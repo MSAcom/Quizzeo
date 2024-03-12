@@ -1,0 +1,7 @@
+id_quizz,id_question,id_reponse,reponse,bonne_reponse,nb_reponse
+65f0765f66110,65f0765f66a63,65f0765f66a8a,18,False,0
+65f0765f66110,65f0765f66a63,65f0765f66aa6,21,True,0
+65f0765f66110,65f0765f66abe,65f0765f66ad4,Benmoufok,False,0
+65f0765f66110,65f0765f66abe,65f0765f66aea,Benmouffok,True,0
+65f0765f66110,65f0765f66aff,65f0765f66b4a,rouge,False,0
+65f0765f66110,65f0765f66aff,65f0765f66b66,vert,True,0
