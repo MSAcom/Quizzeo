@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription</title>
     <link rel="stylesheet" href="./accueil.css">
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -55,6 +55,7 @@
         <label for="mot_de_passe">Mot de passe (en 6 chiffres seulement):</label>
         <input type="password" id="mot_de_passe" name="mot_de_passe" pattern="\d{6}" maxlength="6" required>
     </div>
+    <div class="g-recaptcha" data-sitekey="6Ld0FJYpAAAAALJl_xqFd39U34xeCCsfKCNLoovu"></div>
     <input type="submit" value="S'inscrire">
 </form>
     </div>
