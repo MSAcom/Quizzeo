@@ -1,3 +1,16 @@
+<?php //captcha personnalisé 
+session_start();
+ 
+if(isset($_POST['captcha'])) {
+   if($_POST['captcha'] == $_SESSION['captcha']) {
+      echo "Captcha valide !";
+   } else {
+      echo "Captcha invalide...";
+   }
+}
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +68,11 @@
         <label for="mot_de_passe">Mot de passe (en 6 chiffres seulement):</label>
         <input type="password" id="mot_de_passe" name="mot_de_passe" pattern="\d{6}" maxlength="6" required>
     </div>
-    <input type="submit" value="S'inscrire">
-</form>
+    <form method="POST"> 
+   <img src="captcha.php"  /> <!--captcha personnalisé-->
+   <label for="captcha-reponse">Recopiez le nombre ci-dessus : </label>
+   <input type="text" name="captcha" />
+   <input type="submit" />
+
     </div>
 </body>
