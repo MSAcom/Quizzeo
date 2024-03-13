@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Vérifiez si l'utilisateur est connecté
+if (!isset($_SESSION['identifiant'])) {
+    // Redirigez l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header("Location: connexion.php");
+    exit();
+}
+
+// Récupérez l'identifiant de l'utilisateur à partir de la session
+$id_utilisateur = $_SESSION['id_utilisateur'];
+$identifiant = $_SESSION['identifiant'];
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
