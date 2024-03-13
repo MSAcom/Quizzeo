@@ -37,7 +37,7 @@ body{
 
 }
 a{
-    color: rgb(0, 0, 0); /* Couleur du texte */
+    color: rgb(0, 0, 0); 
     font-family: fantasy;
     text-decoration: none; /* Supprimer le soulignement par défaut */
     background-color: transparent; 
@@ -128,3 +128,4 @@ input[type="password"]{
 .choix-u{
     padding-bottom: 10px;
 }
+

@@ -1,4 +1,24 @@
-<?php
+
+<?php //ReCaptcha (google) back-end
+
+require_once 'C:\Users\myr-b\Downloads\recaptcha-master\recaptcha-master\src\autoload.php';
+
+if(isset($_POST['submitpost'])) {
+  if(isset($_POST['g-recaptcha-response'])) {
+    $recaptcha = new \ReCaptcha\ReCaptcha('6LekU5YpAAAAAMXngkISe8XkRPcDXpAX-ELXLYyR');
+    $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
+    if ($resp->isSuccess()) {
+        var_dump('Captcha Valide');
+    } else {
+        $errors = $resp->getErrorCodes();
+        var_dump('Captcha Invalide');
+        var_dump($errors);
+    }
+  } else {
+    var_dump('Captcha non rempli');
+  }
+}
+
 session_start(); 
 $error = ""; 
 
@@ -34,6 +54,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +69,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
             font-size: 14px;
         }
     </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!--ReCaptcha (google) -->
 </head>
 
 <body>
@@ -56,27 +78,24 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
         <div class='desktopMenu'>
             <a href="#" class="desktopMenuListItem">Evenements</a>
             <a href="#" class="desktopMenuListItem">Restauration</a>
-            <a href="https://www.disneylandparis.com/fr-fr/hotels-disney?ecid=SEM_IP_S_8537264857-c-99283304142-495257146032-576642349168-Broad&gclsrc=aw.ds&&mkwid=0BnHNBuC&gad_source=1&gclid=CjwKCAiAopuvBhBCEiwAm8jaMcxku_II7Q_OxRbsuI5fGmhIENXmIY6FGYoo-ivaVq16CGQRYm46ThoCaBgQAvD_BwE&pcrid=576642349168&pmt=b&pkw=reservation+hotel+disney" class="desktopMenuListItem">Hebergement</a>
+            <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="./inscription.php" class="desktopMenuListItem">Inscription</a>
-        </div>
-        
+        </div> 
     </nav>
     <div class="container">
         <h2>Connexion</h2>
         <?php if ($error !== "") : ?><!--si erreur est different de vide, donc affiche un message -->
             <p class="error"><?php echo $error; ?></p><!--affiche le message d'erreur-->
         <?php endif; ?>
-        <form action="" method="post"><!--formulaire-->
+        <form id= "connexion-form" action="" method="post"><!--formulaire-->
             <label for="identifiant">Identifiant :</label>
             <input type="text" id="identifiant" name="identifiant" required>
             <label for="mot_de_passe">Mot de passe :</label>
             <input type="password" id="mot_de_passe" name="mot_de_passe" required>
-
-            
-            <input type="submit" value="Se connecter">
+            <div class="g-recaptcha" data-sitekey="6LekU5YpAAAAAGYdJtxGHUZSAUZDi0mrVDrtUbkz"></div> <!--ReCaptcha (google) -->
+            <br/>
+            <input type="submit" value="Valider" name="submitpost">
         </form>
-        
-
     </div>
 </body>
 
