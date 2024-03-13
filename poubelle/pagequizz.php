@@ -17,6 +17,7 @@
                 <button class="btn">melon</button>
                 <button class="btn">bouton</button>
             </div>
+            <button id="inext-btn">Next</button>
         </div>
 
     </div>

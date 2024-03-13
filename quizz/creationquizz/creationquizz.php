@@ -25,7 +25,7 @@ $identifiant = $_SESSION['identifiant'];
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="/Projet_final/Quizzeo/accueil/home.php" class="desktopMenuListItem">Home</a>
-            <a href="#" class="desktopMenuListItem">Restauration</a>
+            <a href="../dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
             <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="/Projet_final/Quizzeo/accueil/deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>
@@ -35,15 +35,21 @@ $identifiant = $_SESSION['identifiant'];
         <h1>Création de Quizz </h1>
         <form action="enregistrement_quizz.php" method="post" id="question-form">
             <div id="questions-container">
-                <div class="question">
+            <div class="question">
+                <div class="center-container">
                     <label for="nom_quizz">Nom du quizz :</label>
-                    <input type="text" id="nom_quizz" name="nom_quizz">
+                    <input class="nom_quizz" type="text" id="nom_quizz" name="nom_quizz">
                 </div>
+                <div class="center-container">
+                    <label for="description_quizz">Description :</label>
+                    <input class="description_quizz" type="text" id="description_quizz" name="description_quizz">
+                </div>
+            </div>
                 <div class="question">
                     <label for="question1">Question 1 :</label>
                     <input type="text" id="question1" name="questions[]">
                     <label for="points1">points pour cette question :</label>
-                    <input type="text" id="points1" name="points[]">
+                    <input type="number" class ="points_question" id="points1" name="points[]">
                     <div class="reponses">
                         <label for="reponse1_1">Réponse 1 :</label>
                         <input type="text" id="reponse1_1" name="reponses[1][]">
@@ -85,7 +91,7 @@ $identifiant = $_SESSION['identifiant'];
                     <label for="question${questionCounter}">Question ${questionCounter}:</label>
                     <input type="text" id="question${questionCounter}" name="questions[]">
                     <label for="points${questionCounter}">points pour cette question :</label>
-                    <input type="points" id="points${questionCounter}"  name="points[]">
+                    <input type="number"  class ="points_question" id="points${questionCounter}"  name="points[]">
                     <div class="reponses">
                         <label for="reponse${questionCounter}_1">Réponse 1 :</label>
                         <input type="text" id="reponse${questionCounter}_1" name="reponses[${questionCounter}][]">

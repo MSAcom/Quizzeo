@@ -25,7 +25,7 @@ $identifiant = $_SESSION['identifiant'];
         <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="#" class="desktopMenuListItem">Home</a> <!-- a href pour redirection pages -->
-            <a href="./attractions.php" class="desktopMenuListItem">Attractions</a>
+            <a href="../quizz\dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
             <a href="../quizz\creationquizz\creationquizz.php" class="desktopMenuListItem">Créer un quizz</a>
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>

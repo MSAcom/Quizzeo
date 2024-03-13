@@ -16,6 +16,7 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     // Initialisation des valeurs pour le quizz
     $id_quizz = uniqid(); // On définit un ID unique pour chaque nouveau quizz
     $nom_quizz = $_POST["nom_quizz"];
+    $description_quizz = $_POST["description_quizz"];
     $actif = "True";
     $status = "EnCours";
     $nb_reponses = 0;
@@ -27,9 +28,9 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
 
     // Écrire les informations du quizz dans le fichier CSV
     if (filesize($file_name) == 0) {
-        fputcsv($file, ['id_quizz', 'nomquizz', 'id_utilisateur', 'actif', 'status', 'nb_reponses', 'url']);
+        fputcsv($file, ['id_quizz', 'nomquizz','descriptionquizz', 'id_utilisateur', 'actif', 'status', 'nb_reponses', 'url']);
     }
-    fputcsv($file, [$id_quizz, $nom_quizz, $id_createur, $actif, $status, $nb_reponses, $url]);
+    fputcsv($file, [$id_quizz, $nom_quizz, $description_quizz , $id_createur, $actif, $status, $nb_reponses, $url]);
 
     // Fermer le fichier quizz.csv
     fclose($file);
@@ -40,6 +41,13 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     $file_questions = fopen($file_name_questions, 'a');
     $file_reponse = fopen($file_name_reponses, 'a');
 
+    if (filesize($file_name_questions) == 0) {
+        fputcsv($file_questions, ['id_quizz', 'id_question','id_utilisateur', 'question', 'points']);
+    }
+    
+    if (filesize($file_name_reponses) == 0) {
+        fputcsv($file_reponse, ['id_quizz', 'id_question','id_reponse', 'reponse', 'bonne_reponse', "nb_reponse"]);
+    }
     // Écrire les questions et les réponses dans les fichiers CSV
     foreach ($_POST["questions"] as $questionIndex => $question) {
         $id_question = uniqid();
