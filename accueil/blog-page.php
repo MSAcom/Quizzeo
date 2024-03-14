@@ -1,0 +1,23 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="./accueil.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
+        <div class='desktopMenu'>
+            <a href="home.php" class="desktopMenuListItem">Home</a> <!-- a href pour redirection pages -->
+            <a href="#" class="desktopMenuListItem">Blog</a>
+            <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
+            <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
+        </div>
+    </nav>
+    <div>
+        <h2> PAGE BLOG </h2>
+    </div>
+</body>
+</html>
