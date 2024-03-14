@@ -50,12 +50,13 @@
             <input type="radio" id="utilisateur" name="role" value="Utilisateur">
             <label for="utilisateur">Utilisateur</label>
         </div>
+        
     </div>
     <div class="form-group">
         <label for="mot_de_passe">Mot de passe (en 6 chiffres seulement):</label>
         <input type="password" id="mot_de_passe" name="mot_de_passe" pattern="\d{6}" maxlength="6" required>
     </div>
-    <div class="g-recaptcha" data-sitekey="6Ld0FJYpAAAAALJl_xqFd39U34xeCCsfKCNLoovu"></div>
+    <div class="g-recaptcha" data-sitekey="6LekU5YpAAAAAGYdJtxGHUZSAUZDi0mrVDrtUbkz"></div>
     <input type="submit" value="S'inscrire">
 </form>
     </div>
