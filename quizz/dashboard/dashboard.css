@@ -42,7 +42,7 @@ a{
     padding-right: 20px;
 }
 
-p{
+.message_connexion{
     font-size: 2.5vh;
     color: rgb(128, 255, 111);
     padding-right: 15px;

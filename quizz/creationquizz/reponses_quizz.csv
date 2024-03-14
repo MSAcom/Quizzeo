@@ -13,3 +13,41 @@ id_quizz,id_question,id_reponse,reponse,bonne_reponse,nb_reponse
 65f1fe243bedb,65f1fe243c146,65f1fe243c1db,vrai,False,0
 65f1fe322304c,65f1fe3223302,65f1fe3223359,"planette terre",True,0
 65f1fe322304c,65f1fe3223302,65f1fe3223399,"mamie truillette",False,0
+65f2b6b4c20b1,65f2b6b4c2266,65f2b6b4c22ef,vrai,True,0
+65f2b6b4c20b1,65f2b6b4c2266,65f2b6b4c24b1,"mamie truillette",False,0
+65f2bc127c0bc,65f2bc127c34a,65f2bc127c3a4,"mamie truillette",True,0
+65f2bc127c0bc,65f2bc127c34a,65f2bc127c3cb,18,False,0
+65f2bc287ade4,65f2bc287bea7,65f2bc287bed5,"planette terre",True,0
+65f2bc287ade4,65f2bc287bea7,65f2bc287bef6,"mamie truillette",False,0
+65f2bc37bfa1f,65f2bc37bfc24,65f2bc37bfc3e,18,False,0
+65f2bc37bfa1f,65f2bc37bfc24,65f2bc37bfc51,vrai,True,0
+65f2bc4283e61,65f2bc4283fdf,65f2bc4284012,"mamie truillette",True,0
+65f2bc4283e61,65f2bc4283fdf,65f2bc428403b,"mamie truillette",False,0
+65f2bc840d73c,65f2bc840d8ab,65f2bc840d8d5,vrai,True,0
+65f2bc840d73c,65f2bc840d8ab,65f2bc840d8f8,18,False,0
+65f2bc9258539,65f2bc92587e5,65f2bc9258810,"mamie truillette",True,0
+65f2bc9258539,65f2bc92587e5,65f2bc9258834,yuyu,False,0
+65f2bc9f71769,65f2bc9f718d9,65f2bc9f71900,vrai,True,0
+65f2bc9f71769,65f2bc9f718d9,65f2bc9f71923,yuyu,False,0
+65f2bcd2a509c,65f2bcd2a5291,65f2bcd2a52b2,"mamie truillette",True,0
+65f2bcd2a509c,65f2bcd2a5291,65f2bcd2a52d0,yuyu,False,0
+65f2bce0632f9,65f2bce063413,65f2bce06342c,"planette terre",True,0
+65f2bce0632f9,65f2bce063413,65f2bce0634ec,yuyu,False,0
+65f2c33fca325,65f2c33fca6cf,65f2c33fca702,vrai,True,0
+65f2c33fca325,65f2c33fca6cf,65f2c33fca728,"planette terre",False,0
+65f2c3550c02c,65f2c3550c2d4,65f2c3550c2ef,"mamie truillette",True,0
+65f2c3550c02c,65f2c3550c2d4,65f2c3550c30b,"mamie truillette",False,0
+65f2c36203034,65f2c36203123,65f2c3620313f,"mamie truillette",True,0
+65f2c36203034,65f2c36203123,65f2c36203158,yuyu,False,0
+65f2c36c4b892,65f2c36c4b9ed,65f2c36c4ba10,yuyu,True,0
+65f2c36c4b892,65f2c36c4b9ed,65f2c36c4ba33,18,False,0
+65f2c3c06bffa,65f2c3c06c1e3,65f2c3c06c1fe,yuyu,True,0
+65f2c3c06bffa,65f2c3c06c1e3,65f2c3c06c217,yuyu,False,0
+65f2c6791295c,65f2c67912c52,65f2c67912c6a,"planette terre",True,0
+65f2c6791295c,65f2c67912c52,65f2c67912c8b,yuyu,False,0
+65f2c68b6d399,65f2c68b6d60a,65f2c68b6d625,vrai,True,0
+65f2c68b6d399,65f2c68b6d60a,65f2c68b6d638,18,False,0
+65f2c697f0ae6,65f2c697f0bd8,65f2c697f0bf3,yuyu,True,0
+65f2c697f0ae6,65f2c697f0bd8,65f2c697f0c0a,vrai,False,0
+65f2c6a8ecd0c,65f2c6a8ece5d,65f2c6a8ece80,yuyu,True,0
+65f2c6a8ecd0c,65f2c6a8ece5d,65f2c6a8ece9d,vrai,False,0

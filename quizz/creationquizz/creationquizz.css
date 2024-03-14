@@ -57,13 +57,13 @@ h1{
 
 }
 
-/*-----------------------------*/
+/*-------------autre----------------*/
 
 input{
     background-color: rgb(235, 235, 235);
     border-style: none;
 }
-body{
+body{ /*fond de couleur*/
     background-color: #001e4d;
     margin: 0;
     padding: 0;
@@ -77,7 +77,7 @@ body{
 .nom_quizz{
     width: 20%;
 }
-.container {
+.container { /*page blanche qui contient tout*/
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -100,10 +100,9 @@ body{
     font-weight: bold;
 }
 
-.question input[type="text"] {
-    width: 96%;
+.question input[type="text"] { /*faire que les champs ne prennent pas l'entiereté du container*/
+    width: 96%; /*qu'elles prennent juste 96% de la div container*/
     padding: 8px;
-    /*border: 1px solid #ccc;*/
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -111,7 +110,6 @@ body{
 .question select {
     width: 100%;
     padding: 8px;
-    /*border: 1px solid #ccc;*/
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -120,20 +118,12 @@ body{
     margin-left: 20px;
 }
 
-.ajouter-reponse {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-.ajouter-reponse:hover {
+.ajouter-reponse:hover { /*quand on met la souris sur le bouton cela change la couleur de ce dernier*/
     background-color: #0056b3;
 }
 
-#ajouter-question {
+#ajouter-question { /*bouton ajouter question*/
     display: block;
     margin-top: 20px;
     padding: 10px;
@@ -144,11 +134,11 @@ body{
     cursor: pointer;
 }
 
-#ajouter-question:hover {
+#ajouter-question:hover { /*ombre du bouton ajouter question*/
     background-color: #0056b3;
 }
 
-input[type="submit"] {
+input[type="submit"] { /*bouton enregistrer*/
     display: block;
     width: 100%;
     padding: 10px;
@@ -162,7 +152,7 @@ input[type="submit"] {
 input[type="submit"]:hover { /*quand on passe la souris sur le bouton cela l'assombri*/
     background-color: #001e4d;
 }
-.points_question{
+.points_question{ /*reduire la taille des points */
     height: 25px;
     
 }

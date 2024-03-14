@@ -67,21 +67,27 @@ $identifiant = $_SESSION['identifiant'];
                                 <button type="submit">infos</button>
                             </form>
                             <div class="button-container">
-                                <form action="modifier_quizz.php" method="post">
+                                <form action="reprendre_quizz.php" method="post">
                                     <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                     <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
+                                    <input type="hidden" name="nom" id ="nom" value="<?php echo $quizz_data[$col_nom_quizz]; ?>">
+                                    <input type="hidden" name="description" value="<?php echo $quizz_data[$col_description_quizz]; ?>">
                                     <button type="submit">modifier</button>
                                 </form>
-                                <form action="lancer_quizz.php" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
-                                    <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
-                                    <button type="submit">lancer</button>
-                                </form>
-                                <form action="terminer_quizz.php" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
-                                    <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
-                                    <button type="submit">terminer</button>
-                                </form>
+                                <?php if ($quizz_data[$col_status] !== "Lancé") { ?>
+                                    <form action="lancer_quizz.php" method="post">
+                                        <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
+                                        <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
+                                        <button type="submit">lancer</button>
+                                    </form>
+                                <?php } ?>
+                                <?php if ($quizz_data[$col_status] !== "Terminé") { ?>
+                                    <form action="terminer_quizz.php" method="post">
+                                        <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
+                                        <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
+                                        <button type="submit">terminer</button>
+                                    </form>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

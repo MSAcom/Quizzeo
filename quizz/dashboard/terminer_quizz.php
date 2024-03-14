@@ -1,32 +1,35 @@
 <?php
 $id_quizz = $_POST["id"];
 $statut_quizz = $_POST["statut"];
-echo $id_quizz." ".$statut_quizz;
 
-// Chemin du fichier CSV
+
 $csv_file = '../creationquizz/quizz.csv';
 
-// Lire le contenu du fichier CSV dans un tableau
-$lines = file($csv_file);
 
-// Parcourir chaque ligne du tableau
-foreach ($lines as $key => &$line) {
-    // Convertir la ligne en tableau en utilisant la virgule comme séparateur
-    $data = str_getcsv($line);
+$lines = file($csv_file);// Lire le contenu du fichier CSV dans un tableau
 
-    // Si l'identifiant du quiz correspond
-    if ($data[0] == $id_quizz) {
-        // Modifier le statut du quiz
-        $data[5] = "Terminé"; // Assurez-vous que 5 est l'index de la colonne du statut dans votre fichier CSV
 
-        // Réécrire la ligne modifiée dans le tableau
-        $lines[$key] = implode(',', $data);
+foreach ($lines as $key => &$line) {// Parcourir chaque ligne du tableau
+    
+    $data = str_getcsv($line);// Convertir la ligne en tableau en utilisant la virgule comme séparateur
+
+    
+    if ($data[0] == $id_quizz) {// Si l'identifiant du quiz correspond
+        
+        $data[5] = "Terminé"; // Modifier le statut du quiz
+
+        
+        $csv_line = fopen('php://temp', 'r+');// Réécrire la ligne modifiée dans le tableau en utilisant fputcsv()
+        fputcsv($csv_line, $data);
+        rewind($csv_line);
+        $lines[$key] = fgets($csv_line);
+        fclose($csv_line);
+
         header("Location: ./dashboard.php");
         break; // Sortir de la boucle après avoir trouvé le quiz
     }
 }
 
-// Enregistrer le tableau modifié dans le fichier CSV
-file_put_contents($csv_file, implode('', $lines));
 
+file_put_contents($csv_file, implode('', $lines));// Enregistrer le tableau modifié dans le fichier CSV
 ?>
