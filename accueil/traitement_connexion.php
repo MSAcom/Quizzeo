@@ -18,7 +18,7 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
 
     if ($resp->isSuccess()) { // Si la réponse est bonne
         if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { // Si les champs identifiant et mdp sont bien remplies 
-            $file_name = 'utilisateurs.csv'; //chemin fichier CSV
+            $file_name = 'utilisateurs.csv'; // Chemin fichier CSV
             $file = fopen($file_name, 'r'); // mode lecture 
 
             if ($file) { //Si ouvre bien le fichier CSV
@@ -65,9 +65,11 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                 fclose($file);
             } else {
                 $error = "Erreur lors de l'ouverture du fichier.";
+                header('Location: connexion.php?error=' . urlencode($error)); 
             }
         } else { 
             $error = "Veuillez remplir tous les champs.";
+            header('Location: connexion.php?error=' . urlencode($error)); 
         }
     } else { //Si la réponse au reCaptcha est mauvaise: 
         

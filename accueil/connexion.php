@@ -29,13 +29,13 @@ $error = isset($_GET['error']) ? $_GET['error'] : ""; // Récupérez la variable
             <a href="#" class="desktopMenuListItem">Connexion</a>
         </div> 
     </nav>
-    
+
     <div class="container">
         <h2>Connexion</h2>
         <?php if ($error !== "") : ?><!--si erreur est different de vide, donc affiche un message -->
             <p class="error"><?php echo $error; ?></p><!--affiche le message d'erreur-->
         <?php endif; ?>
-        <form id="connexion-form" action="traitement_connexio.php" method="post"> <!--formulaire de connexion-->
+        <form id="connexion-form" action="traitement_connexion.php" method="POST"> <!--formulaire de connexion-->
             <label for="identifiant">Identifiant :</label>
             <input type="text" id="identifiant" name="identifiant" required> 
             <label for="mot_de_passe">Mot de passe :</label>
