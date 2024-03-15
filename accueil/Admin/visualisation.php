@@ -15,7 +15,7 @@
         <div class='desktopMenu'>
             <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs crées</a>
             <a href="#" class="desktopMenuListItem">Quiz crées</a>
-            <a href="#" class="desktopMenuListItem">Statut des Quiz</a>
+            
             
         </div>
         
