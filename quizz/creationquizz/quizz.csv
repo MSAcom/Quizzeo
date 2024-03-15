@@ -1,5 +1,4 @@
 id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
-65f2c6791295c,astres,"connaissez vous vraiment les fruits?",65ef10d468cac,True,Lancé,0,url
-65f2c68b6d399,kaka,"un beau quizz sur le chocolat",65ef10d468cac,True,Lancé,0,url
-65f2c697f0ae6,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,True,Terminé,0,url
-65f2c6a8ecd0c,"je suis un quizz","connaissez vous vraiment les fruits?",65ef10d468cac,True,Lancé,0,url
+65f436a437e0a,"kaka aaa","un beau quizz sur le chocolataaa",65ef10d468cac,True,EnCours,0,url
+65f44b358f3c8,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,True,EnCours,0,url
+65f44b81af57d,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,True,EnCours,0,url

@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-// Vérifiez si l'utilisateur est connecté
+
 if (!isset($_SESSION['identifiant'])) {
-    // Redirigez l'utilisateur vers la page de connexion s'il n'est pas connecté
-    header("Location: ../../accueil/connexion.php");
+    
+    header("Location: ../../accueil/connexion.php");// Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
     exit();
 }
 
-// Récupérez l'identifiant de l'utilisateur à partir de la session
-$id_utilisateur = $_SESSION['id_utilisateur'];
-$identifiant = $_SESSION['identifiant'];
+
+$id_utilisateur = $_SESSION['id_utilisateur'];// Récupérer l'id de l'utilisateur à partir de la session
+$identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ $identifiant = $_SESSION['identifiant'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page quizzs</title>
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="card.css">
 </head>
 <body>
@@ -38,11 +38,12 @@ $identifiant = $_SESSION['identifiant'];
         <div class="page">
             <?php
 
-            // Ouvrir le fichier des quizz en lecture
+            
             $quizz_file = fopen("../creationquizz/quizz.csv", "r");
-            $en_tete = fgetcsv($quizz_file); // Ignorer l'en-tête
-            // Recherchez les index des colonnes spécifiques
-            $col_id_quizz = array_search('idquizz', $en_tete);
+            $en_tete = fgetcsv($quizz_file); 
+            
+
+            $col_id_quizz = array_search('idquizz', $en_tete);// on cherche les colonnes dans le csv
             $col_nom_quizz = array_search('nomquizz', $en_tete);
             $col_description_quizz = array_search('descriptionquizz', $en_tete);
             $col_utilisateur = array_search('id_utilisateur', $en_tete);
@@ -51,8 +52,8 @@ $identifiant = $_SESSION['identifiant'];
             $col_nb_reponses = array_search('nb_reponses', $en_tete);
             $col_url = array_search('url', $en_tete);
 
-            // Afficher chaque quizz créé par l'utilisateur
-            while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {
+
+            while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {// Afficher chaque quizz créé par l'utilisateur
                 if ($quizz_data[$col_utilisateur] == $id_utilisateur) {
                     ?>
                     <div class="tableau">

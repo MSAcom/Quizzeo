@@ -42,11 +42,11 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     $file_reponse = fopen($file_name_reponses, 'a');
 
     if (filesize($file_name_questions) == 0) {
-        fputcsv($file_questions, ['id_quizz', 'id_question','id_utilisateur', 'question', 'points']);
+        fputcsv($file_questions, ['id_quizz', 'id_question','id_utilisateur', 'question_quizz', 'points']);
     }
     
     if (filesize($file_name_reponses) == 0) {
-        fputcsv($file_reponse, ['id_quizz', 'id_question','id_reponse', 'reponse', 'bonne_reponse', "nb_reponse"]);
+        fputcsv($file_reponse, ['id_quizz', 'id_question','id_reponse', 'reponse_quizz', 'bonne_reponse', "nb_reponse"]);
     }
     // Écrire les questions et les réponses dans les fichiers CSV
     foreach ($_POST["questions"] as $questionIndex => $question) {
@@ -62,15 +62,15 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
         }
     }
 
-    // Fermer les fichiers questions_quizz.csv et reponses_quizz.csv
+    // on ferme les fichiers questions_quizz.csv et reponses_quizz.csv
     fclose($file_questions);
     fclose($file_reponse);
 
-    // Redirection après traitement
+
     header("Location: creationquizz.php");
     exit();
 } else {
-    // Gérer le cas où les données POST ne sont pas définies
+    //si on a pas reçu les données voulues via POST
     echo "Les données POST ne sont pas définies.";
 }
 ?>

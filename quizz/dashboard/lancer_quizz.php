@@ -18,7 +18,7 @@ foreach ($lines as $key => &$line) {// Parcourir chaque ligne du tableau
         
         $data[5] = "Lancé"; // Modifier le statut du quiz
 
-         fputcsv();
+       
         $csv_line = fopen('php://temp', 'r+'); // Réécrire la ligne modifiée dans le tableau en utilisant
         fputcsv($csv_line, $data);
         rewind($csv_line);

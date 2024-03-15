@@ -1,27 +1,6 @@
-id_quizz,id_question,id_utilisateur,question,points
-65f1fa9a12b4d,65f1fa9a1320a,65ef10d468cac,"quel est l'astre qui nous éclaire",2
-65f1fa9a12b4d,65f1fa9a1326c,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f1fab2e10c8,65f1fab2e1412,65ef10d468cac,pp,2
-65f1fab2e10c8,65f1fab2e1493,65ef10d468cac,hy,2
-65f1fe08a8428,65f1fe08a86d9,65ef10d468cac,"quel est l'astre qui nous éclaire",2
-65f1fe243bedb,65f1fe243c146,65ef10d468cac,"quel est l'astre qui nous éclaire",2
-65f1fe322304c,65f1fe3223302,65ef10d468cac,"quel est l'astre qui nous éclaire",2
-65f2b6b4c20b1,65f2b6b4c2266,65ef10e86b043,123456,2
-65f2bc127c0bc,65f2bc127c34a,65ef10d468cac,"quel est l'astre qui nous éclaire",2
-65f2bc287ade4,65f2bc287bea7,65ef10d468cac,hy,2
-65f2bc37bfa1f,65f2bc37bfc24,65ef10d468cac,123456,2
-65f2bc4283e61,65f2bc4283fdf,65ef10d468cac,hy,2
-65f2bc840d73c,65f2bc840d8ab,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f2bc9258539,65f2bc92587e5,65ef10d468cac,hy,2
-65f2bc9f71769,65f2bc9f718d9,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f2bcd2a509c,65f2bcd2a5291,65ef10e86b043,hy,2
-65f2bce0632f9,65f2bce063413,65ef10e86b043,123456,2
-65f2c33fca325,65f2c33fca6cf,65ef10d468cac,123456,2
-65f2c3550c02c,65f2c3550c2d4,65ef10d468cac,123456,2
-65f2c36203034,65f2c36203123,65ef10d468cac,123456,2
-65f2c36c4b892,65f2c36c4b9ed,65ef10d468cac,hy,2
-65f2c3c06bffa,65f2c3c06c1e3,65ef10d468cac,hy,2
-65f2c6791295c,65f2c67912c52,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f2c68b6d399,65f2c68b6d60a,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f2c697f0ae6,65f2c697f0bd8,65ef10d468cac,"quelle est la mamie qui fait le plus peur aux cambrioleurs",2
-65f2c6a8ecd0c,65f2c6a8ece5d,65ef10d468cac,popo,2
+id_quizz,id_question,id_utilisateur,question_quizz,points
+65f436a437e0a,65f436a4382ca,65ef10d468cac,"quel est l'astre qui nous éclaire",2
+65f436a437e0a,65f436a4382ca,65ef10d468cac,"quel est l'astre qui nous éclaire",2
+65f44b358f3c8,65f44b358f607,65ef10d468cac,popo,2
+65f44b358f3c8,65f44b358f607,65ef10d468cac,popo,2
+65f44b81af57d,65f44b81af6b4,65ef10d468cac,hy,2

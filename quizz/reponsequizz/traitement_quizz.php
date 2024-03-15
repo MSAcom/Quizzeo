@@ -1,5 +1,5 @@
 <?php
-// Traitement des réponses du quizz
+
 
 $score = 0;
 
