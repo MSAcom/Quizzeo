@@ -20,7 +20,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page quizzs</title>
     <link rel="stylesheet" href="../quizz/dashboard/dashboard.css">
-    <link rel="stylesheet" href="card.css">
+   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
     <nav class="navbar">
@@ -29,7 +29,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
             <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
     
             <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs</a>
-            <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
+            <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
     </nav>
@@ -59,20 +59,22 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
                     <div class="tableau">
                         <div class="card">
                             <div class='texte'>nom : <?php echo $quizz_data[$col_nom_quizz]; ?></div>
-                            <div class='description'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
+                            <div class='description description_quizz'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
                             <div class='description'>status : <?php echo $quizz_data[$col_status]; ?></div>
                             <div class='description'><?php if ( $quizz_data[$col_actif] === "True"){echo "Actif";} else {echo "Désactivé";}?></div>
+                            <?php if ( $quizz_data[$col_actif] === "True"){?>
                             <form action="desactivation_quizz.php" method="post">
                                 <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                 <input type="hidden" name="activation_user" value="<?php echo $quizz_data[$col_status]; ?>">
-                                <button type="submit">Desactiver</button>
+                                <button class="desactiver" type="submit">Desactiver</button>
                             </form>
+                            <?php } if ( $quizz_data[$col_actif] === "False"){?>
                             <form action="activation_quizz.php" method="post">
                                 <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                 <input type="hidden" name="activation_user" value="<?php echo $quizz_data[$col_status]; ?>">
-                                <button type="submit">Activer</button>
+                                <button class="activer" type="submit">Activer</button>
                             </form>
-                           
+                           <?php } ?>
                         </div>
                     </div>
                 <?php

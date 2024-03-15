@@ -24,7 +24,6 @@ $identifiant = $_SESSION['identifiant'];
         <div class='desktopMenu'>
             <a href="/Projet_final/Quizzeo/accueil/home.php" class="desktopMenuListItem">Home</a>
             <a href="../dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
-            <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="/Projet_final/Quizzeo/accueil/deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>
         
@@ -36,7 +35,7 @@ $identifiant = $_SESSION['identifiant'];
             <div class="question">
                 <div class="center-container">
                     <label for="nom_quizz">Nom du quizz :</label>
-                    <input class="nom_quizz" type="text" id="nom_quizz" name="nom_quizz">
+                    <input class="nom_quizz" type="text" id="nom_quizz" name="nom_quizz" required>
                 </div>
                 <div class="center-container">
                     <label for="description_quizz">Description :</label>

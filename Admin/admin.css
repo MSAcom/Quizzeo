@@ -1,0 +1,61 @@
+body {
+    background-color: #001e4d;
+}
+.container{
+    border-radius: 20px;
+    width: 80%;
+    margin: 50px auto;
+}
+.card{
+    background-color: rgb(224, 227, 255);
+    border: none;
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 238, 215);
+    
+}
+.description_quizz{
+    height: 80px;
+}
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(224, 227, 255);
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+tr {
+    background-color: rgb(255, 238, 215);
+}
+
+form{
+    display: block;
+}
+button {
+    border: none;
+    height: 20px;
+    width: 80px;
+}
+button.activer {
+    background-color: rgb(122, 255, 162);
+    transition: background-color 0.2s;
+}
+
+button.desactiver {
+    background-color: rgb(255, 169, 169);
+    transition: background-color 0.2s;
+}
+button.activer:hover {
+    background-color: rgb(208, 255, 214);
+}
+button.desactiver:hover {
+    background-color: rgb(255, 211, 211);
+}

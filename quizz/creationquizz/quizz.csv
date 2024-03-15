@@ -1,4 +1,8 @@
 id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65f436a437e0a,"kaka aaa","un beau quizz sur le chocolataaa",65ef10d468cac,True,EnCours,0,url
-65f44b358f3c8,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,False,EnCours,0,url
-65f44b81af57d,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,True,EnCours,0,url
+65f44b358f3c8,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,True,EnCours,0,url
+65f44b81af57d,"les chocolats","un beau quizz sur le chocolat",65ef10d468cac,False,EnCours,0,url
+65f4b64a52f70,"les chocolats","un beau quizz sur le chocolat",65f30860ea5d9,True,Lancé,0,url
+65f4bbb17f454,"les chocolats","un beau quizz sur le chocolat",65f30860ea5d9,True,EnCours,0,url
+65f4bbea8a21e,boulangerie,"connaissez vous le domaine du pain?",65f30860ea5d9,True,EnCours,0,url
+65f4bc024e650,boulangerie,"connaissez vous le domaine du pain?",65f30860ea5d9,True,EnCours,0,url

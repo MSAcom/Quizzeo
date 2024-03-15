@@ -52,7 +52,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
 
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+        <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="#" class="desktopMenuListItem">Evenements</a>
             <a href="#" class="desktopMenuListItem">Restauration</a>

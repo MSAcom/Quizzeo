@@ -28,7 +28,6 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
         <div class='desktopMenu'>
             <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
             <a href="../creationquizz/creationquizz.php" class="desktopMenuListItem">Créer un quizz</a>
-            <a href="./pagefavoris.php" class="desktopMenuListItem">Favoris</a>
             <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
@@ -59,9 +58,9 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
                     <div class="tableau">
                         <div class="card">
                             <div class='texte'>nom : <?php echo $quizz_data[$col_nom_quizz]; ?></div>
-                            <div class='description'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
+                            <div class='description description_quizz'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
                             <div class='description'>status : <?php echo $quizz_data[$col_status]; ?></div>
-                            <div class='description'>nombre de réponses : <?php echo $quizz_data[$col_nb_reponses]; ?></div>
+                            <div class='description '>nombre de réponses : <?php echo $quizz_data[$col_nb_reponses]; ?></div>
                             <form action="reception.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                 <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">

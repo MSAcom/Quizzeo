@@ -92,6 +92,7 @@ body{ /*fond de couleur*/
     border: solid 2px black;
     padding: 15px;
     border-radius: 10px;
+    background-color: rgb(224, 227, 255);
 }
 .ajout{
     padding-bottom: 200px;
@@ -108,6 +109,7 @@ body{ /*fond de couleur*/
     border-radius: 4px;
     margin-bottom: 10px;
     margin-top: 10px;
+    background-color: rgb(255, 238, 215);
 }
 
 .question select {
@@ -158,5 +160,5 @@ input[type="submit"]:hover { /*quand on passe la souris sur le bouton cela l'ass
 }
 .points_question{ /*reduire la taille des points */
     height: 25px;
-    
+    background-color: rgb(255, 238, 215);
 }

@@ -67,7 +67,7 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     fclose($file_reponse);
 
 
-    header("Location: creationquizz.php");
+    header("Location: ../dashboard/dashboard.php");
     exit();
 } else {
     //si on a pas reçu les données voulues via POST

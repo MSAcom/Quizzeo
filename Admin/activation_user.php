@@ -3,7 +3,7 @@ $id_utilisateur = $_POST["id_utilisateur"];
 $action = $_POST["actif"];
  
  
-$csv_file = '../utilisateurs.csv';
+$csv_file = '../accueil/utilisateurs.csv';
  
  
 $lines = file($csv_file);// Lire le contenu du fichier CSV dans un tableau
