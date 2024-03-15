@@ -53,11 +53,11 @@
                                         <button type="submit">Activer</button>
                                     </form>
                                 <?php } ?>
-                                <?php if ($data[$col_actif] !== "Déactiver") { ?>
+                                <?php if ($data[$col_actif] !== "Désactiver") { ?>
                                     <form action="listeuser.php" method="post">
                                         <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
                                         <input type="hidden" name="actif" value="<?php echo $data[$col_actif]; ?>">
-                                        <button type="submit">Déactiver</button>
+                                        <button type="submit">Désactiver</button>
                                     </form>
                                 <?php } ?>
         </tr></td>
