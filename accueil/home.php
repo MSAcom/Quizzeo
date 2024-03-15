@@ -1,6 +1,4 @@
 
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +13,7 @@
             <a href="#" class="desktopMenuListItem">Home</a> <!-- a href pour redirection pages -->
             <a href="blog-page.php" class="desktopMenuListItem">Blog</a>
             <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
-            <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
+            <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
     </nav>
 </body>

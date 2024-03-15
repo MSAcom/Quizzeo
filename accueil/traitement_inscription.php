@@ -15,10 +15,20 @@ if(isset($_POST['captcha'])) { // Vérifie utilisateur a bien remplie input du c
 // Vérifie que les champs suivants ont bien été remplie
 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['identifiant']) && isset($_POST['role']) && isset($_POST['mot_de_passe'])) {
     
-    $file_name = 'utilisateurs.csv'; // Chemin fichier
+    $file_name = 'utilisateurs.csv';// Définit nom du fichier CSV 
+ 
+    $file = fopen($file_name, 'a');//Ouvre fichier en mode écriture mais sans écraser.
+ 
+    if (filesize($file_name) == 0) {//Si le fichier CSV est vide, ajoute ligne des catégories
+        fputcsv($file, ['Id_utilisateur', 'Nom', 'Prenom', 'Identifiant', 'role','Mot_de_passe', 'nouveau_email']);
+    }
+
+    fclose($file);
+
     
     $file = fopen($file_name, 'r'); // Ouvre en mode lecture seulement
-    
+
+
     if ($file) { // Si fichier s'ouvre bien
 
         $identifiant_existe = false; // Initialise la variable

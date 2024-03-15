@@ -55,7 +55,7 @@ $identifiant = $_SESSION['identifiant'];
     <nav class="navbar">
         <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem">Home</a> <!-- a href pour redirection pages -->
+            <a href="#" class="desktopMenuListItem">Dashboard</a> <!-- a href pour redirection pages -->
             <a href="profil.php" class="desktopMenuListItem">Profil</a>
             <a href="commentaires.php" class="desktopMenuListItem">Commentaires</a>
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>

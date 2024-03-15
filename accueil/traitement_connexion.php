@@ -26,7 +26,7 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                     if ($line[3] === $_POST['identifiant']) { // Verifie l'identifiant de la page connexion à celui du CSV enregistré lors de l'sincription
                         if (password_verify($_POST['mot_de_passe'], $line[5])) { // Vérifie pareil pour le mdp
 
-                            //récupère les données de l'utilisateur connecté pour sa session
+                            //Récupère les données de l'utilisateur connecté pour sa session
                             $_SESSION['identifiant'] = $_POST['identifiant']; 
                             $_SESSION['id_utilisateur'] = $line[0];
                             $_SESSION['role'] = $line[4];
@@ -35,7 +35,7 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
 
                             fclose($file); 
 
-                            //redirection lors de la connexion en fonction du role de l'utilisateur
+                            //Redirection lors de la connexion en fonction du role de l'utilisateur
                             $message = "Vous êtes connecté"; 
                             if ($_SESSION['role'] === "Utilisateur") {
                                 header('Location: page_utilisateur.php?message=' . urlencode($message)); // Ajout la variable $message dans l'URL pour debug
