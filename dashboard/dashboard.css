@@ -1,0 +1,213 @@
+body {
+margin: 0px;
+padding: 0px;
+max-width: 100%; 
+overflow-x: hidden; /* Empêche le défilement horizontal de la page */
+font-family:Arial, Helvetica, sans-serif;
+background-color: #001e4d;
+
+}
+
+.navbar{
+background-color: rgb(236, 236, 236);
+height: 8rem;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: sticky;
+top: 0;
+z-index: 3;
+}
+
+.logo {
+object-fit: cover;
+height: 80px;
+}
+.desktopMenuListItem {
+margin:1rem;
+cursor: pointer;
+font-size: 3vh;
+}
+.desktopMenuListItem:hover { /* Quand passe la souris par dessus, change de couleur */
+color: rgb(110, 178, 255);
+padding-bottom: 0.5rem;
+
+}
+a{
+color: rgb(0, 0, 0); /* Couleur du texte */
+font-family: fantasy;
+text-decoration: none; /* Supprimer le soulignement par défaut */
+background-color: transparent; 
+padding-right: 20px;
+}
+
+.message_connexion{
+font-size: 2.5vh;
+color: rgb(128, 255, 111);
+padding-right: 15px;
+}
+.pastille {
+width: 10px;
+height: 10px;
+background-color: green;
+border-radius: 50%;
+display: inline-block;
+margin-left: 5px;
+}
+h1{
+text-align: center; 
+margin-top: 25px; 
+
+}
+
+.banner {
+max-width: 100%; 
+height: auto; 
+display: block;
+margin: auto;
+}
+.container {
+background-color: #fff;
+padding: 20px;
+width: 95%;
+text-align: center;
+}
+
+form {
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+}
+
+label {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+input[type="submit"] {
+width: 100%;
+padding: 0.5rem;
+border: none;
+background-color: #007bff;
+color: white;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s; /* Change couleur lentement et pas brusquement */
+margin-top: 10px; 
+
+}
+input[type="submit"]:hover {
+background-color: #0056b3; /* Changement de couleur quand passe dessus */
+color: #f4f4f4; /* Changement de couleur du texte quand passe dessus aussi */
+}
+
+input[type="text"],
+input[type="password"]{
+width: 100%;
+padding: 0.5rem;
+border: 1px solid #ccc; /* Ajoute une bordure */
+border-radius: 4px; /* Arrondit les coins */
+margin-bottom: 10px; /* Ajoute un espace en bas */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une petite ombre */
+
+}
+
+h2 {
+font-size: 24px; /* Taille de la police */
+color: #333; /* Couleur du texte */
+text-align: center; 
+margin-bottom: 20px; 
+padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+width: 10px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1; /* Couleur de fond de la barre */
+}
+
+::-webkit-scrollbar-thumb {
+background: #888; /* Couleur de la barre */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555; /* Couleur de la barre quand passe dessus */
+}
+
+
+.erreur {
+background-color: #ffcccc; /* couleur de fond */
+color: #cc0000; /* couleur du texte */
+padding: 10px; /* espace intérieur */
+border: 1px solid #cc0000; /* bordure */
+border-radius: 5px; /* bord arrondi */
+width: 300px; /* largeur du message */
+margin: 0 auto; /* centrage horizontal */
+margin-top: 25vh; /*centrage vertical */
+text-align: center;
+}
+/*-------------CARD---------------*/
+
+
+.card{
+border: solid 1px black;
+width: 250px;
+height: 295px;
+margin: 3px;
+padding: 20px;
+align-items: center;
+justify-content: center;
+text-align: center;  
+}
+.button-container{
+display:flex;
+margin-top: 5px;
+}
+
+.container{
+max-width: 1000px;
+margin: 50px auto;
+padding: 50px;
+background-color: #f9f9f9;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.page{
+
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.texte{
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-bottom: 10px;
+height : 30px ;
+
+
+}
+.description{
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-bottom: 10px;
+height: 60px;
+
+}
+
+.url { /*pour mettre l'url*/
+font-weight: bold; 
+color : green ;
+border : solid 2px green ;
+}
+@media screen and (max-width:1100px) {
+
+.container{
+    max-width: 600px;
+}
+}

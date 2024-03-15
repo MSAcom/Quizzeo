@@ -1,0 +1,145 @@
+.navbar{
+    background-color: rgb(236, 236, 236);
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 80px;/*
+    width: 200px;
+    padding-left: 20px;*/
+}
+.desktopMenuListItem {
+    margin:1rem;
+    cursor: pointer;
+    font-size: 3vh;
+}
+.desktopMenuListItem:hover { /* Quand passe la souris par dessus, change de couleur */
+    color: rgb(110, 178, 255);
+    padding-bottom: 0.5rem;
+
+}
+a{
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    font-family: fantasy;
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    background-color: transparent; 
+    padding-right: 20px;
+}
+
+p{
+    font-size: 2.5vh;
+    color: rgb(128, 255, 111);
+    padding-right: 15px;
+}
+.pastille {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+h1{
+    text-align: center; 
+    margin-top: 25px; 
+
+}
+
+/*-----------------------------*/
+input{
+    background-color: red;
+}
+body{
+    background-color: #001e4d;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+.ajout{
+    padding-bottom: 200px;
+}
+.question label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.question input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.question select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.question .reponses {
+    margin-left: 20px;
+}
+
+.ajouter-reponse {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ajouter-reponse:hover {
+    background-color: #0056b3;
+}
+
+#ajouter-question {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#ajouter-question:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
