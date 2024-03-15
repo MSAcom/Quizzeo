@@ -76,6 +76,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
             <input type="submit" value="Se connecter">
         </form>
         
+         
 
     </div>
 </body>
