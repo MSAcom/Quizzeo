@@ -22,10 +22,10 @@ $identifiant = $_SESSION['identifiant'];
 </head>
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
+        <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="#" class="desktopMenuListItem">Home</a> <!-- a href pour redirection pages -->
-            <a href="../quizz\dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
+            <a href="../quizz/dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
             <a href="../quizz\creationquizz\creationquizz.php" class="desktopMenuListItem">Créer un quizz</a>
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>

@@ -11,7 +11,7 @@
 
 <body>
     <?php
-        $file = fopen("../utilisateurs.csv", "r");
+        $file = fopen("../accueil/utilisateurs.csv", "r");
             $en_tete = fgetcsv($file); // Ignorer l'en-tête
             // Recherchez les index des colonnes spécifiques
             $col_Nom = array_search('Nom', $en_tete);
