@@ -52,6 +52,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
             </div>
             <div class="form-group choix">
                 <label>Type d'utilisateur :</label>
+                
                 <div>
                     <input type="radio" id="ecole" name="role" value="Ecole" required> <!--Le type radio pour sélectionner une option parmi d'autres -->
                     <label for="ecole">École</label>
