@@ -47,14 +47,14 @@
 <td>
 
             <?php if ($data[$col_actif] !== "Activer") { ?>
-                                    <form action="listeuser.php" method="post">
-                                        <input type="hidden" name="id_uttilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
+                                    <form action="activation_user.php" method="post">
+                                        <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
                                         <input type="hidden" name="actif" value="<?php echo $data[$col_actif]; ?>">
                                         <button type="submit">Activer</button>
                                     </form>
                                 <?php } ?>
                                 <?php if ($data[$col_actif] !== "Désactiver") { ?>
-                                    <form action="listeuser.php" method="post">
+                                    <form action="desactivation_user.php" method="post">
                                         <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
                                         <input type="hidden" name="actif" value="<?php echo $data[$col_actif]; ?>">
                                         <button type="submit">Désactiver</button>
