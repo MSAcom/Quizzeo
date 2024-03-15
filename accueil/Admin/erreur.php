@@ -11,7 +11,7 @@
      <div class="popup">
         <div class="popup_content">
             <h2>Erreur de connexion.Votre compte a été désactivé.</h2>
-            <a href="#" class="clean">OK</a>
+            <a href="home.php" class="clean">OK</a>
 
             </div>
     </div>

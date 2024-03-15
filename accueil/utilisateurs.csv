@@ -1,3 +1,4 @@
 Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,Actif
 65f30860ea5d9,arame,arame,salut,Utilisateur,$2y$10$HQ/Wt.VRW9RZxemwLgx0EOkhK0dgdCbaRN6pwLs.tY/hrf69G8UEO,False
 65f30d64df10c,user,user,salut,Entreprise,$2y$10$TGNm9J8kObJTfLtiommPpuuNhQHhEWjLWMejNmxXXzhbwjuSdl.9m,True
+65f430dcd00a6,Ndeye,Arame,ndarame,Admin,$2y$10$H0RVpfdU9ZQg1YnfgVuL5esYVLdil0r26yg/Fa8i8yJibp0DVCFhW,True
