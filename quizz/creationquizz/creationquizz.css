@@ -64,9 +64,11 @@ input{
     border-style: none;
 }
 body{ /*fond de couleur*/
+    /*background-image: "../images/ciel-etoile.jpg";*/
     background-color: #001e4d;
     margin: 0;
     padding: 0;
+    /*background-attachment : fixed ;*/
 }
 .center-container { /*pour centrer le nom du quizz*/
     display: flex;

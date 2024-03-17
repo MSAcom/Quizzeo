@@ -39,7 +39,8 @@
                         <div class='description description_quizz'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
                         <form action="../quizz/reponsequizz/pagequizzreponse.php" method="post">
                             <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
-                            <input type="hidden" name="activation_user" value="<?php echo $quizz_data[$col_status]; ?>">
+                            <input type="hidden" name="nom_quizz" value="<?php echo $quizz_data[$col_nom_quizz]; ?>">
+                            <input type="hidden" name="description_quizz" value="<?php echo $quizz_data[$col_description_quizz]; ?>">
                             <button class="jouer" type="submit">jouer</button>
                         </form>
                     </div>

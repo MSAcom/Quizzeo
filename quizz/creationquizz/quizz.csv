@@ -6,4 +6,8 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65f4bbb17f454,"les chocolats","un beau quizz sur le chocolat",65f30860ea5d9,True,Lancé,0,url
 65f4bbea8a21e,boulangerie,"connaissez vous le domaine du pain?",65f30860ea5d9,True,Lancé,0,url
 65f4bc024e650,boulangerie,"connaissez vous le domaine du pain?",65f30860ea5d9,True,Terminé,0,url
-65f5ed424ca02,"quizz sur la grece antique","connaissez vous la mythologie grecque?",65f30860ea5d9,True,EnCours,0,url
+65f5ed424ca02,"quizz sur la grece antique","connaissez vous la mythologie grecque?",65f30860ea5d9,True,Lancé,0,url
+65f6db9875888,"quizz sur la nourriture","composition des mets et recettes",65f30860ea5d9,True,Lancé,0,url
+65f6deda65ceb,"je suis un quizz","connaissez vous vraiment les fruits?",65f30860ea5d9,True,Lancé,0,url
+65f6ea7fa7de5,boulangerie,"un beau quizz sur le chocolat",65f30860ea5d9,True,Lancé,0,url
+65f6eaf990540,astres,"connaissez vous bien le ciel?",65f30860ea5d9,True,Lancé,0,url
