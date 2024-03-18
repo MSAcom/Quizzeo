@@ -8,19 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Mon Blog</h1>
+        
         <nav class="navbar">
-            <img src="../accueil/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+            <img src="../creationquizz/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
             <div class="desktopMenu">
                 <a href="index.php">Accueil</a>
                 <a href="blog.php">Blog</a>
-                <a href="../accueil/profil.php">Profil</a>
-                <a href="../accueil/deconnexion.php">Déconnexion</a>
+                <a href="../blog/profil.php">Profil</a>
+                <a href="../creationquizz/deconnexion.php">Déconnexion</a>
             </div>
         </nav>
     </header>
     
     <main>
+        <h1>Mon Blog</h1>
         <section class="articles">
             <article>
                 <h2>Culture générale</h2>
@@ -31,14 +32,21 @@
             <article>
                 <h2>L'histoire </h2>
                 <p>À quoi servent les quizz, quel est l'origine du mot quizz ?</p>
-                <p>Découvrons emsemble !</p>
+                <p>Découvrons ensemble !</p>
                 <a href="https://fr.wikipedia.org/wiki/Quiz">Lire la suite</a>
             </article>
-            <!-- Ajoutez d'autres articles ici -->
+            <article>
+                <h2>De la blague </h2>
+                <img src="mignons.png" height="100" />
+                <p>Vous voulez des blagues des migions ?</p>
+                <p>Regardons ensemble ! <br> <a href="https://www.pinterest.fr/pin/541628292667356167/">Lire la suite</a></p>
+            </article>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Mon blog. All reserved.</p>
+    <footer>   
+    <p class="textfooter">&copy; 2024 Mon blog. All rights reserved.</p>
     </footer>
+    
+    
 </body>
