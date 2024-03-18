@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="quiz">
-    <h2>Quiz indisponible</h2>
+    <h2>Vous ne pouvez pas accéder à ce Quiz, il a été désactivé.</h2>
 
 </div>
 </body>
