@@ -12,7 +12,7 @@
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
-            <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs</a>
+            <a href="listeuser.php" class="desktopMenuListItem">Historique</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
@@ -41,7 +41,7 @@
                             <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                             <input type="hidden" name="nom_quizz" value="<?php echo $quizz_data[$col_nom_quizz]; ?>">
                             <input type="hidden" name="description_quizz" value="<?php echo $quizz_data[$col_description_quizz]; ?>">
-                            <button class="jouer" type="submit">jouer</button>
+                            <button class="jouer" type="submit">Jouer</button>
                         </form>
                     </div>
                 </div>
