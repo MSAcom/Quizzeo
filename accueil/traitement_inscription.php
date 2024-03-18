@@ -20,7 +20,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['identifiant
     $file = fopen($file_name, 'a');//Ouvre fichier en mode écriture mais sans écraser.
  
     if (filesize($file_name) == 0) {//Si le fichier CSV est vide, ajoute ligne des catégories
-        fputcsv($file, ['Id_utilisateur', 'Nom', 'Prenom', 'Identifiant', 'role','Mot_de_passe', 'nouveau_email']);
+        fputcsv($file, ['Id_utilisateur', 'Nom', 'Prenom', 'Identifiant', 'role','Mot_de_passe','nouveau_email','Actif']);
     }
 
     fclose($file);
