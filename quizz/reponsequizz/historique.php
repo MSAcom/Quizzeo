@@ -12,7 +12,7 @@
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
-            <a href="../reponsequizz/historique.php" class="desktopMenuListItem">Historique</a>
+            <a href="listeuser.php" class="desktopMenuListItem">Historique</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
@@ -21,14 +21,11 @@
         <h1> Les Quizz présents sur Quizzeo </h1>
         <div class="page">
             <?php
-            $quizz_file = fopen("../quizz/creationquizz/quizz.csv", "r");
+            $quizz_file = fopen("../stockage_reponses.csv", "r");
             $en_tete = fgetcsv($quizz_file); 
 
             $col_id_quizz = array_search('idquizz', $en_tete);
-            $col_nom_quizz = array_search('nomquizz', $en_tete);
-            $col_description_quizz = array_search('descriptionquizz', $en_tete);
-            $col_actif = array_search('actif', $en_tete);
-            $col_status = array_search('status', $en_tete);
+            $col_note = array_search('score', $en_tete);
 
             while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {
                 if ($quizz_data[$col_status] === "Lancé" || $quizz_data[$col_status] === "Terminé") { //n'affiche que les quizz qui sont lancés ou terminés

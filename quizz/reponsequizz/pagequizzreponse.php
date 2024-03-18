@@ -63,7 +63,7 @@ $points_totaux = 0; // Initialisation du score
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
-            <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs</a>
+            <a href="historique.php" class="desktopMenuListItem">Historique</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
@@ -76,7 +76,7 @@ $points_totaux = 0; // Initialisation du score
         <h1 class="titre"><?php echo $nom_quizz ?></h1>
         <h2><?php echo $description_quizz ?></h2>
         </div>
-        <form action="v2traitement_quizz.php" method="post">
+        <form action="traitement_quizz.php" method="post">
             <div class="question"><?php
 
 
