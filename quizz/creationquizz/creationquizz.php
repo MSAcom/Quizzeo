@@ -3,13 +3,14 @@ session_start();
 
 
 if (!isset($_SESSION['identifiant'])) {// Vérifier si l'utilisateur est connecté
-    header("Location: connexion.php");// Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header("Location: ../../accueil/connexion.php");// Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
     exit();
 }
 
 $id_utilisateur = $_SESSION['id_utilisateur'];// Récupérer l'identifiant de l'utilisateur à partir de la session
 $identifiant = $_SESSION['identifiant'];
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
