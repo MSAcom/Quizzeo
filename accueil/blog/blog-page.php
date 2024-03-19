@@ -21,7 +21,10 @@
     </header>
     
     <main>
-        <h1>Mon Blog</h1>
+        <div class="bleug">
+            <h1>Mon Blog</h1>
+        </div>    
+        
         <section class="articles">
             <article>
                 <h2>Culture générale</h2>
@@ -44,8 +47,8 @@
         </section>
     </main>
 
-    <footer>   
-    <p class="textfooter">&copy; 2024 Mon blog. All rights reserved.</p>
+    <footer class="ftr">   
+    <p>&copy; 2024 Mon blog. All rights reserved.</p>
     </footer>
     
     

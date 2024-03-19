@@ -9,7 +9,7 @@ body{
 }
 
 .navbar{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(228, 227, 227);
     height: 8rem;
     width: 100%;
     display: flex;
@@ -25,6 +25,7 @@ body{
     height: 80px;/*
     width: 200px;
     padding-left: 20px;*/
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 }
 .desktopMenuListItem {
     margin:1rem;
@@ -37,7 +38,7 @@ body{
 
 }
 a{
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0); /* Couleur du texte */
     font-family: fantasy;
     text-decoration: none; /* Supprimer le soulignement par défaut */
     background-color: transparent; 
@@ -46,7 +47,7 @@ a{
 
 p{
     font-size: 2.5vh;
-    color: green;
+    color: rgb(128, 255, 111);
     padding-right: 15px;
 }
 .pastille {
@@ -57,11 +58,53 @@ p{
     display: inline-block;
     margin-left: 5px;
 }
-h1{
-    text-align: center; 
-    margin-top: 25px; 
-
+ 
+.patterns {
+    height: 700px;
 }
+
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #d40505;
+    font-size: 100px;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 3s infinite alternate;
+}
+
+@keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(0, 69%, 75%)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+    
+}
+
+@keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(0, 69%, 75%)
+  
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+    
+}
+
 
 .banner {
     max-width: 100%; 
@@ -89,7 +132,6 @@ input{
 .choix{
     display: flex;
 }
-
 
 label {
     font-weight: bold;
@@ -129,4 +171,3 @@ input[type="password"]{
 .choix-u{
     padding-bottom: 10px;
 }
-

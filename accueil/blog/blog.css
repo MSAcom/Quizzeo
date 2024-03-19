@@ -1,18 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #4573ab;
+    background-color: #001e4d;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #001e4d;
     color: #fff;
     padding: 20px;
 }
 
 .navbar{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 255, 255);
     height: 8rem;
     width: 100%;
     display: flex;
@@ -31,7 +31,7 @@ header {
 
 a{
     color: rgb(0, 0, 0); /* Couleur du texte */
-    font-family: fantasy;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none; /* Supprimer le soulignement par défaut */
     background-color: transparent; 
     padding-right: 20px;
@@ -52,54 +52,53 @@ main {
 }
 
 article {
-    background-color: #ffffff;
-    padding: 5px;
+    background-color: #fff;
+    padding: 20px;
+    width: 45%;
+    margin: 0 auto;
     margin-bottom: 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
 }
+
 
 h2 {
     color: #333;
     font-size: 40px;
 }
 
-@keyframes flameAnimation {
-    0% {
-        text-shadow: 0 0 20px #00FFFF, 0 0 30px #0088ff, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
-    }
-    50% {
-        text-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 120px #00FFFF, 0 0 140px #00FFFF;
-    }
-    100% {
-        text-shadow: 0 0 20px #00FFFF, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
-    }
-}
-
 h1 {
     color: white;
     font-size: 60px;
+    text-align: center;
+}  
+
+.bleug {
     animation: flameAnimation 1.5s infinite;
 }
 
-
 footer {
-    background-color: #333;
+    background-color: #001e4d;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    position: fixed;
+    padding: 10px 0;
     bottom: 0;
     width: 100%;
 }
 
-.textfooter {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 20px 0;
-    text-align: center;
+.ftr {
+    animation: flameAnimation 1.5s infinite;
+}
+
+@keyframes flameAnimation {
+    0% {
+        text-shadow: 0 0 20px #cccccc, 0 0 30px #888888, 0 0 40px #cccccc, 0 0 50px #cccccc, 0 0 60px #cccccc, 0 0 70px #cccccc, 0 0 80px #cccccc;
+    }
+    50% {
+        text-shadow: 0 0 20px #cccccc, 0 0 40px #cccccc, 0 0 60px #cccccc, 0 0 80px #cccccc, 0 0 100px #cccccc, 0 0 120px #cccccc, 0 0 140px #cccccc;
+    }
+    100% {
+        text-shadow: 0 0 20px #cccccc, 0 0 30px #cccccc, 0 0 40px #cccccc, 0 0 50px #cccccc, 0 0 60px #cccccc, 0 0 70px #cccccc, 0 0 80px #cccccc;
+    }
 }
