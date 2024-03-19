@@ -10,8 +10,9 @@
 </head>
 
 <body>
+    
     <?php
-        $file = fopen("../utilisateurs.csv", "r");
+        $file = fopen("../connexion/utilisateurs.csv", "r");//Ouverture du fichier en mode lecture
             $en_tete = fgetcsv($file); // Ignorer l'en-tête
             // Recherchez les index des colonnes spécifiques
             $col_Nom = array_search('Nom', $en_tete);
@@ -34,9 +35,9 @@
             </tr>
             <?php
             while (($data = fgetcsv($file)) !== FALSE) {
-                ?>
+                ?> <!--Début de la boucle qui permet de lire chaque ligne du fichier "utilisateurs.csv" -->
 
-        <tr>
+        <tr> <!-- Pour afficher les données de chaque colonne du fichier-->
             <td><?php echo $data[$col_Nom]?></td>
             <td><?php echo $data[$col_Prénom]?></td>
             <td><?php echo $data[$col_Identifiant]?></td>
@@ -45,7 +46,7 @@
             
 
 <td>
-
+      <!-- Formulaire pour activer un utilisateur-->
             <?php if ($data[$col_actif] !== "Activer") { ?>
                                     <form action="activation_user.php" method="post">
                                         <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
@@ -53,6 +54,7 @@
                                         <button type="submit">Activer</button>
                                     </form>
                                 <?php } ?>
+                                <!-- Formulaire pour désactiver un utilisateur-->
                                 <?php if ($data[$col_actif] !== "Désactiver") { ?>
                                     <form action="desactivation_user.php" method="post">
                                         <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
@@ -66,7 +68,7 @@
     ?>
      </table>
      <?php
-        fclose($file);
+        fclose($file); //Fermeture du fichier csv
     ?>
         </div>
     </div>

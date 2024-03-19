@@ -11,11 +11,8 @@
 
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+        <img src="../Admin/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem">Evenements</a>
-            <a href="#" class="desktopMenuListItem">Restauration</a>
-            <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="./connexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
         

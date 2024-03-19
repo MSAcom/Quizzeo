@@ -54,10 +54,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
     <nav class="navbar">
         <img src="../Admin/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem">Evenements</a>
-            <a href="#" class="desktopMenuListItem">Restauration</a>
-            <a href="https://www.disneylandparis.com/fr-fr/hotels-disney?ecid=SEM_IP_S_8537264857-c-99283304142-495257146032-576642349168-Broad&gclsrc=aw.ds&&mkwid=0BnHNBuC&gad_source=1&gclid=CjwKCAiAopuvBhBCEiwAm8jaMcxku_II7Q_OxRbsuI5fGmhIENXmIY6FGYoo-ivaVq16CGQRYm46ThoCaBgQAvD_BwE&pcrid=576642349168&pmt=b&pkw=reservation+hotel+disney" class="desktopMenuListItem">Hebergement</a>
-            <a href="./inscription.php" class="desktopMenuListItem">Inscription</a>
+           <a href="./inscription.php" class="desktopMenuListItem">Inscription</a>
         </div>
         
     </nav>

@@ -4,7 +4,7 @@ body{
     max-width: 100%; 
     overflow-x: hidden; /* Empêche le défilement horizontal de la page */
     font-family:Arial, Helvetica, sans-serif;
-    background-color:rgb(255, 255, 255);
+    background-color: lightpink;
    
 }
 
@@ -15,24 +15,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: sticky; /*Permet à la nav barre de rester fixe en haut de la page */
     top: 0;
     z-index: 3;
 }
 
 .logo {
-    object-fit: cover;
-    height: 80px;/*
-    width: 200px;
-    padding-left: 20px;*/
-}
+    object-fit: cover;/*Permet d'ajuster la taille du logo*/
+    height: 80px; /*Hauteur du logo*/
+    }
 .desktopMenuListItem {
     margin:1rem;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 3vh;/*Taille de la police*/
 }
 .desktopMenuListItem:hover { /* Quand passe la souris par dessus, change de couleur */
-    color: rgb(110, 178, 255);
+    color: mediumpurple;
     padding-bottom: 0.5rem;
 
 }
@@ -44,24 +42,14 @@ a{
     padding-right: 20px;
 }
 h1{
-    text-align: center; 
+    text-align: left;
     margin-top: 25px;
-    animation-duration: 3s;
-    animation-name:slidein;
-    animation-iteration-count: infinite;
-}
-@keyframes slidein {
-    from{
-      margin-left: 100%;
-      width: 300%;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0); 
+    
+    
     }
 
-    to{
-     margin-left: 0%;
-     width: 100%;
-    }
-    
-}
 
 footer{
     background-color: rgb(236, 236, 236);
@@ -73,4 +61,3 @@ footer{
     width: 100%;
 }
 
-    

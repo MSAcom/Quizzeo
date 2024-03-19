@@ -14,8 +14,7 @@
         <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs crées</a>
-            <a href="users_connectes.php" class="desktopMenuListItem">Utilisateurs connectés</a>
-            <a href="#" class="desktopMenuListItem">Quiz crées</a>
+             <a href="#" class="desktopMenuListItem">Quiz crées</a>
             
             
         </div>
