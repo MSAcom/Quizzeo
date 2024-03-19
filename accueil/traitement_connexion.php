@@ -35,7 +35,7 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                         //Redirection en fonction du role de l'utilisateur
                         $message = "Vous êtes connecté"; 
                         if ($_SESSION['role'] === "Utilisateur") {
-                            header('Location: page_utilisateur.php?message=' . urlencode($message)); // Ajout la variable $message dans l'URL pour debug
+                            header('Location: ../quizz/reponsequizz/historique.php?message=' . urlencode($message)); // Ajout la variable $message dans l'URL pour debug
                         }
                         if ($_SESSION['role'] === "Entreprise") {
                             header('Location: page-random.php?message=' . urlencode($message));

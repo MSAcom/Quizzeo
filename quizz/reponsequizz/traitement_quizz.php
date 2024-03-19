@@ -5,8 +5,9 @@ if (!isset($_SESSION['identifiant'])) {
     header("Location: connexion.php");
     exit();
 }
+/*var_dump($_POST);*/
 
-/*vardump($_POST);*/
+
 $id_utilisateur = $_SESSION['id_utilisateur'];
 
 $id_quizz = $_POST["id_quizz"];

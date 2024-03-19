@@ -94,15 +94,16 @@ $commentaires = lireCommentaires();
 </head>
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
+        <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="page_utilisateur.php" class="desktopMenuListItem">Dashboard</a>
+            <a href="../User/dashboard_user.php" class="desktopMenuListItem">Dashboard</a>
             <a href="profil.php" class="desktopMenuListItem">Profil</a>
             <a href="#" class="desktopMenuListItem">Commentaires</a>
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> <?php echo $identifiant; ?> connecté </p>
     </nav>
+    <div class="container">
     <h2>Ajouter un Commentaire</h2>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <label for="sujet">Sujet :</label>
@@ -132,7 +133,7 @@ $commentaires = lireCommentaires();
 
 </div>
 
-</div>
+</div></div>
 
 </body>
 </html>

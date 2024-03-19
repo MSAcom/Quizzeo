@@ -21,7 +21,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : ""; // Récupérez la variable
 <body>
   
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+        <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'> 
             <a href="home.php" class="desktopMenuListItem">Home</a>
             <a href="blog-page.php" class="desktopMenuListItem">Blog</a>

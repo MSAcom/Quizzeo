@@ -71,15 +71,16 @@ if (isset($_POST['submit'])) {// Lorsque envoie le formulaire de modification, s
 </head>
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
+        <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="page_utilisateur.php" class="desktopMenuListItem">Dashboard</a> <!-- a href pour redirection pages -->
+            <a href="../quizz/reponsequizz/historique.php" class="desktopMenuListItem">Dashboard</a> <!-- a href pour redirection pages -->
             <a href="profil.php" class="desktopMenuListItem">Profil</a>
             <a href="commentaires.php" class="desktopMenuListItem">Commentaires</a>
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> user connecté </p>
     </nav>
+    <div class="container">
     <h2>Profil de <?= $user_data[1] ?> <?= $user_data[2] ?></h2>
     
     
@@ -106,5 +107,6 @@ if (isset($_POST['submit'])) {// Lorsque envoie le formulaire de modification, s
         <input type="password" id="nouveau_mot_de_passe" name="nouveau_mot_de_passe" >
         <input type="submit" name="submit" value="Enregistrer les modifications">
     </form>
+    </div>
 </body>
 </html>

@@ -16,7 +16,7 @@ foreach ($lines as $key => &$line) {// Parcourir chaque ligne du tableau
    
     if ($data[0] == $id_utilisateur) {// Si l'identifiant de l'utilisateur correspond
        
-        $data[6] = "False"; // Modifier l'action  de l'utilisateur
+        $data[7] = "False"; // Modifier l'action  de l'utilisateur
  
        
         $csv_line = fopen('php://temp', 'r+'); // Réécrire la ligne modifiée dans le tableau 
@@ -25,7 +25,7 @@ foreach ($lines as $key => &$line) {// Parcourir chaque ligne du tableau
         $lines[$key] = fgets($csv_line);
         fclose($csv_line);
  
-        header("Location: ./listeuser.php");
+        header("Location: listeuser.php");
         break; // Sortir de la boucle après avoir trouvé l'utilisateur
     }
 }

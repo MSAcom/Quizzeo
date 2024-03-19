@@ -1,4 +1,5 @@
 Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif
-65f84309a9610,test1,test1,test1,Utilisateur,$2y$10$MPTybjkO3vWhxqI7QcMj9.JoaUINeFt0ls.PJaMfKkHJ7LA9Dk/kW,,False
+65f84309a9610,test1,test1,test1,Utilisateur,$2y$10$MPTybjkO3vWhxqI7QcMj9.JoaUINeFt0ls.PJaMfKkHJ7LA9Dk/kW,test1@gmail.com,True
 65f8465c43c65,coucou,coucou,coucou,Utilisateur,$2y$10$WrkN1bMIALrsBBqs9iBJwOgdLAaXR2kGd9R6khQrnHAIm8LWzCMV6,,True
 65f860004f0cc,coucou2,coucou2,coucou2,Ecole,$2y$10$7UAIUqFzmy3Jf0blgHJqmOd96JoUlU.aBcP4/30edxPGpoY0DfgOm,,True
+65f97c25006aa,bricout,clemence,clem,Utilisateur,$2y$10$oAyO9P4t2h3tRBXNrLNIcuTEdDbz69Bu00CZhnNySUwHV46mVNW9q,,True

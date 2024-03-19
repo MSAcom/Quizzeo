@@ -59,3 +59,8 @@ button.jouer:hover {
     width: 180px;
     height: 180px;
 }
+@media screen and (max-width:800px){
+    .logo{
+        display: none;
+    }
+}

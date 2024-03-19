@@ -1,17 +1,41 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['identifiant'])) {
-    // Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
-    header("Location: ../../accueil/connexion.php");
+
+if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connecté
+    header("Location: ../../accueil/connexion.php"); // Redirige lutilisateur vers page de connexion si pas connecté
     exit();
 }
 
-// Récupérer l'identifiant de l'utilisateur à partir de la session
+//Permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+        
+        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+            'role' => $data[4]
+        );
+    }
+    fclose($handle);
+}
+
+
+$identifiant = $_SESSION['identifiant'];
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+    // Si oui alors il accède à la page_utilisateur
+
+} else { //sinon: 
+    
+    header("Location: ../accueil/connexion.php"); //redirection
+    exit();
+}
+
+// Récupérer les données de l'utilisateur 
 $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +49,12 @@ $identifiant = $_SESSION['identifiant'];
     <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
+            
             <a href="../../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a>
+            <a href="../../accueil/commentaires.php" class="desktopMenuListItem">Commentaires</a>
+            <a href="../../accueil/profil.php" class="desktopMenuListItem">Profil</a>
             <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
+
         </div>
         <p> <span class="pastille"></span> connecté </p>
     </nav>

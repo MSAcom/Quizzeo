@@ -16,7 +16,7 @@ foreach ($lines as $key => &$line) {// Parcourir chaque ligne du tableau
    
     if ($data[0] == $id_utilisateur) {// Si l'identifiant de l'utilisateur correspond
        
-        $data[6] = "True"; // Modifier l'action  de l'utilisateur
+        $data[7] = "True"; // Modifier l'action  de l'utilisateur
  
        
         $csv_line = fopen('php://temp', 'r+'); // Réécrire la ligne modifiée dans le tableau 

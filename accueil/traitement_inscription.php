@@ -48,10 +48,11 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['identifiant
 
             $id_utilisateur = uniqid(); // Définit un id unique pour chaque nouvelle inscription
             $password_hash = password_hash($_POST['mot_de_passe'], PASSWORD_DEFAULT); // Utilise la fonction password_hash() pour hasher le mot de passe avant de l'enregistrer
-
+            $actif = "True";
+            $email = "";
             $file = fopen($file_name, 'a'); // Ouvre le fichier en mode écriture pour ajouter les informations de l'utilisateur
 
-            fputcsv($file, [$id_utilisateur, $_POST['nom'], $_POST['prenom'], $_POST['identifiant'], $_POST['role'], $password_hash]);
+            fputcsv($file, [$id_utilisateur, $_POST['nom'], $_POST['prenom'], $_POST['identifiant'], $_POST['role'], $password_hash, $email, $actif]);
 
             fclose($file); 
 
