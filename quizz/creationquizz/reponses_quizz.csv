@@ -27,3 +27,5 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65f6eaf990540,65f6eaf9907c7,65f6eaf990816,soleil,True,0
 65f6eaf990540,65f6eaf990820,65f6eaf990829,"il explosera provoquant la fin du systeme solaire",True,0
 65f6eaf990540,65f6eaf990820,65f6eaf990831,"il se transformera en trou noir",False,0
+65f9684422079,65f9684422613,65f9684422666,"entre 10 et 100",False,0
+65f9684422079,65f9684422613,65f96844226de,"entre 100 et 1000",True,0

@@ -11,3 +11,4 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65f6deda65ceb,"je suis un quizz","connaissez vous vraiment les fruits?",65f30860ea5d9,True,Lancé,0,url
 65f6ea7fa7de5,boulangerie,"un beau quizz sur le chocolat",65f30860ea5d9,True,Lancé,0,url
 65f6eaf990540,astres,"connaissez vous bien le ciel?",65f30860ea5d9,True,Lancé,0,url
+65f9684422079,"quizz test","un quizz pour faire des test",65f30860ea5d9,True,Lancé,0,url

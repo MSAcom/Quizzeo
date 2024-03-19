@@ -6,12 +6,13 @@ if (!isset($_SESSION['identifiant'])) {
     exit();
 }
 
+/*vardump($_POST);*/
 $id_utilisateur = $_SESSION['id_utilisateur'];
 
 $id_quizz = $_POST["id_quizz"];
 $total = $_POST["total"];
 $score = 0;
-
+$nom_du_quizz = $_POST["nom_quizz"];
 // on lit les données envoyées par l'utilisateur
 foreach ($_POST as $key => $value) {
     if (strpos($key, 'id_reponse_validee_') !== false) {
@@ -54,9 +55,10 @@ foreach ($_POST as $key => $value) {
 $file_name_stockage = 'stockage_reponses.csv';
 $file_stockage = fopen($file_name_stockage, 'a+');
 
+
 //si le fichier est vide on ajoute l'en-tete
 if (filesize($file_name_stockage) == 0) {
-    fputcsv($file_stockage, ['id_utilisateur', 'id_quizz', 'score']);
+    fputcsv($file_stockage, ['id_utilisateur', 'id_quizz', 'score', 'nom_quizz']);
 }
 
 //on cherche si une ligne pour ce quizz existe déjà
@@ -73,9 +75,10 @@ while (($ligne_stockage = fgetcsv($file_stockage)) !== false) {//on parcours le 
 /*----------on réécrit le fichier------------------*/
 ftruncate($file_stockage, 0); // on vide le ficheir existant
 
+
 //si le fichier est vide, on réécrit l'en-tete
 if (filesize($file_name_stockage) == 0) {
-    fputcsv($file_stockage, ['id_utilisateur', 'id_quizz', 'score']);
+    fputcsv($file_stockage, ['id_utilisateur', 'id_quizz', 'score', 'nom_quizz']);
 }
 
 foreach ($lines as $line) {
@@ -84,7 +87,7 @@ foreach ($lines as $line) {
 
 // si l'utilisateur n'a pas déja joué au quizz
 if (!$score_updated) {
-    fputcsv($file_stockage, [$id_utilisateur, $id_quizz, $score]); // on ajoute la ligne
+    fputcsv($file_stockage, [$id_utilisateur, $id_quizz, $score, $nom_du_quizz]); // on ajoute la ligne
 }
 
 
