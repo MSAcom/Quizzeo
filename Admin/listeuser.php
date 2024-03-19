@@ -83,7 +83,7 @@ $identifiant = $_SESSION['identifiant'];
                 <?php
                 while (($data = fgetcsv($file)) !== FALSE) {
                     if (!($data[$col_id_utilisateur] === $id_utilisateur)){
-                ?>
+                ?> 
                     <tr>
                         <td><?php echo $data[$col_Nom] ?></td>
                         <td><?php echo $data[$col_Prénom] ?></td>
