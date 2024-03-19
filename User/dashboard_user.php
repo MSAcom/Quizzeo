@@ -69,7 +69,7 @@ $identifiant = $_SESSION['identifiant'];
             $col_status = array_search('status', $en_tete);
 
             while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {
-                if ($quizz_data[$col_status] === "Lancé" /*|| $quizz_data[$col_status] === "Terminé"*/) { //n'affiche que les quizz qui sont lancés ou terminés
+                if ($quizz_data[$col_status] === "Lancé" && $quizz_data[$col_actif] === "True") { //n'affiche que les quizz qui sont lancés ou terminés
             ?>
                 <div class="tableau">
                     <div class="card">

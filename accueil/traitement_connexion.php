@@ -44,7 +44,7 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                             header('Location: page-random2.php?message=' . urlencode($message));
                         }
                         if ($_SESSION['role'] === "Admin") {
-                            header('Location: page-admin.php?message=' . urlencode($message));
+                            header('Location: ../Admin/listeuser.php?message=' . urlencode($message));
                         }
                         exit();
                     } else {

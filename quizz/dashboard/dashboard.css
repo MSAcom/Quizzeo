@@ -27,7 +27,7 @@ body{
 .desktopMenuListItem {
     margin:1rem;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 25px;
 }
 .desktopMenuListItem:hover { /* Quand passe la souris par dessus, change de couleur */
     color: rgb(110, 178, 255);

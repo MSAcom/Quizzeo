@@ -26,7 +26,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
+            
     
             <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>

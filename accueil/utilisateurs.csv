@@ -3,3 +3,4 @@ Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif
 65f8465c43c65,coucou,coucou,coucou,Utilisateur,$2y$10$WrkN1bMIALrsBBqs9iBJwOgdLAaXR2kGd9R6khQrnHAIm8LWzCMV6,,True
 65f860004f0cc,coucou2,coucou2,coucou2,Ecole,$2y$10$7UAIUqFzmy3Jf0blgHJqmOd96JoUlU.aBcP4/30edxPGpoY0DfgOm,,True
 65f97c25006aa,bricout,clemence,clem,Utilisateur,$2y$10$oAyO9P4t2h3tRBXNrLNIcuTEdDbz69Bu00CZhnNySUwHV46mVNW9q,,True
+65f9a1fa87c7a,admin,admin,admin,Admin,$2y$10$GF2JvPAO/wGGR9dSDm2eU.Kwcc0EpIoczIdfJUj5yczxvsKvwOYXu,,True
