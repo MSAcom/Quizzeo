@@ -38,10 +38,10 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                             header('Location: ../quizz/reponsequizz/historique.php?message=' . urlencode($message)); // Ajout la variable $message dans l'URL pour debug
                         }
                         if ($_SESSION['role'] === "Entreprise") {
-                            header('Location: page-random.php?message=' . urlencode($message));
+                            header('Location: ../Entreprise/dashboard_entreprise?message=' . urlencode($message));
                         }
                         if ($_SESSION['role'] === "Ecole") {
-                            header('Location: page-random2.php?message=' . urlencode($message));
+                            header('Location: ../Ecole/dashboard_ecole.php?message=' . urlencode($message));
                         }
                         if ($_SESSION['role'] === "Admin") {
                             header('Location: ../Admin/listeuser.php?message=' . urlencode($message));

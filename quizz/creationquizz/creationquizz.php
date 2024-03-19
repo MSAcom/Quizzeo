@@ -2,14 +2,39 @@
 session_start();
 
 
-if (!isset($_SESSION['identifiant'])) {// Vérifier si l'utilisateur est connecté
-    header("Location: connexion.php");// Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connecté
+    header("Location: ../../accueil/connexion.php"); // Redirige lutilisateur vers page de connexion si pas connecté
     exit();
 }
 
-$id_utilisateur = $_SESSION['id_utilisateur'];// Récupérer l'identifiant de l'utilisateur à partir de la session
+//Permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+        
+        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+            'role' => $data[4]
+        );
+    }
+    fclose($handle);
+}
+
+
+$identifiant = $_SESSION['identifiant'];
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Entreprise' || isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Ecole') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+    // Si oui alors il accède à la page_utilisateur
+    
+} else { //sinon: 
+    
+    header("Location: ../../accueil/connexion.php"); //redirection
+    exit();
+}
+
+// Récupérer les données de l'utilisateur 
+$id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,10 +48,28 @@ $identifiant = $_SESSION['identifiant'];
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="/Projet_final/Quizzeo/accueil/home.php" class="desktopMenuListItem">Home</a>
-            <a href="../dashboard/dashboard.php" class="desktopMenuListItem">Dashboard</a>
-            <a href="/Projet_final/Quizzeo/accueil/deconnexion.php" class="desktopMenuListItem">Deconnection</a>
+            <?php 
+            if ($users[$identifiant]['role'] === "Ecole"){?>
+                <a href="../../Ecole/dashboard_ecole.php" class="desktopMenuListItem">Dashboard</a>
+                <?php } ?>
+            
+                <?php 
+            if ($users[$identifiant]['role'] === "Entreprise"){?>
+                <a href="../../Entreprise/dashboard_entreprise.php" class="desktopMenuListItem">Dashboard</a>
+                <?php } ?>
+            
+            <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>
-        
+
+        <?php if ($users[$identifiant]['role'] === "Ecole"){?>
+            <p> <span class="pastille"></span> Ecole </p>
+         <?php } ?>
+            
+         <?php 
+            if ($users[$identifiant]['role'] === "Entreprise"){?>
+                <p> <span class="pastille"></span> Entreprise </p>
+            <?php } ?>
+       
 </nav>
     <div class="container">
         <h1>Création de Quizz </h1>

@@ -29,3 +29,9 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65f6eaf990540,65f6eaf990820,65f6eaf990831,"il se transformera en trou noir",False,0
 65f9684422079,65f9684422613,65f9684422666,"entre 10 et 100",False,0
 65f9684422079,65f9684422613,65f96844226de,"entre 100 et 1000",True,0
+65fa046c9e6c8,65fa046c9eaa9,65fa046c9eafe,"ecole vrai",True,0
+65fa046c9e6c8,65fa046c9eaa9,65fa046c9eb49,ecole,False,0
+65fa04d790ded,65fa04d791137,65fa04d7911a4,entr,False,0
+65fa04d790ded,65fa04d791137,65fa04d791232,entr,True,0
+65fa05f75efa1,65fa05f75f654,65fa05f75f8f4,testest,True,0
+65fa05f75efa1,65fa05f75f654,65fa05f75f93c,testest,False,0

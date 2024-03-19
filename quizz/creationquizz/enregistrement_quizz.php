@@ -1,15 +1,38 @@
 <?php
 session_start();
 
-// Vérification de l'authentification de l'utilisateur
-if (!isset($_SESSION['identifiant'])) {
-    // Redirection vers la page de connexion si l'utilisateur n'est pas connecté
-    header("Location: connexion.php");
+
+if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connecté
+    header("Location: ../../accueil/connexion.php"); // Redirige lutilisateur vers page de connexion si pas connecté
     exit();
 }
 
-// Récupération de l'identifiant de l'utilisateur depuis la session
-$id_createur = $_SESSION['id_utilisateur'];
+//Permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+        
+        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+            'role' => $data[4]
+        );
+    }
+    fclose($handle);
+}
+
+
+$identifiant = $_SESSION['identifiant'];
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Entreprise' || isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Ecole') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+    // Si oui alors il accède à la page_utilisateur
+
+} else { //sinon: 
+    
+    header("Location: ../../accueil/connexion.php"); //redirection
+    exit();
+}
+
+// Récupérer les données de l'utilisateur 
+$id_utilisateur = $_SESSION['id_utilisateur'];
+$identifiant = $_SESSION['identifiant'];
 
 // Vérification des valeurs POST
 if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["correct_responses"], $_POST["points"])) {
@@ -66,8 +89,11 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     fclose($file_questions);
     fclose($file_reponse);
 
+    if ($users[$identifiant]['role'] === "Ecole"){
+    header("Location: ../../Ecole/dashboard_ecole.php");}
 
-    header("Location: ../dashboard/dashboard.php");
+    if ($users[$identifiant]['role'] === "Entreprise"){
+        header("Location: ../../Entreprise/dashboard_entreprise.php");}
     exit();
 } else {
     //si on a pas reçu les données voulues via POST
