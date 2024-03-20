@@ -26,7 +26,7 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur
 
 } else { //sinon: 
     
-    header("Location: ../accueil/connexion.php"); //redirection
+    header("Location: ../../accueil/connexion.php"); //redirection
     exit();
 }
 

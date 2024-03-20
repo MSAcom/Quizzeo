@@ -1,10 +1,37 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['identifiant'])) {
-    header("Location: connexion.php");
+
+
+//Permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+        
+        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+            'role' => $data[4]
+        );
+    }
+    fclose($handle);
+}
+
+
+$identifiant = $_SESSION['identifiant'];
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+    // Si oui alors il accède à la page_utilisateur
+
+} else { //sinon: 
+    
+    header("Location: ../../accueil/connexion.php"); //redirection
     exit();
 }
+
+// Récupérer les données de l'utilisateur 
+$id_utilisateur = $_SESSION['id_utilisateur'];
+$identifiant = $_SESSION['identifiant'];
+
+
+
 /*var_dump($_POST);*/
 
 
@@ -120,7 +147,7 @@ fclose($file_stockage);
 
     <div class="container">
     <div class="logodiv">
-        <img class="logo" src="quizzeo.png">
+        <img class="logo" src="../images/quizzeo-sans-fond.png">
     </div>
     <div class="entete">
         <h1 class="titre"><?php echo $_POST["nom_quizz"] ?> </h1>

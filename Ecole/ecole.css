@@ -1,0 +1,22 @@
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+table {
+    width: 100%; /* nous voulons que la table prennent toute la lageur de son conainer */
+   /* border-collapse: collapse; */
+    margin-top: 20px; 
+}
+
+th, td {
+   
+    text-align: left; 
+    padding: 8px; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+

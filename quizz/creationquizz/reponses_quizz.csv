@@ -35,3 +35,9 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65fa04d790ded,65fa04d791137,65fa04d791232,entr,True,0
 65fa05f75efa1,65fa05f75f654,65fa05f75f8f4,testest,True,0
 65fa05f75efa1,65fa05f75f654,65fa05f75f93c,testest,False,0
+65fabf6503db3,65fabf65054a8,65fabf6505946,coucou,True,0
+65fabf6503db3,65fabf65054a8,65fabf6505b5d,coucou,False,0
+65fac004274b7,65fac004278e1,65fac0042793a,tyyt,True,0
+65fac004274b7,65fac004278e1,65fac00427984,tyty,False,0
+65fac05df0634,65fac05df08f7,65fac05df095e,yuyu,True,0
+65fac05df0634,65fac05df08f7,65fac05df09a5,yuyu,False,0
