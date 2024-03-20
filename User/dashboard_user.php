@@ -57,6 +57,18 @@ $identifiant = $_SESSION['identifiant'];
     </nav>
     <div class="container">
         <h1> Les Quizz présents sur Quizzeo </h1>
+        <div> <!--pour qu'on puisse acceder aux quizz via un lien-->
+            <div><h2>Vous avez un lien ?</h2></div>
+
+            <div>
+                <form class="formurl" action="vers_lien.php" method="get">
+                    <label for="url"></label>
+                    <input class="url" type="text" id="url" name="url" placeholder="Entrez-le ici !" required>
+                    <button class="boutonurl" type="submit">Accéder</button>
+                </form>
+            </div>
+
+        </div><div><h2>Sinon choisissez un de ces quizz !</h2></div>
         <div class="page">
             <?php
             $quizz_file = fopen("../quizz/creationquizz/quizz.csv", "r");

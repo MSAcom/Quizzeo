@@ -80,7 +80,7 @@ $points_totaux = 0; // Initialisation du score
 <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
+            <a href="../../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a>
             <a href="historique.php" class="desktopMenuListItem">Historique</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
@@ -88,7 +88,7 @@ $points_totaux = 0; // Initialisation du score
     </nav>
     <div class="container">
         <div class="logodiv">
-            <img class="logo" src="quizzeo.png">
+            <img class="logo" src="../images/quizzeo-sans-fond.png">
         </div>
         <div class="entete">
         <h1 class="titre"><?php echo $nom_quizz ?></h1>

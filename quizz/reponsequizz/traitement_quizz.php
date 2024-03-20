@@ -32,7 +32,7 @@ $identifiant = $_SESSION['identifiant'];
 
 
 
-/*var_dump($_POST);*/
+/*var_dump($_POST);*///pour verifier les données recues en post
 
 
 $id_utilisateur = $_SESSION['id_utilisateur'];

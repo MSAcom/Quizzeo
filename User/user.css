@@ -64,3 +64,26 @@ button.jouer:hover {
         display: none;
     }
 }
+.formurl {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formurl input[type="text"] {
+    width: 70%;
+}
+
+.formurl button[type="submit"] {
+    margin-left: 10px; /* Marge à gauche pour séparer le bouton de la barre de recherche */
+}
+.boutonurl{
+    background-color: rgb(220, 220, 220);
+    /*display: flex;*/
+    margin-top: 0px;
+}
+.url{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
