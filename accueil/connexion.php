@@ -30,7 +30,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : ""; // Récupérez la variable
         </div> 
     </nav>
 
-    <div class="container">
+   <br> <div class="container">
         <h2>Connexion</h2>
         <?php if ($error !== "") : ?><!--si erreur est different de vide, donc affiche un message -->
             <p class="error"><?php echo $error; ?></p><!--affiche le message d'erreur-->

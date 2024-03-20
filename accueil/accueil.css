@@ -4,7 +4,8 @@ body{
     max-width: 100%; 
     overflow-x: hidden; /* Empêche le défilement horizontal de la page */
     font-family:Arial, Helvetica, sans-serif;
-    background-color:rgb(255, 255, 255);
+    background-color: #001e4d;
+    
    
 }
 

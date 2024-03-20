@@ -34,7 +34,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
         </div>
     </nav>
 
-    <div class="container">
+    <br> <div class="container">
         <h2>Inscription</h2>
         
         <form action="traitement_inscription.php" method="POST" class="inscription-form">
