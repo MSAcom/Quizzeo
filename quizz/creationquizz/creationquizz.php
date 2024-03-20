@@ -90,20 +90,35 @@ $identifiant = $_SESSION['identifiant'];
                     <input type="text" id="question1" name="questions[]">
                     <label for="points1">points pour cette question :</label>
                     <input type="number" class ="points_question" id="points1" name="points[]">
-                    <div class="reponses">
+                    <div class="reponses"> <hr>
                         <label for="reponse1_1">Réponse 1 :</label>
                         <input type="text" id="reponse1_1" name="reponses[1][]">
-                        <label for="reponse1_1_correct">Correct</label>
-                        <input type="radio" id="reponse1_1_correct" name="correct_responses[1]" value="1">
-                        
+                        <div class="correction"><label for="reponse1_1_correct">Correct</label>
+                        <input type="radio" id="reponse1_1_correct" name="correct_responses[1]" value="1" required></div>
+                        <hr>
                     </div>
                     <div class="reponses">
                         <label for="reponse1_2">Réponse 2 :</label>
                         <input type="text" id="reponse1_2" name="reponses[1][]">
 
-                        <label for="reponse1_2_correct">Correct</label>
-                        <input type="radio" id="reponse1_2_correct" name="correct_responses[1]" value="2">
-                        
+                        <div class="correction"><label for="reponse1_2_correct">Correct</label>
+                        <input type="radio" id="reponse1_2_correct" name="correct_responses[1]" value="2"  required></div>
+                        <hr>
+                    </div>
+                    <div class="reponses">
+                        <label for="reponse1_3">Réponse 3 :</label>
+                        <input type="text" id="reponse1_3" name="reponses[1][]">
+                        <div class="correction"><label for="reponse1_3_correct">Correct</label>
+                        <input type="radio" id="reponse1_3_correct" name="correct_responses[1]" value="3" required></div>
+                        <hr>
+                    </div>
+                    <div class="reponses">
+                        <label for="reponse1_4">Réponse 4 :</label>
+                        <input type="text" id="reponse1_4" name="reponses[1][]">
+
+                        <div class="correction"><label for="reponse1_4_correct">Correct</label>
+                        <input type="radio" id="reponse1_4_correct" name="correct_responses[1]" value="4" required></div>
+                        <hr>
                     </div>
 
                 </div>
@@ -133,21 +148,36 @@ $identifiant = $_SESSION['identifiant'];
                     <label for="points${questionCounter}">points pour cette question :</label>
                     <input type="number"  class ="points_question" id="points${questionCounter}"  name="points[]">
                     <div class="reponses">
-                        <label for="reponse${questionCounter}_1">Réponse 1 :</label>
+                    <hr><label for="reponse${questionCounter}_1">Réponse 1 :</label>
                         <input type="text" id="reponse${questionCounter}_1" name="reponses[${questionCounter}][]">
                       
-                        <label for="reponse${questionCounter}_1_correct">Correct</label>
-                        <input type="radio" id="reponse${questionCounter}_1_correct" name="correct_responses[${questionCounter}]" value="1">
-                    </div>
+                        <div class="correction"> <label for="reponse${questionCounter}_1_correct">Correct</label>
+                        <input type="radio" id="reponse${questionCounter}_1_correct" name="correct_responses[${questionCounter}]" value="1"></div>
+                        <hr></div>
                     <div class="reponses">
                         <label for="reponse${questionCounter}_2">Réponse 2 :</label>
                         <input type="text" id="reponse${questionCounter}_2" name="reponses[${questionCounter}][]">
                        
                         
-                        <label for="reponse${questionCounter}_2_correct">Correct</label>
-                        <input type="radio" id="reponse${questionCounter}_2_correct" name="correct_responses[${questionCounter}]" value="2">
-                    </div>
-                   
+                        <div class="correction"><label for="reponse${questionCounter}_2_correct">Correct</label>
+                        <input type="radio" id="reponse${questionCounter}_2_correct" name="correct_responses[${questionCounter}]" value="2"></div>
+                        <hr> </div>
+                    <div class="reponses">
+                        <label for="reponse${questionCounter}_3">Réponse 3 :</label>
+                        <input type="text" id="reponse${questionCounter}_3" name="reponses[${questionCounter}][]">
+                       
+                        
+                        <div class="correction"><label for="reponse${questionCounter}_3_correct">Correct</label>
+                        <input type="radio" id="reponse${questionCounter}_3_correct" name="correct_responses[${questionCounter}]" value="3"></div>
+                        <hr></div>
+                    <div class="reponses">
+                        <label for="reponse${questionCounter}_4">Réponse 4 :</label>
+                        <input type="text" id="reponse${questionCounter}_3" name="reponses[${questionCounter}][]">
+                       
+                        
+                        <div class="correction"> <label for="reponse${questionCounter}_4_correct">Correct</label>
+                        <input type="radio" id="reponse${questionCounter}_4_correct" name="correct_responses[${questionCounter}]" value="4"></div>
+                        <hr></div>
                 `;
 
                 questionsContainer.appendChild(nouvelleQuestion);

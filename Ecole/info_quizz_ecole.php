@@ -73,6 +73,28 @@ $identifiant = $_SESSION['identifiant'];
         $col_nom_quizz_stockage = array_search('nom_quizz', $en_tete_stockage);
 
         ?>
+        <h1>Informations suppémentaires sur ce quizz :</h1>
+        <h2>transmettre le lien :</h2>
+        <form class="formurl" action="vers_lien.php" method="get">
+        <label for="url"></label>
+        <input class="url" type="text" id="url" name="url" value="<?php echo "http://localhost/Projet_final/Quizzeo/quizz/reponsequizz/pagequizzreponse.php?id_quizz=". $id_quizz?>" readonly>
+        <button class="copyButton" type="button">Copier</button>
+    </form>
+
+<script>//javascript pour faire un bouton copier
+   
+    function copyText() { // fonction pour copier le contenu du champ de saisie
+        var urlInput = document.getElementById("url");
+        urlInput.select();// selectionne le texte à copier
+        document.execCommand("copy");// copie le texte dans le presse-papiers
+        window.getSelection().removeAllRanges();
+        alert("Contenu copié !"); //affiche un message d'alerte prevenant que le contenu est copié
+    }
+
+    document.querySelector(".copyButton").addEventListener("click", copyText); 
+    //on utilise la fonction créé précédemment, et on l'execute si l'utilisateur clique sur le bouton copier
+</script>
+<h2>Reponses au quizz : </h2>
         <table>
             <tr>
                 <th>Nom</th>

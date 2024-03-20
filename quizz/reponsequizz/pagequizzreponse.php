@@ -82,7 +82,7 @@ $points_totaux = 0; // Initialisation du score
         <div class='desktopMenu'>
             <a href="../../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a>
             <a href="historique.php" class="desktopMenuListItem">Historique</a>
-            <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
+            <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
     </nav>

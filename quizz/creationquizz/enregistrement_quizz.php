@@ -53,7 +53,7 @@ if (isset($_POST["nom_quizz"], $_POST["questions"], $_POST["reponses"], $_POST["
     if (filesize($file_name) == 0) {
         fputcsv($file, ['id_quizz', 'nomquizz','descriptionquizz', 'id_utilisateur', 'actif', 'status', 'nb_reponses', 'url']);
     }
-    fputcsv($file, [$id_quizz, $nom_quizz, $description_quizz , $id_utilisateur , $actif, $status, $nb_reponses, $url]);
+    fputcsv($file, [$id_quizz, $nom_quizz, $description_quizz , $id_utilisateur, $actif, $status, $nb_reponses, $url]);
 
     // Fermer le fichier quizz.csv
     fclose($file);

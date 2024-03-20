@@ -33,6 +33,15 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur
 // Récupérer les données de l'utilisateur 
 $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
+// Récupération des quizz déjà joués par l'utilisateur depuis le fichier stockage_reponses.csv
+$quizz_deja_joues = [];
+$stockage_reponses_file = fopen("../quizz/reponsequizz/stockage_reponses.csv", "r");
+while (($reponse_data = fgetcsv($stockage_reponses_file)) !== FALSE) {
+    if ($reponse_data[0] == $id_utilisateur) {
+        $quizz_deja_joues[] = $reponse_data[1]; // Ajout de l'ID du quizz déjà joué
+    }
+}
+fclose($stockage_reponses_file);
 ?>
 
 <!DOCTYPE html>
@@ -81,8 +90,9 @@ $identifiant = $_SESSION['identifiant'];
             $col_status = array_search('status', $en_tete);
 
             while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {
-                if ($quizz_data[$col_status] === "Lancé" && $quizz_data[$col_actif] === "True") { //n'affiche que les quizz qui sont lancés ou terminés
+                if ($quizz_data[$col_status] === "Lancé" && $quizz_data[$col_actif] === "True" && !in_array($quizz_data[$col_id_quizz], $quizz_deja_joues)) { //n'affiche que les quizz qui sont lancés ou terminés
             ?>
+               
                 <div class="tableau">
                     <div class="card">
                         <div class='texte'>nom : <?php echo $quizz_data[$col_nom_quizz]; ?></div>

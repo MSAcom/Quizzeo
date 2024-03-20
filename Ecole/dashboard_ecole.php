@@ -22,7 +22,7 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Ecole') {//
 
 } else { //sinon: 
     
-    header("Location: ../accueil/connexxion.php"); //redirection
+    header("Location: ../accueil/connexion.php"); //redirection
     exit();
 }
 

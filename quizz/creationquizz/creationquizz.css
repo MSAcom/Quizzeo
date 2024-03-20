@@ -127,30 +127,42 @@ body{ /*fond de couleur*/
 }
 
 
+
 .ajouter-reponse:hover { /*quand on met la souris sur le bouton cela change la couleur de ce dernier*/
-    background-color: #0056b3;
+    background-color: #feffab;
 }
 
 #ajouter-question { /*bouton ajouter question*/
     display: block;
     margin-top: 20px;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #000000;
+   
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    background-color: #6958ff;
+    
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    
 }
 
 #ajouter-question:hover { /*ombre du bouton ajouter question*/
-    background-color: #0056b3;
+    background-color: #001e4d;
+   
+    color: #ffffff;
+}
+input[type="radio"] {
+    margin-bottom: 10px;
 }
 
 input[type="submit"] { /*bouton enregistrer*/
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;/*couleur par defaut du bouton*/
+    background-color: #6958ff;/*couleur par defaut du bouton*/
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -163,4 +175,7 @@ input[type="submit"]:hover { /*quand on passe la souris sur le bouton cela l'ass
 .points_question{ /*reduire la taille des points */
     height: 25px;
     background-color: rgb(255, 238, 215);
+}
+.correction{
+    display: flex;
 }
