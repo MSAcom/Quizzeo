@@ -56,7 +56,7 @@ $points_totaux = 0; // Initialisation du score
     <title>Quizz</title>
     
     <link rel="stylesheet" href="../../quizz/dashboard/dashboard.css">
-    <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="../reponsequizz/quizz.css">
 </head>
 <body>
 <nav class="navbar">
@@ -68,8 +68,14 @@ $points_totaux = 0; // Initialisation du score
         </div>
         <p> <span class="pastille"></span> connecté </p>
     </nav>
+    <div class="chrono">
+        <div class="time">0</div>
+        <div class="time">0</div>
+        <div class="time">0</div>
+    </div> 
     <div class="container">
-        <div class="logodiv">
+    
+         <div class="logodiv">
             <img class="logo" src="quizzeo.png">
         </div>
         <div class="entete">
@@ -119,7 +125,6 @@ $points_totaux = 0; // Initialisation du score
             <input class ="soumettre" type="submit" value="Soumettre">
         </form>
     </div></div>
-
-
+    <script src="../reponsequizz/chrono.js" ></script>
 </body>
 </html>
