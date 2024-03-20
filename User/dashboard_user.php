@@ -75,10 +75,8 @@ $identifiant = $_SESSION['identifiant'];
                     <div class="card">
                         <div class='texte'>nom : <?php echo $quizz_data[$col_nom_quizz]; ?></div>
                         <div class='description description_quizz'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
-                        <form action="../quizz/reponsequizz/pagequizzreponse.php" method="post">
+                        <form action="../quizz/reponsequizz/pagequizzreponse.php" method="get">
                             <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
-                            <input type="hidden" name="nom_quizz" value="<?php echo $quizz_data[$col_nom_quizz]; ?>">
-                            <input type="hidden" name="description_quizz" value="<?php echo $quizz_data[$col_description_quizz]; ?>">
                             <button class="jouer" type="submit">Jouer</button>
                         </form>
                     </div>

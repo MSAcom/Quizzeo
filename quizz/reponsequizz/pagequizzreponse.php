@@ -13,10 +13,28 @@ $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 
 // Récupérer les données envoyées en POST
-$id_quizz = $_POST["id_quizz"];
-$nom_quizz = $_POST["nom_quizz"];
-$description_quizz = $_POST["description_quizz"];
+$id_quizz = $_GET["id_quizz"];
 
+/*--------------QUIZZ---------------*/
+// Ouvrir le fichier des questions
+$quizz_file_name = '../creationquizz/quizz.csv';
+$quizz_file = fopen($quizz_file_name, 'r');
+
+// Lire la première ligne pour obtenir les en-têtes des colonnes
+$en_tete_quizz = fgetcsv($quizz_file);
+
+// Chercher les index des colonnes nécessaires
+$col_id_quizz = array_search('id_quizz', $en_tete_quizz); 
+$col_nom_quizz= array_search('nomquizz', $en_tete_quizz); 
+$col_description_quizz = array_search('descriptionquizz', $en_tete_quizz); 
+// Parcourir le fichier pour trouver le quiz correspondant à l'ID
+while (($ligne_quizz = fgetcsv($quizz_file)) !== false) {
+    if ($ligne_quizz[$col_id_quizz] == $id_quizz) {
+        $nom_quizz = $ligne_quizz[$col_nom_quizz];
+        $description_quizz = $ligne_quizz[$col_description_quizz];
+    }}
+fclose($quizz_file);
+/*--------------------QUESTIONS------------------*/
 // Ouvrir le fichier des questions
 $file_name = '../creationquizz/questions_quizz.csv';
 $file = fopen($file_name, 'r');
