@@ -73,17 +73,24 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
 </head>
 
 <body>
+<div class="background">
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+        <img src="../Admin/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
+<<<<<<< HEAD:accueil/connexion.php
             <a href="#" class="desktopMenuListItem">Evenements</a>
             <a href="#" class="desktopMenuListItem">Restauration</a>
             <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="./inscription.php" class="desktopMenuListItem">Inscription</a>
         </div> 
+=======
+           <a href="./inscription.php" class="desktopMenuListItem">Inscription</a>
+        </div>
+        
+>>>>>>> pop-up:accueil/connexion/connexion.php
     </nav>
-    <div class="container">
-        <h2>Connexion</h2>
+   <br> <div class="container">
+    <h2>Connexion</h2>
         <?php if ($error !== "") : ?><!--si erreur est different de vide, donc affiche un message -->
             <p class="error"><?php echo $error; ?></p><!--affiche le message d'erreur-->
         <?php endif; ?>
@@ -96,6 +103,12 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
             <br/>
             <input type="submit" value="Valider" name="submitpost">
         </form>
+<<<<<<< HEAD:accueil/connexion.php
+=======
+        
+         
+
+>>>>>>> pop-up:accueil/connexion/connexion.php
     </div>
 </body>
 

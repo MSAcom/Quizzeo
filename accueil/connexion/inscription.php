@@ -19,16 +19,13 @@ if(isset($_POST['captcha'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription</title>
     <link rel="stylesheet" href="./accueil.css">
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <img src="./quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
+        <img src="../Admin/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem">Evenements</a>
-            <a href="#" class="desktopMenuListItem">Restauration</a>
-            <a href="#" class="desktopMenuListItem">Hebergement</a>
             <a href="./connexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
         
@@ -63,16 +60,23 @@ if(isset($_POST['captcha'])) {
             <input type="radio" id="utilisateur" name="role" value="Utilisateur">
             <label for="utilisateur">Utilisateur</label>
         </div>
+        
     </div>
     <div class="form-group">
         <label for="mot_de_passe">Mot de passe (en 6 chiffres seulement):</label>
         <input type="password" id="mot_de_passe" name="mot_de_passe" pattern="\d{6}" maxlength="6" required>
     </div>
+<<<<<<< HEAD:accueil/inscription.php
     <form method="POST"> 
    <img src="captcha.php"  /> <!--captcha personnalisé-->
    <label for="captcha-reponse">Recopiez le nombre ci-dessus : </label>
    <input type="text" name="captcha" />
    <input type="submit" />
 
+=======
+    <div class="g-recaptcha" data-sitekey="6LekU5YpAAAAAGYdJtxGHUZSAUZDi0mrVDrtUbkz"></div>
+    <input type="submit" value="S'inscrire">
+</form>
+>>>>>>> pop-up:accueil/connexion/inscription.php
     </div>
 </body>
