@@ -51,6 +51,7 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
 </head>
 
 <body>
+<div class="background">
     <nav class="navbar">
         <img src="../Admin/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
@@ -58,8 +59,8 @@ if (isset($_POST['identifiant']) && isset($_POST['mot_de_passe'])) { //isset per
         </div>
         
     </nav>
-    <div class="container">
-        <h2>Connexion</h2>
+   <br> <div class="container">
+    <h2>Connexion</h2>
         <?php if ($error !== "") : ?><!--si erreur est different de vide, donc affiche un message -->
             <p class="error"><?php echo $error; ?></p><!--affiche le message d'erreur-->
         <?php endif; ?>

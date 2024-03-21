@@ -70,7 +70,7 @@ h1{
     margin: auto;
 }
 .container {
-    background-color: #fff;
+    background-color: #ffffff5d;
     padding: 20px;
     width: 45%;
     text-align: center;
@@ -128,3 +128,21 @@ input[type="password"]{
 .choix-u{
     padding-bottom: 10px;
 }
+
+.background {
+    width: 100%;
+    height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+    background-image: url('backroundcolor.jpg'); /* Pour mettre l'image de fond */
+    background-size: cover; /* Permet d'ajuster la taille de l'image pour couvrir toute la zone */
+    background-position: center; /* Permet de centrer l'image */
+    animation: animateBackground 20s linear infinite; /*Permet d'appliquer l'animation sur l'image de fond */
+  }
+  
+  @keyframes animateBackground {
+    0% { /*Permet de définir la position de l'image de fond à 0% sur l'axe horizontal et 0% sur l'axe vertical.*/
+      background-position: 0% 0%;
+    }
+    100% {/*Permet de définir la position de l'image de fond à 100% sur l'axe horizontal et 100% sur l'axe vertical*/
+      background-position: 100% 100%;
+    }
+  }
