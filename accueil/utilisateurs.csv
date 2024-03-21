@@ -9,3 +9,4 @@ Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif
 65fc1514e5e3a,test2,test2,test2,Utilisateur,$2y$10$LhiPvAEmRQFR/y3YgpTOwOstp27EsvJmOblg8OKhm.ERQvvdO/2l2,,True
 65fc15d323a23,test2," test2"," test2",Utilisateur,$2y$10$OPbpLhk/m2fsk1s0394bhuwJFXbHkButVR4j1Ypwo88Nv7CP6I7rm,,True
 65fc15feadfdd,test4,test4,test4,Utilisateur,$2y$10$VMYukA88CJ8eHUHqcRnltOUZX.KTos/qHC0cxytVe5edkn5/FNPIi,,True
+65fc3ddda1978,test5,test5,test5,Utilisateur,$2y$10$Nhmy8I0s5fjxgLrlywhGkOxLXpYXrQV.FgtJp1ZPBaNldGiClaRVy,,True

@@ -62,6 +62,13 @@ $identifiant = $_SESSION['identifiant'];
         $col_score = array_search('score', $en_tete_stockage);
         $col_nom_quizz_stockage = array_search('nom_quizz', $en_tete_stockage);
 
+        /*-------------Ouvrir le fichier de stockage-----------------*/
+        $file_question = fopen("../quizz/creationquizz/questions_quizz.csv", "r");
+        $en_tete_question= fgetcsv($file_question); 
+
+        $col_id_question= array_search('id_question', $en_tete_question);
+        $col_nom_question = array_search('question_quizz', $en_tete_question);
+
         /*-------------Ouvrir le fichier de stockage  de tt les reponses-----------------*/
         $file_toutes_reponses = fopen("../quizz/reponsequizz/toutes_reponses.csv", "r");
         $en_tete_toutes_reponses = fgetcsv($file_toutes_reponses); 
@@ -107,27 +114,64 @@ $identifiant = $_SESSION['identifiant'];
             $compteur = 0;
             while (($data_toutes_reponses = fgetcsv($file_toutes_reponses)) !== FALSE) {
                 if ($data_toutes_reponses[$col_id_quizz_stockage_toutes_reponses] === $id_quizz) {
-                    $question_id = $data_toutes_reponses[$col_id_reponse_toutes_reponses];
-                    if (!isset($total_responses[$question_id])) {
-                        $total_responses[$question_id] = 1;
+                    $reponse_id = $data_toutes_reponses[$col_id_reponse_toutes_reponses];
+                    if (!isset($total_responses[$reponse_id])) {
+                        $total_responses[$reponse_id] = 1;
                         $compteur ++;
                     } else {
-                        $total_responses[$question_id]++;
+                        $total_responses[$reponse_id]++;
                         $compteur ++;
                     }
                 }
-
+                
             }
             
-            foreach ($total_responses as $question_id => $reponses_choisies) {
-            echo "<tr>";
-            echo "<td>$question_id</td>";
-            echo "<td>$reponses_choisies</td>"; //je veux afficher l'id de la question ici
-            echo "<td> $total_responses[$question_id] </td>"; // Nombre de personnes ayant choisi cette réponse
-            $pourcentage = ($total_responses[$question_id]/$compteur)*100;
-            $pourcentageArrondi = round($pourcentage, 2); // Arrondir à deux décimales
-            echo "<td> $pourcentageArrondi%</td>"; // Pourcentage de personnes ayant choisi cette réponse
-            echo "</tr>";}
+            foreach ($total_responses as $reponse_id => $reponses_choisies) {
+                echo "<tr>";
+                $nom_question = ""; // Initialisation de la variable $nom_question
+
+                // Ouvrir le fichier CSV des réponses
+                $file_reponses = fopen("../quizz/creationquizz/reponses_quizz.csv", "r");
+                $en_tete_reponses = fgetcsv($file_reponses); 
+                $col_id_reponses = array_search('id_reponse', $en_tete_reponses);
+                $col_reponses = array_search('reponse_quizz', $en_tete_reponses);
+                // Parcourir le fichier des réponses pour trouver la réponse associée à l'ID de la réponse
+                rewind($file_toutes_reponses); // Réinitialiser la position du pointeur du fichier
+                while (($data_reponses = fgetcsv($file_reponses)) !== FALSE) {
+                    if ($data_reponses[$col_id_reponses] === $reponse_id) {
+                       
+                        $reponse_quizz = $data_reponses[$col_reponses]; // Récupérer la réponse au quizz
+                        $id_question_associated = $data_reponses[$col_id_question_toutes_reponses]; // Récupérer l'ID de la question associée
+                        break;
+                    }
+                }
+                fclose($file_reponses); // Fermer le fichier des réponses
+
+                // Ouvrir le fichier CSV des questions
+                $file_questions = fopen("../quizz/creationquizz/questions_quizz.csv", "r");
+                $en_tete_questions = fgetcsv($file_questions); 
+                $col_id_question = array_search('id_question', $en_tete_questions);
+                $col_nom_question = array_search('question_quizz', $en_tete_questions);
+                // Parcourir le fichier des questions pour trouver le nom de la question correspondant à l'ID de la question
+                rewind($file_question); // Réinitialiser la position du pointeur du fichier
+                while (($data_questions = fgetcsv($file_questions)) !== FALSE) {
+                    if ($data_questions[$col_nom_question] === $id_question_associated) {
+                        $id_question = $data_questions[$col_id_question]; // Récupérer l'identifiant de la question
+                        $nom_question = $data_questions[$col_nom_question]; // Récupérer le nom de la question
+                        break;
+                    }
+                }
+                fclose($file_questions); // Fermer le fichier des questions
+                
+                echo "<td>$nom_question</td>"; // Afficher le nom de la question
+                echo "<td>$reponse_quizz</td>"; // Afficher la réponse au quizz
+                echo "<td> $total_responses[$reponse_id] </td>"; // Nombre de personnes ayant choisi cette réponse
+                $pourcentage = ($total_responses[$reponse_id]/$compteur)*100;
+                $pourcentageArrondi = round($pourcentage, 2); // Arrondir à deux décimales
+                echo "<td> $pourcentageArrondi%</td>"; // Pourcentage de personnes ayant choisi cette réponse
+                echo "</tr>";
+            }
+            
             ?>
         </table>
         <?php

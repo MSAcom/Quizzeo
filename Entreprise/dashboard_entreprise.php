@@ -86,8 +86,8 @@ $identifiant = $_SESSION['identifiant'];
                                 <button type="submit">infos</button>
                             </form>
                             <div class="button-container">
-                                <form action="reprendre_quizz.php" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
+                                <form action="../quizz/creationquizz/modification_quizz.php" method="post">
+                                    <input type="hidden" name="id_quizz" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                     <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
                                     <input type="hidden" name="nom" id ="nom" value="<?php echo $quizz_data[$col_nom_quizz]; ?>">
                                     <input type="hidden" name="description" value="<?php echo $quizz_data[$col_description_quizz]; ?>">

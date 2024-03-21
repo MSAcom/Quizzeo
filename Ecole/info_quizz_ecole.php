@@ -45,7 +45,8 @@ $identifiant = $_SESSION['identifiant'];
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo' />
         <div class='desktopMenu'>
-            <a href="dashboard_ecole.php" class="desktopMenuListItem">Quizz</a>
+            <a href="../quizz/creationquizz/creationquizz.php" class="desktopMenuListItem">Créer un quizz</a>
+            <a href="dashboard_ecole.php" class="desktopMenuListItem">Dashboard</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Déconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>

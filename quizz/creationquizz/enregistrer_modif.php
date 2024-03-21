@@ -1,20 +1,40 @@
 <?php
 session_start();
+var_dump($_POST);
 
-
-if (!isset($_SESSION['identifiant'])) {// vérifier si l'utilisateur est connecté
-    
-    header("Location: connexion.php");// rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connecté
+    header("Location: ../../accueil/connexion.php"); // Redirige lutilisateur vers page de connexion si pas connecté
     exit();
 }
 
+//Permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+        
+        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+            'role' => $data[4]
+        );
+    }
+    fclose($handle);
+}
+
+
+$identifiant = $_SESSION['identifiant'];
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Entreprise' || isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Ecole') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+    // Si oui alors il accède à la page_utilisateur
+    
+} else { //sinon: 
+    
+    header("Location: ../../accueil/connexion.php"); //redirection
+    exit();
 
 if (!isset($_POST['id_quizz'])) {
     
     header("Location: ../dashboard/info_quizz.php");// rediriger l'utilisateur vers une page d'erreur si pas d'id pour le quizz
     exit();
 }
-
+}
 
 $id_quizz = $_POST['id_quizz'];// récupérer l'id du quizz à envoyé sur la page précédente avec POST
 
@@ -56,7 +76,7 @@ if ($col_id_quizz !== false) {// Vérifier l'ID du quizz
     exit();
 } else {
     // Si on ne trouve pas l'ID du quizz on redirige vers une page d'erreur
-    header("Location: ../dashboard/info_quizz.php");
+    header("Location: ../../accueil/connexion.php");
     exit();
 }
 
@@ -93,6 +113,6 @@ fclose($questions_file);
 fclose($reponses_file);
 
 
-header("Location: ../dashboard/dashboard.php");
+header("Location: ../../Ecole/dashboard_ecole.php");
 exit();
 ?>
