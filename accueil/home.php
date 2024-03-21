@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'Acceuil</title>
     <link rel="stylesheet"  type="text/css" href="./accueil.css">
-
+    <link rel="stylesheet"type="text/css" href="./gooey.scss">
 </head>
 <body>
     <nav class="navbar">
@@ -16,8 +16,13 @@
             <a href="deconnexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
         <!--<p> <span class="pastille"></span> connecté </p>-->
-
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
+    
     <div class="patterns">
         <svg width="100%" height="100%">
             <defs>
@@ -31,5 +36,8 @@
             </text>
         </svg>
     </div>
+    <div class="wrap-2"><canvas id="liquid"></canvas></div>
+
+    <script src="gooey.js"></script>
 </body>
 </html>
