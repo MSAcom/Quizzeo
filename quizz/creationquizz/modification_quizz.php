@@ -17,25 +17,25 @@ if (!isset($_POST['id_quizz'])) {
 
 $id_quizz = $_POST['id_quizz'];
 
-// Comparer l'ID avec ceux dans le du quizz
-$quizz_file = fopen("quizz.csv", "r"); // Ouvrir le fichier des quizz en lecture
-$en_tete_quizz = fgetcsv($quizz_file); // Ignorer l'en-tête
+/*-----------------nous comparons l'id_quizz avec ceux dans le du quizz-------------------*/
+$quizz_file = fopen("quizz.csv", "r"); // nous ouvrons le fichier des quizz en lecture
+$en_tete_quizz = fgetcsv($quizz_file); 
 
-$col_id_quizz = array_search('id_quizz', $en_tete_quizz); // Rechercher les index des colonnes spécifiques
+$col_id_quizz = array_search('id_quizz', $en_tete_quizz); // nous recherchons les colonnes qui nous interessent dans le fichier quizz.csv
 $col_nom_quizz = array_search('nomquizz', $en_tete_quizz);
 $col_description_quizz = array_search('descriptionquizz', $en_tete_quizz);
 fclose($quizz_file);
 
 
 if ($col_id_quizz !== false) {
-    $quizz_details = []; // Initialiser le tableau des détails du quizz
+    $quizz_details = []; // on initialise le tableau des détails du quizz
 
     // on parcours les lignes du fichier CSV pour trouver les détails du quizz correspondant à l'ID fourni
     $quizz_file = fopen("quizz.csv", "r"); // on ouvre à nouveau le fichier des quizz en lecture
     fgetcsv($quizz_file); // on ignore l'en-tête, (la première ligne avec le nom des colonnes)
     while (($row = fgetcsv($quizz_file)) !== false) {
         if ($row[$col_id_quizz] == $id_quizz) {
-            // Stocker les détails du quizz dans le tableau
+            // on stocke les détails du quizz dans le tableau
             $quizz_details = $row;
             break; 
         }
@@ -43,11 +43,11 @@ if ($col_id_quizz !== false) {
 
     fclose($quizz_file);
 
-    // Remplir les champs du formulaire avec les données récupérées
+    // nous remplissons les champs du formulaire avec les données récupérées
     $nom_quizz = isset($quizz_details[$col_nom_quizz]) ? $quizz_details[$col_nom_quizz] : ""; // entrer le nom du quizz
     $description_quizz = isset($quizz_details[$col_description_quizz]) ? $quizz_details[$col_description_quizz] : ""; // entrer la description du quizz
 } else {
-    // Si l'id du quizz n'est pas trouvé, on redirige l'utilisateur vers une page d'erreur
+    // si l'id du quizz n'est pas trouvé, on redirige l'utilisateur vers une page d'erreur
     header("Location: ../dashboard/info_quizz.php");
     exit();
 }
@@ -97,7 +97,7 @@ $question_file = fopen("questions_quizz.csv", "r");
 $en_tete_question = fgetcsv($question_file); 
 $col_question_id = array_search('id_question', $en_tete_question); // on cherche la colonne de l'id de la question
 
-// Vérifier si l'index de la colonne des questions est valide
+// on vérifie si l'index de la colonne des questions est valide
 if ($col_question_id !== false) {
     $col_question_quizz = array_search('question_quizz', $en_tete_question); // on cherche l'index de la colonne des questions
 
@@ -107,18 +107,18 @@ if ($col_question_id !== false) {
         if ($question_row[$col_id_quizz] == $id_quizz) {
             echo "<div class='question'>";
 
-            echo "<h3>Question $num_question</h3>"; // Afficher Question :(numéro de la question)
+            echo "<h3>Question $num_question</h3>"; // Question :(numéro de la question)
             echo "<input type='text' id='question$num_question' name='questions[]' value='" . htmlspecialchars($question_row[$col_question_quizz]) . "'>";
 
 
-            echo "<div class='reponses-container'>"; // Afficher les réponses correspondantes à la question
+            echo "<div class='reponses-container'>"; // nous affichons les réponses correspondantes à la question
 
-            // Ouvrir le fichier CSV des réponses
+           /*-------------------reponses--------------------*/
             $reponse_file = fopen("reponses_quizz.csv", "r");
             $en_tete_reponse = fgetcsv($reponse_file); 
-            $col_reponse_id = array_search('id_question', $en_tete_reponse); // Rechercher la colonne de l'ID de la question
-            $col_reponse_quizz = array_search('reponse_quizz', $en_tete_reponse); // Rechercher la colonne des réponses
-            $col_bonne_reponse = array_search('bonne_reponse', $en_tete_reponse); // Rechercher la colonne de la bonne réponse
+            $col_reponse_id = array_search('id_question', $en_tete_reponse); 
+            $col_reponse_quizz = array_search('reponse_quizz', $en_tete_reponse); 
+            $col_bonne_reponse = array_search('bonne_reponse', $en_tete_reponse); 
 
             // on parcours les lignes du fichier CSV des réponses
             while (($reponse_row = fgetcsv($reponse_file)) !== false) {

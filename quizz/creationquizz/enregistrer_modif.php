@@ -2,21 +2,21 @@
 session_start();
 
 
-if (!isset($_SESSION['identifiant'])) {// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['identifiant'])) {// vérifier si l'utilisateur est connecté
     
-    header("Location: connexion.php");// Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header("Location: connexion.php");// rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
     exit();
 }
 
 
 if (!isset($_POST['id_quizz'])) {
     
-    header("Location: ../dashboard/info_quizz.php");// Rediriger l'utilisateur vers une page d'erreur si pas d'id pour le quizz
+    header("Location: ../dashboard/info_quizz.php");// rediriger l'utilisateur vers une page d'erreur si pas d'id pour le quizz
     exit();
 }
 
 
-$id_quizz = $_POST['id_quizz'];// Récupérer l'ID du quizz à envoyé sur la page précédente avec POST
+$id_quizz = $_POST['id_quizz'];// récupérer l'id du quizz à envoyé sur la page précédente avec POST
 
 // Comparer l'ID avec le CSV du quizz
 $quizz_file = fopen("quizz.csv", "r+"); // Ouvrir quizz en mode lecture et écriture
@@ -32,10 +32,10 @@ if ($col_id_quizz !== false) {// Vérifier l'ID du quizz
 
     
     $quizz_data = [];
-    // On Parcoure les lignes du fichier CSV pour chercher les détails du quizz correspondant à l'ID
+    // on Parcoure les lignes du fichier CSV pour chercher les détails du quizz correspondant à l'ID
     while (($row = fgetcsv($quizz_file)) !== false) {
         if ($row[$col_id_quizz] == $id_quizz) {
-            // On met à jour les détails du quizz avec les données du formulaire
+            // on met à jour les détails du quizz avec les données du formulaire
             $row[$col_nom_quizz] = isset($_POST['nom_quizz']) ? $_POST['nom_quizz'] : $row[$col_nom_quizz];
             $row[$col_description_quizz] = isset($_POST['description_quizz']) ? $_POST['description_quizz'] : $row[$col_description_quizz];
         }

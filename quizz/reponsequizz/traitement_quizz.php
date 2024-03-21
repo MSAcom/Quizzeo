@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-// Permet de vérifier facilement le rôle de chaque utilisateur
-$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
-if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
-        $users[$data[3]] = array( // Crée tableau users et grâce à l'identifiant de l'utilisateur, va stocker le rôle de l'utilisateur
+// permet de vérifier facilement le rôle de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv';
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// ouvrir en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // tant qu'il y'a de lignes
+        $users[$data[3]] = array( // crée tableau users et grâce à l'identifiant de l'utilisateur, va stocker le rôle de l'utilisateur
             'role' => $data[4]
         );
     }
@@ -13,14 +13,14 @@ if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mod
 }
 
 $identifiant = $_SESSION['identifiant'];
-if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// vérifie si l'utilisateur a le rôle "Utilisateur"
     // Si oui alors il accède à la page_utilisateur
 } else { //sinon: 
     header("Location: ../../accueil/connexion.php"); //redirection
     exit();
 }
 
-// Récupérer les données de l'utilisateur 
+// récupérer les données de l'utilisateur 
 $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 
@@ -31,32 +31,35 @@ $total = $_POST["total"];
 $score = 0;
 $nom_du_quizz = $_POST["nom_quizz"];
 
-// Ouvrir le fichier toutes_reponses.csv en mode ajout
+/*-----------stocker les reponses choisies par l'utilisateur-------------*/
+// ouvrir le fichier toutes_reponses.csv en mode ajout
 $file_name_toutes_reponses = 'toutes_reponses.csv';
 $file_toutes_reponses = fopen($file_name_toutes_reponses, 'a+');
 
-// Si le fichier est vide, ajouter l'en-tête
+// si le fichier est vide, on ajoute l'en-tête
 if (filesize($file_name_toutes_reponses) == 0) {
-    fputcsv($file_toutes_reponses, ['id_reponse', 'id_quizz', 'id_utilisateur']);
+    fputcsv($file_toutes_reponses, ['id_reponse', 'id_quizz', 'id_utilisateur', 'id_question']);
 }
 
-// Lire les données envoyées par l'utilisateur
+// lire les données envoyées par l'utilisateur
 foreach ($_POST as $key => $value) {
     if (strpos($key, 'id_reponse_validee_') !== false) {
         // Extraire l'identifiant de la question à partir de la clé
-        $question_id = substr($key, 19);
+        $question_id = substr($key, 19);//on ignore les 19 premiers caractères pour ne garder que l'id de la question
 
-        // Ouvrir le fichier reponses_quizz.csv en mode lecture
+        /*-----------------reponses---------------*/
+        // on ouvre le fichier reponses_quizz.csv en mode lecture
         $file_name_reponses = '../creationquizz/reponses_quizz.csv';
         $file_reponses = fopen($file_name_reponses, 'r');
         $en_tete_reponses = fgetcsv($file_reponses);
 
         while (($ligne_reponses = fgetcsv($file_reponses)) !== false) {
             if ($ligne_reponses[0] === $id_quizz && $ligne_reponses[1] === $question_id && $ligne_reponses[4] === 'True') {
-                // Inscrire les données dans le fichier toutes_reponses.csv
-                fputcsv($file_toutes_reponses, [$_POST["id_reponse_validee_".$ligne_reponses[1]], $id_quizz, $id_utilisateur]);
+                // on ecrit les données dans le fichier toutes_reponses.csv
+                fputcsv($file_toutes_reponses, [$_POST["id_reponse_validee_".$ligne_reponses[1]], $id_quizz, $id_utilisateur, $question_id]);
                 
-                // Ouvrir le fichier questions_quizz.csv en mode lecture
+                /*-------------question--------------*/
+                //on ouvre le fichier questions_quizz.csv en mode lecture
                 $file_name = '../creationquizz/questions_quizz.csv';
                 $file = fopen($file_name, 'r');
                 $en_tete_question = fgetcsv($file);
@@ -64,8 +67,8 @@ foreach ($_POST as $key => $value) {
                 while (($ligne = fgetcsv($file)) !== false) {
                     if ($ligne[0] == $id_quizz && $ligne[1] == $question_id) {
                         $points_question = $ligne[4];
-                        
-                        // Calculer le score
+                        /*-------------score----------*/
+                        //on calcule le score en rajoutant les points de la question si la reponse est bonne
                         if ($_POST["id_reponse_validee_".$ligne_reponses[1]] === $ligne_reponses[2]) {
                             $score += $points_question; 
                         }

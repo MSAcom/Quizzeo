@@ -104,15 +104,15 @@ $points_totaux = 0; // Initialisation du score
                         $id_question = $ligne[$col_id_question]; // Stocker l'id de la question
                         $points_question = $ligne[$col_points_question];
                         $points_totaux +=  $points_question;
-                        echo "<p> Question : " . $ligne[$col_question] . "<br>"; // Afficher la question
-                        echo "Points attribués à la question : " . $ligne[$col_points_question] . "</p><br>"; // Afficher les points attribués
+                        echo "<p> Question : " . $ligne[$col_question] . "<br>"; // on affiche la question
+                        echo "Points attribués à la question : " . $ligne[$col_points_question] . "</p><br>"; // on affiche les points attribués à cette question
                         rewind($file_reponses); // Revenir au début du fichier des réponses
-                        while (($ligne_reponses = fgetcsv($file_reponses)) !== false) { // Parcourir le fichier des réponses
-                            // Si l'id_question correspondant à la réponse correspond à celui stocké précédemment
+                        while (($ligne_reponses = fgetcsv($file_reponses)) !== false) { // on parcours le fichier des reponses
+                            // si l'id_question correspondant à la réponse correspond à celui stocké précédemment
                             if ($ligne_reponses[$col_id_quizz_fichier_reponse] === $id_quizz && $ligne_reponses[$col_id_question_fichier_reponse] === $id_question) {
-                                if (isset($ligne_reponses[$col_reponse_fichier_reponse])) { // Si les données sont présentes
+                                if (isset($ligne_reponses[$col_reponse_fichier_reponse])) { // si les données sont présentes
                                     ?>
-                                    <label> <!-- Afficher la réponse dans le formulaire -->
+                                    <label> <!--on affiche la reponse dans le formulaire -->
                                  
                                         <input type="radio" name="id_reponse_validee_<?php echo $id_question; ?>" value="<?php echo $ligne_reponses[$col_id_reponse_fichier_reponse]; ?>"> 
                                         <?php echo $ligne_reponses[$col_reponse_fichier_reponse]?></label><br>
@@ -126,8 +126,8 @@ $points_totaux = 0; // Initialisation du score
                     }
                 }
                
-                fclose($file); // Fermer le fichier des questions
-                fclose($file_reponses); // Fermer le fichier des réponses
+                fclose($file); // on ferme les fichiers
+                fclose($file_reponses);
                 ?> 
                 <input type="hidden" name="nom_quizz" value="<?php echo $nom_quizz ?>">
                 <input type="hidden" name="description_quizz" value="<?php echo $description_quizz ?>">

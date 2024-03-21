@@ -6,3 +6,6 @@ Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif
 65f9a1fa87c7a,admin,admin,admin,Admin,$2y$10$GF2JvPAO/wGGR9dSDm2eU.Kwcc0EpIoczIdfJUj5yczxvsKvwOYXu,,True
 65f9f1f612243,ecole,ecole,ecole,Ecole,$2y$10$lvEhMYGg0qjIbVbqn6fKJeRiPkiwGLCRi7hpBpLsCb7NNoiVJipCe,,True
 65f9f43f07dad,entr,entr,entr,Entreprise,$2y$10$RJ6kC98z5wkJaX6LpBLUAeKwYcjhfEfxnNHCvQDx1wtFcURCj7KIq,,True
+65fc1514e5e3a,test2,test2,test2,Utilisateur,$2y$10$LhiPvAEmRQFR/y3YgpTOwOstp27EsvJmOblg8OKhm.ERQvvdO/2l2,,True
+65fc15d323a23,test2," test2"," test2",Utilisateur,$2y$10$OPbpLhk/m2fsk1s0394bhuwJFXbHkButVR4j1Ypwo88Nv7CP6I7rm,,True
+65fc15feadfdd,test4,test4,test4,Utilisateur,$2y$10$VMYukA88CJ8eHUHqcRnltOUZX.KTos/qHC0cxytVe5edkn5/FNPIi,,True

@@ -2,17 +2,17 @@
 session_start();
 
 
-if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connecté
-    header("Location: ../../accueil/connexion.php"); // Redirige lutilisateur vers page de connexion si pas connecté
+if (!isset($_SESSION['identifiant'])) { // si l'utilisateur n'est pas connecté
+    header("Location: ../../accueil/connexion.php"); // on le redirige vers page de connexion 
     exit();
 }
 
-//Permet de vérifier facilement le role de chaque utilisateur
-$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
-if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+//on vérifie le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; 
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// ouvrir le fichier CSV en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // tant qu'il y'a de lignes
         
-        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+        $users[$data[3]] = array( //crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
             'role' => $data[4]
         );
     }
@@ -21,8 +21,8 @@ if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mod
 
 
 $identifiant = $_SESSION['identifiant'];
-if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
-    // Si oui alors il accède à la page_utilisateur
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur') {// vérifie si l'utilisateur a le rôle "Utilisateur"
+    // si oui alors il accède à la page_utilisateur
 
 } else { //sinon: 
     
@@ -30,7 +30,7 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Utilisateur
     exit();
 }
 
-// Récupérer les données de l'utilisateur 
+// on recupère les données de session
 $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 ?>
@@ -64,7 +64,7 @@ $identifiant = $_SESSION['identifiant'];
             <?php
             /*ouvrir le fichier stockage*/ 
             $stockage_file = fopen("stockage_reponses.csv", "r");
-            $en_tete = fgetcsv($stockage_file); // Lire et ignorer l'en-tête
+            $en_tete = fgetcsv($stockage_file); // lire et ignorer l'en-tête
 
             $col_id_quizz_stockage = array_search('id_quizz', $en_tete);
             $col_note = array_search('score', $en_tete);
@@ -78,12 +78,12 @@ $identifiant = $_SESSION['identifiant'];
             $col_nom = array_search('nom_quizz', $en_tete_quizz);
 
             while (($stockage_data = fgetcsv($stockage_file)) !== FALSE) {
-                // Ignorer l'en-tête
+
                 if ($stockage_data[0] === $en_tete[0]) {
                     continue;
                 }
 
-                // Vérifier si l'ID de l'utilisateur correspond à celui stocké dans le fichier
+                // vérifier si l'ID de l'utilisateur correspond à celui stocké dans le fichier
                 if ($stockage_data[0] == $id_utilisateur) {
             ?>
                 <div class="tableau">

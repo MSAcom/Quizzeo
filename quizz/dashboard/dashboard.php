@@ -7,12 +7,12 @@ if (!isset($_SESSION['identifiant'])) { // Vérifie si l'utilisateur est connect
     exit();
 }
 
-//Permet de vérifier facilement le role de chaque utilisateur
-$csvFile = '../../accueil/utilisateurs.csv'; // Chemin fichier CSV
-if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mode lecture seulement
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //Parcours tant qu'il y'a de lignes
+//permet de vérifier facilement le role de chaque utilisateur
+$csvFile = '../../accueil/utilisateurs.csv'; 
+if (($handle = fopen($csvFile, "r")) !== FALSE) {// ouvrir en mode lecture seulement
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { //parcours tant qu'il y'a de lignes
         
-        $users[$data[3]] = array( // Crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
+        $users[$data[3]] = array( // crée tableau users et grace à l'identifiant de l'utilisateur, va stocker le role de l'utilisateur
             'role' => $data[4]
         );
     }
@@ -21,8 +21,8 @@ if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mod
 
 
 $identifiant = $_SESSION['identifiant'];
-if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Admin' ) {// Vérifie si l'utilisateur a le rôle "Utilisateur"
-    // Si oui alors il accède à la page_utilisateur
+if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Admin' ) {// vérifie si l'utilisateur a le rôle "Utilisateur"
+    // si oui alors il accède à la page_utilisateur
     
 } else { //sinon: 
     
@@ -32,7 +32,7 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Admin' ) {/
 
 
 
-$id_utilisateur = $_SESSION['id_utilisateur'];// Récupérer l'id de l'utilisateur à partir de la session
+$id_utilisateur = $_SESSION['id_utilisateur'];// récupérer l'id de l'utilisateur à partir de la session
 $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
 ?>
 
@@ -75,7 +75,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
             $col_url = array_search('url', $en_tete);
 
 
-            while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {// Afficher chaque quizz créé par l'utilisateur
+            while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {//on affiche chaque quizz créé par l'utilisateur
                 if ($quizz_data[$col_utilisateur] == $id_utilisateur) {
                     ?>
                     <div class="tableau">

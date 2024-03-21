@@ -13,7 +13,7 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65f6eaf990540,astres,"connaissez vous bien le ciel?",65f30860ea5d9,True,Lancé,0,url
 65f9684422079,"quizz test","un quizz pour faire des test",65f30860ea5d9,True,Lancé,0,url
 65fa046c9e6c8,ecole,ecole,65f9f1f612243,True,Lancé,0,url
-65fa04d790ded,entr,entr,65f9f43f07dad,True,EnCours,0,url
+65fa04d790ded,entr,entr,65f9f43f07dad,True,Lancé,0,url
 65fa05f75efa1,testest,testest,,True,EnCours,0,url
 65fabf6503db3,coucou,coucou,,True,EnCours,0,url
 65fac004274b7,tyty,tyty,65f860004f0cc,True,Lancé,0,url
