@@ -1,4 +1,4 @@
-
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        this.classList.toggle('active'); // Bascule la classe active sur le burger menu
-    });
+function toggleMobileMenu() {
+    var mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.style.display === "none" ? mobileMenu.style.display = "flex" : mobileMenu.style.display = "none";
+}

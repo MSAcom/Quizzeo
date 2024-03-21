@@ -21,6 +21,9 @@
         backdrop-filter: blur(5px); /* Ajoute un flou à l'arrière de la navbar */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute ombre */
         }
+    .desktopMenu ul { /* Aligne les éléments de la nav à l'horizontal */
+        display:flex;
+    }
     a {
         font-family: Arial;
     }
@@ -49,7 +52,7 @@
         font-size: 4rem;
         letter-spacing: -0.14rem;
         line-height: 1;
-        margin-bottom: 6rem;
+        margin-bottom: rem;
         font-family: fantasy;
         margin-top: 6rem;
     }
@@ -120,15 +123,21 @@
     <nav class="navbar">
         <img src="./quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem active">Home</a> <!-- a href pour redirection pages -->
+            <a href="#" class="desktopMenuListItem active">Home</a><!-- a href pour redirection pages -->
             <a href="blog-page.php" class="desktopMenuListItem">Blog</a>
             <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
             <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="toggleMobileMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
+        </div>
+        <div class="mobileMenu" id="mobileMenu">
+            <a href="#" class="mobileMenuItem">Home</a><!-- a href pour redirection pages -->
+            <a href="blog-page.php" class="mobileMenuItem">Blog</a>
+            <a href="inscription.php" class="mobileMenuItem">Inscription</a>
+            <a href="connexion.php" class="mobileMenuItem">Connexion</a>
         </div>
     </nav>
     <main>
@@ -165,5 +174,6 @@
     <script src="gooey.js"></script>
     <script src="app.js"></script>
     <script src="burger.js"></script>
+</body>
 
 </html>

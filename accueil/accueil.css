@@ -158,8 +158,8 @@ canvas{
     margin: 6px 0; /* Ajustement de l'espacement entre les barres du burger */
     
 }
- 
-@media (max-width: 1026px) {
+
+@media (max-width: 950px) {
     .desktopMenu {
         display: none;
     }
@@ -174,7 +174,7 @@ canvas{
     }
  
     .burger-menu.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(14px, 14px); /* Ajustement de la position et de la rotation */
+        transform: rotate(45deg) translate(8px, 8px); /* Ajustement de la position et de la rotation */
     }
  
     .burger-menu.active .bar:nth-child(2) {
@@ -188,4 +188,34 @@ canvas{
     .burger-menu.active {
         transition: transform 0.5s ease-in-out;
     }
+ 
+    .mobileMenu {
+        display: none;
+    }
+
+    
 }
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%; /* Ajustement de la position verticale */
+    right: 50px; /* Ajustement de la position horizontale */
+    background-color: #333;
+    padding: 30px;
+    z-index: 999; /* Ajustement du niveau de superposition */
+    border-radius: 5px; /* Arrondir les coins du menu */
+}
+
+.mobileMenuItem {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte */
+    margin-bottom: 10px;
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur du texte */
+}
+
+.mobileMenuItem:hover {
+    color: rgb(141, 108, 190); /* Couleur du texte au survol */
+}
+
