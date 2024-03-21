@@ -105,6 +105,7 @@
 }
 
 
+
 </style>
 
 <body>
@@ -119,7 +120,7 @@
             </text>
         </svg>
     </div>
-    </div>
+
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
@@ -174,6 +175,10 @@
     <script src="gooey.js"></script>
     <script src="app.js"></script>
     <script src="burger.js"></script>
+    <footer class="ftr">   
+    <li class="copyright"> &copy; 2024 Mon blog. All rights reserved.</li>
+    </footer>
+
 </body>
 
 </html>

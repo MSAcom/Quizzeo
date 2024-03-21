@@ -193,7 +193,6 @@ canvas{
     .mobileMenu {
         display: none;
     }
-
     
 }
 .mobileMenu {
@@ -220,3 +219,33 @@ canvas{
     color: rgb(141, 108, 190); /* Couleur du texte au survol */
 }
 
+footer {
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* Positionnement fixe */
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond avec opacité */
+    backdrop-filter: blur(5px); /* Ajoute un effet de flou */
+}
+ 
+.copyright {
+    color: black;
+    list-style-type: none;
+}
+.ftr {
+    animation: flameAnimation 1.5s infinite;
+}
+ 
+@keyframes flameAnimation {
+    0% {
+        text-shadow: 0 0 20px #808080, 0 0 30px #808080, 0 0 40px #808080, 0 0 50px #808080, 0 0 60px #808080, 0 0 70px #808080, 0 0 80px #808080;
+    }
+    50% {
+        text-shadow: 0 0 20px #808080, 0 0 40px #808080, 0 0 60px #808080, 0 0 80px #808080, 0 0 100px #808080, 0 0 120px #808080, 0 0 140px #808080;
+    }
+    100% {
+        text-shadow: 0 0 20px #808080, 0 0 30px #808080, 0 0 40px #808080, 0 0 50px #808080, 0 0 60px #808080, 0 0 70px #808080, 0 0 80px #808080;
+    }
+}
