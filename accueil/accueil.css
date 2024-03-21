@@ -10,7 +10,7 @@ body{
 
 .navbar{
     background-color: rgb(236, 236, 236);
-    height: 8rem;
+    height: 4,5rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -131,11 +131,92 @@ input[type="password"]{
     padding-bottom: 10px;
 }
 
-@media screen and (max-width:500px){
-    .logo{
+.wrap-2{
+    position: fixed;
+    z-index:-10;
+    top:0;
+    left:0;
+    overflow:hidden;
+    height:100vh;
+    width:100vw;
+}
+canvas{
+    width:100%;
+    height:100%;
+}
+ 
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 40px; /* Ajustement du padding */
+    margin-right: 15px;
+}
+ 
+.bar {
+    width: 35px; /* Ajustement de la largeur du burger */
+    height: 5px; /* Ajustement de la longueur du burger */
+    background-color: rgb(141, 108, 190);
+    margin: 6px 0; /* Ajustement de l'espacement entre les barres du burger */
+    
+}
+
+@media (max-width: 950px) {
+    .desktopMenu {
         display: none;
     }
-    .desktopMenuListItem {
-        margin: 0rem;
+ 
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
     }
+ 
+    .burger-menu.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px); /* Ajustement de la position et de la rotation */
+    }
+ 
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+ 
+    .burger-menu.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -9px); /* Ajustement de la position et de la rotation */
+    }
+ 
+    .burger-menu.active {
+        transition: transform 0.5s ease-in-out;
+    }
+ 
+    .mobileMenu {
+        display: none;
+    }
+
+    
 }
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%; /* Ajustement de la position verticale */
+    right: 50px; /* Ajustement de la position horizontale */
+    background-color: #333;
+    padding: 30px;
+    z-index: 999; /* Ajustement du niveau de superposition */
+    border-radius: 5px; /* Arrondir les coins du menu */
+}
+
+.mobileMenuItem {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte */
+    margin-bottom: 10px;
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur du texte */
+}
+
+.mobileMenuItem:hover {
+    color: rgb(141, 108, 190); /* Couleur du texte au survol */
+}
+
