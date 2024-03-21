@@ -105,3 +105,7 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65fc47b6c89a3,65fc47b6c9007,65fc47b6c911d,"reponse 2",False,0
 65fc47b6c89a3,65fc47b6c9007,65fc47b6c9135,"reponse 3",False,0
 65fc47b6c89a3,65fc47b6c9007,65fc47b6c9142,"reponse 4",True,0
+65fc6049b6f13,65fc6049b7240,65fc6049b72bd,incrementation,False,0
+65fc6049b6f13,65fc6049b7240,65fc6049b72fb,incrementation,False,0
+65fc6049b6f13,65fc6049b7240,65fc6049b730a,incrementation,False,0
+65fc6049b6f13,65fc6049b7240,65fc6049b7319,incrementation,True,0

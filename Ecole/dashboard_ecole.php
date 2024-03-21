@@ -71,6 +71,16 @@ $identifiant = $_SESSION['identifiant'];
             $col_url = array_search('url', $en_tete);
 
 
+            /*-------------Ouvrir le fichier de stockage  de tt les reponses-----------------*/
+            $file_toutes_reponses = fopen("../quizz/reponsequizz/toutes_reponses.csv", "r");
+            $en_tete_toutes_reponses = fgetcsv($file_toutes_reponses); 
+
+            $col_id_utilisateur_stockage_toutes_reponses = array_search('id_utilisateur', $en_tete_toutes_reponses);
+            $col_id_quizz_stockage_toutes_reponses = array_search('id_quizz', $en_tete_toutes_reponses);
+            $col_id_reponse_toutes_reponses = array_search('id_reponse', $en_tete_toutes_reponses);
+            $col_id_question_toutes_reponses = array_search('id_question', $en_tete_toutes_reponses);
+
+
             while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {// Afficher chaque quizz créé par l'utilisateur
                 if ($quizz_data[$col_utilisateur] == $id_utilisateur) {
                     ?>
@@ -80,6 +90,8 @@ $identifiant = $_SESSION['identifiant'];
                             <div class='description description_quizz'>description : <?php echo $quizz_data[$col_description_quizz]; ?></div>
                             <div class='description'>status : <?php echo $quizz_data[$col_status]; ?></div>
                             <div class='description '>nombre de réponses : <?php echo $quizz_data[$col_nb_reponses]; ?></div>
+
+
                             <form action="info_quizz_ecole.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $quizz_data[$col_id_quizz]; ?>">
                                 <input type="hidden" name="statut" value="<?php echo $quizz_data[$col_status]; ?>">
