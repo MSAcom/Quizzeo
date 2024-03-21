@@ -32,6 +32,29 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
 
                 if ($userFound) { 
                     if ($line[7] === "True") { // Verifie si l'utilisateur est actif
+                        
+                    $csv_file = 'utilisateurs.csv';
+                    $file = fopen($file_name, 'r+');
+                    $lines = file($csv_file);// on lit le contenu du fichier CSV dans un tablea
+                    foreach ($lines as $key => &$line) {// on parcours chaque ligne du tablea 
+                        $data = str_getcsv($line);// on stocke ces données dans un tableau (séparés par virgules) => convertit données string en csv
+                        if ($data[0] == $_SESSION['id_utilisateur']) {//  si l'identifiant du quiz correspond
+                            
+                            $data[8] = "True"; //nous modifions le statut du quiz
+
+                            $csv_line = fopen('php://temp', 'r+'); //nous réécrivons la ligne modifiée dans le tableau en utilisant fputcsv()
+                            fputcsv($csv_line, $data);
+                            rewind($csv_line); //"rembobine" le pointeur => retourne au début du fichier
+                            $lines[$key] = fgets($csv_line);//on lit une ligne (à partir du pointeur) et cette ligne est stockée dans le tableau "$lines" sous la clé "$key"
+                            fclose($csv_line);
+
+                            break; // Sortir de la boucle après avoir trouvé le quiz
+                        }
+                    }
+
+
+                    file_put_contents($csv_file, implode('', $lines));// Enregistrer le tableau modifié dans le fichier CSV
+
                         //Redirection en fonction du role de l'utilisateur
                         $message = "Vous êtes connecté"; 
                         if ($_SESSION['role'] === "Utilisateur") {

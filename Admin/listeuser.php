@@ -70,6 +70,7 @@ $identifiant = $_SESSION['identifiant'];
             $col_actif = array_search('Actif', $en_tete);
             $col_id_utilisateur = array_search('id_utilisateur', $en_tete);
             $col_Paramètres = array_search('Paramètres', $en_tete);
+            $col_connexion = array_search('connecte', $en_tete);
             ?>
             <table>
                 <tr>
@@ -78,6 +79,7 @@ $identifiant = $_SESSION['identifiant'];
                     <th>Identifiant</th>
                     <th>Role</th>
                     <th>Actif</th>
+                    <th>Connecté</th>
                     <th>Paramètres</th>
                 </tr>
                 <?php
@@ -89,6 +91,7 @@ $identifiant = $_SESSION['identifiant'];
                         <td><?php echo $data[$col_Prénom] ?></td>
                         <td><?php echo $data[$col_Identifiant] ?></td>
                         <td><?php echo $data[$col_role] ?></td>
+                        <td><?php if ( $data[$col_connexion] === "True"){echo "Connecté";} else {echo "Déconnecté";}?> </td>
                         <td><?php if ( $data[$col_actif] === "True"){echo "Actif";} else {echo "Désactivé";}?> </td>
                         <td>
                             <?php if ($data[$col_actif] === "False") { ?>

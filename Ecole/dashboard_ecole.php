@@ -51,6 +51,13 @@ $identifiant = $_SESSION['identifiant'];
         </div>
         <p> <span class="pastille"></span> Ecole</p>
     </nav>
+    <style>
+        /* Style pour la couleur de fond si le quizz est désactivé */
+        .card.desactive {
+            background-color: #ffcccc; /* Couleur rouge clair */
+            border:solid;
+        }
+    </style>
     <div class="container">
         <h1> Les Quizz de  <?php echo $identifiant ?> : </h1>
         <div class="page">
@@ -83,6 +90,9 @@ $identifiant = $_SESSION['identifiant'];
 
             while (($quizz_data = fgetcsv($quizz_file)) !== FALSE) {// Afficher chaque quizz créé par l'utilisateur
                 if ($quizz_data[$col_utilisateur] == $id_utilisateur) {
+                    $actif = filter_var($quizz_data[$col_actif], FILTER_VALIDATE_BOOLEAN);
+                    $card_class = $actif ? '' : 'desactive';
+                    var_dump($card_class); 
                     ?>
                     <div class="tableau">
                         <div class="card">

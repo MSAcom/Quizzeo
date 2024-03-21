@@ -1,12 +1,4 @@
-Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif
-65f84309a9610,test1,test1,test1,Utilisateur,$2y$10$MPTybjkO3vWhxqI7QcMj9.JoaUINeFt0ls.PJaMfKkHJ7LA9Dk/kW,test1@gmail.com,True
-65f8465c43c65,coucou,coucou,coucou,Utilisateur,$2y$10$WrkN1bMIALrsBBqs9iBJwOgdLAaXR2kGd9R6khQrnHAIm8LWzCMV6,,True
-65f860004f0cc,coucou2,coucou2,coucou2,Ecole,$2y$10$7UAIUqFzmy3Jf0blgHJqmOd96JoUlU.aBcP4/30edxPGpoY0DfgOm,,True
-65f97c25006aa,bricout,clemence,clem,Utilisateur,$2y$10$oAyO9P4t2h3tRBXNrLNIcuTEdDbz69Bu00CZhnNySUwHV46mVNW9q,,True
-65f9a1fa87c7a,admin,admin,admin,Admin,$2y$10$GF2JvPAO/wGGR9dSDm2eU.Kwcc0EpIoczIdfJUj5yczxvsKvwOYXu,,True
-65f9f1f612243,ecole,ecole,ecole,Ecole,$2y$10$lvEhMYGg0qjIbVbqn6fKJeRiPkiwGLCRi7hpBpLsCb7NNoiVJipCe,,True
-65f9f43f07dad,entr,entr,entr,Entreprise,$2y$10$RJ6kC98z5wkJaX6LpBLUAeKwYcjhfEfxnNHCvQDx1wtFcURCj7KIq,,True
-65fc1514e5e3a,test2,test2,test2,Utilisateur,$2y$10$LhiPvAEmRQFR/y3YgpTOwOstp27EsvJmOblg8OKhm.ERQvvdO/2l2,,True
-65fc15d323a23,test2," test2"," test2",Utilisateur,$2y$10$OPbpLhk/m2fsk1s0394bhuwJFXbHkButVR4j1Ypwo88Nv7CP6I7rm,,True
-65fc15feadfdd,test4,test4,test4,Utilisateur,$2y$10$VMYukA88CJ8eHUHqcRnltOUZX.KTos/qHC0cxytVe5edkn5/FNPIi,,True
-65fc3ddda1978,test5,test5,test5,Utilisateur,$2y$10$Nhmy8I0s5fjxgLrlywhGkOxLXpYXrQV.FgtJp1ZPBaNldGiClaRVy,,True
+Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif,connecte
+65fcb832ecc17,test1,test1,test1,Utilisateur,$2y$10$3Zdl3bRpqkQOFVoyZ2kY8uqOzVLku6BHAGxWKS5AWamN59nL9e2mm,,True,True
+65fcbb3523392,admin,admin,admin,Admin,$2y$10$VPvYfgsGllOsYIaC2jaiEOZj57VGIDjVl95wAglynhpm5ggT4FRSa,,True,True
+65fcbc5463848,ecole,ecole,ecole,Ecole,$2y$10$Zvg553IQ4N/NmaHwtxIDWeKeKD4gj8BCGXaKUszi/Qu53l1SWbKFu,,True,False
