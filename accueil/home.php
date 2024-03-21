@@ -7,12 +7,20 @@
     <title>Page d'Accueil</title>
     <link rel="stylesheet" href="./accueil.css"> <!--css-->
     <link rel="stylesheet" href="./loading.css">
+
 </head>
 
 <style>
     .navbar {
-        background: white;
-    }
+        background-color: rgba(255, 255, 255, 0.5); /* Couleur avec opacité */
+        color: #fff; 
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(5px); /* Ajoute un flou à l'arrière de la navbar */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute ombre */
+        }
     a {
         font-family: Arial;
     }
@@ -20,10 +28,16 @@
         -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); reflection /*effet miroir*/
     }
     .container {
-        margin-top:4%;
+        margin-top:7%;
         display: flex;
         width: 70%;
         z-index: 1;
+        background-color: rgba(255, 255, 255, 0.5); /* Couleur avec opacité */
+        color: black; 
+        border-radius : 20px;
+       
+        backdrop-filter: blur(5px); /* Ajoute un flou à l'arrière de la navbar */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute ombre */
     }
 
     .left {
@@ -35,8 +49,9 @@
         font-size: 4rem;
         letter-spacing: -0.14rem;
         line-height: 1;
-        margin-bottom: 8rem;
+        margin-bottom: 6rem;
         font-family: fantasy;
+        margin-top: 6rem;
     }
 
     .right {
@@ -86,6 +101,7 @@
     color: rgb(110, 178, 255);
 }
 
+
 </style>
 
 <body>
@@ -109,6 +125,11 @@
             <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
             <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
     <main>
         <div class="container">
@@ -118,11 +139,12 @@
                     Test.<br/>
                     Learn.<br/>
                 </h1>
-
+<!--
                 <div class="search">
                     <input type="text" placeholder="Find a quizz">
                     <button> Go </button>
                 </div>
+-->
             </div>
 
             <div class="right">
@@ -139,7 +161,9 @@
             </div>
         </div>
     </main>
+    <div class="wrap-2"><canvas id="liquid"></canvas></div>
+    <script src="gooey.js"></script>
     <script src="app.js"></script>
-</body>
+    <script src="burger.js"></script>
 
 </html>
