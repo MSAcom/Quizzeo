@@ -104,6 +104,7 @@ $points_totaux = 0; // Initialisation du score
                         $id_question = $ligne[$col_id_question]; // Stocker l'id de la question
                         $points_question = $ligne[$col_points_question];
                         $points_totaux +=  $points_question;
+                        ?><input type="hidden" name="question<?php echo $id_question; ?>" value="<?php echo $ligne[$col_question] ?>"><?php
                         echo "<p> Question : " . $ligne[$col_question] . "<br>"; // on affiche la question
                         echo "Points attribués à la question : " . $ligne[$col_points_question] . "</p><br>"; // on affiche les points attribués à cette question
                         rewind($file_reponses); // Revenir au début du fichier des réponses
@@ -117,6 +118,7 @@ $points_totaux = 0; // Initialisation du score
                                         <input type="radio" name="id_reponse_validee_<?php echo $id_question; ?>" value="<?php echo $ligne_reponses[$col_id_reponse_fichier_reponse]; ?>"> 
                                         <?php echo $ligne_reponses[$col_reponse_fichier_reponse]?></label><br>
                                          <input type="hidden" name="points<?php echo $id_question; ?>" value="<?php echo $points_question ?>">
+                                        
                                     <?php
                                     
                                     

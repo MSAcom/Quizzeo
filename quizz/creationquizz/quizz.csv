@@ -27,3 +27,4 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65fb5965a37a9,"les chocolats","un beau quizz sur le chocolat",65f9f1f612243,True,Lancé,0,url
 65fc47b6c89a3,"je suis un quizz","je suis un quizz",65f9f43f07dad,True,Lancé,1,url
 65fc6049b6f13,"quizz test incrementation",incrementation,65f9f1f612243,True,Lancé,1,url
+65fc900374910,"les chocolats","un beau quizz sur le chocolat",65f9f43f07dad,True,EnCours,6,url

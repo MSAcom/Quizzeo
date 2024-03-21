@@ -69,7 +69,7 @@ $file_toutes_reponses = fopen($file_name_toutes_reponses, 'a+');
 
 // si le fichier est vide, on ajoute l'en-tête
 if (filesize($file_name_toutes_reponses) == 0) {
-    fputcsv($file_toutes_reponses, ['id_reponse', 'id_quizz', 'id_utilisateur', 'id_question']);
+    fputcsv($file_toutes_reponses, ['id_reponse', 'id_quizz', 'id_utilisateur', 'id_question', "question_quizz"]);
 }
 
 // lire les données envoyées par l'utilisateur
@@ -87,7 +87,7 @@ foreach ($_POST as $key => $value) {
         while (($ligne_reponses = fgetcsv($file_reponses)) !== false) {
             if ($ligne_reponses[0] === $id_quizz && $ligne_reponses[1] === $question_id && $ligne_reponses[4] === 'True') {
                 // on ecrit les données dans le fichier toutes_reponses.csv
-                fputcsv($file_toutes_reponses, [$_POST["id_reponse_validee_".$ligne_reponses[1]], $id_quizz, $id_utilisateur, $question_id]);
+                fputcsv($file_toutes_reponses, [$_POST["id_reponse_validee_".$ligne_reponses[1]], $id_quizz, $id_utilisateur, $question_id, $_POST["question".$question_id]]);
                 
                 /*-------------question--------------*/
                 //on ouvre le fichier questions_quizz.csv en mode lecture
@@ -98,6 +98,7 @@ foreach ($_POST as $key => $value) {
                 while (($ligne = fgetcsv($file)) !== false) {
                     if ($ligne[0] == $id_quizz && $ligne[1] == $question_id) {
                         $points_question = $ligne[4];
+                        
                         /*-------------score----------*/
                         //on calcule le score en rajoutant les points de la question si la reponse est bonne
                         if ($_POST["id_reponse_validee_".$ligne_reponses[1]] === $ligne_reponses[2]) {
