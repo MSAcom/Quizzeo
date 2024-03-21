@@ -228,4 +228,27 @@ canvas{
     .burger-menu.active {
         transition: transform 0.5s ease-in-out;
     }
+
+    .mobileMenu {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50%; /* Ajustement de la position verticale */
+    right: 20px; /* Ajustement de la position horizontale */
+    background-color: #333;
+    padding: 20px;
+    z-index: 999; /* Ajustement du niveau de superposition */
+
+}
+
+.mobileMenuItem {
+    text-decoration: none;
+    color: rgb(91, 3, 255);
+    margin-bottom: 10px;
+    font-size: 50px;
 }

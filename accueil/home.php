@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'Acceuil</title>
     <link rel="stylesheet"  type="text/css" href="./accueil.css">
-    <link rel="stylesheet"type="text/css" href="./gooey.scss">
 </head>
 <body>
     <nav class="navbar">
@@ -16,10 +15,15 @@
             <a href="deconnexion.php" class="desktopMenuListItem">Connexion</a>
         </div>
         <!--<p> <span class="pastille"></span> connecté </p>-->
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="toggleMobileMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
+        </div>
+        <div class="mobileMenu" id="mobileMenu">
+            <a href="./attractions.php" class="mobileMenuItem">Attractions</a>
+            <a href="./pagefavoris.php" class="mobileMenuItem">Favoris</a>
+            <a href="deconnexion.php" class="mobileMenuItem">Connexion</a>
         </div>
     </nav>
     
@@ -39,5 +43,6 @@
     <div class="wrap-2"><canvas id="liquid"></canvas></div>
 
     <script src="gooey.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>
