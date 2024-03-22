@@ -22,7 +22,7 @@
 .desktopMenuListItem {
     margin:1rem;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 30px;
 }
 .desktopMenuListItem:hover { /* Quand passe la souris par dessus, change de couleur */
     color: rgb(110, 178, 255);
@@ -178,4 +178,12 @@ input[type="submit"]:hover { /*quand on passe la souris sur le bouton cela l'ass
 }
 .correction{
     display: flex;
+}
+@media screen and (max-width:500px){
+    .logo{
+        display: none;
+    }
+    .desktopMenuListItem {
+        margin: 20px;
+    }
 }

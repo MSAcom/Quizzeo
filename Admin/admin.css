@@ -59,3 +59,11 @@ button.activer:hover {
 button.desactiver:hover {
     background-color: rgb(255, 211, 211);
 }
+@media screen and (max-width:500px){
+    .logo{
+        display: none;
+    }
+    .desktopMenuListItem {
+        margin: 0rem;
+    }
+}

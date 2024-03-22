@@ -30,7 +30,7 @@ if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Admin') {//
     exit();
 }
 
-// Récupérer les données de l'utilisateur 
+// récupérer les données de l'utilisateur 
 $id_utilisateur = $_SESSION['id_utilisateur'];
 $identifiant = $_SESSION['identifiant'];
 ?>
@@ -51,7 +51,7 @@ $identifiant = $_SESSION['identifiant'];
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo' />
         <div class='desktopMenu'>
             
-
+            <a href="" class="desktopMenuListItem">Utilisateurs</a>
             <a href="admin.php" class="desktopMenuListItem">Quizz</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
@@ -78,8 +78,8 @@ $identifiant = $_SESSION['identifiant'];
                     <th>Prénom</th>
                     <th>Identifiant</th>
                     <th>Role</th>
-                    <th>Actif</th>
                     <th>Connecté</th>
+                    <th>Actif</th>
                     <th>Paramètres</th>
                 </tr>
                 <?php
@@ -91,21 +91,21 @@ $identifiant = $_SESSION['identifiant'];
                         <td><?php echo $data[$col_Prénom] ?></td>
                         <td><?php echo $data[$col_Identifiant] ?></td>
                         <td><?php echo $data[$col_role] ?></td>
-                        <td><?php if ( $data[$col_connexion] === "True"){echo "Connecté";} else {echo "Déconnecté";}?> </td>
-                        <td><?php if ( $data[$col_actif] === "True"){echo "Actif";} else {echo "Désactivé";}?> </td>
+                        <td><?php if ( $data[$col_connexion] === "True"){echo "Connecté";} else {echo "Déconnecté";}?> </td> <!--pour voir si l'utilisateur est connecté-->
+                        <td><?php if ( $data[$col_actif] === "True"){echo "Actif";} else {echo "Désactivé";}?> </td><!--pour voir si l'utilisateur est désactivé ou pas-->
                         <td>
                             <?php if ($data[$col_actif] === "False") { ?>
                                 <form action="activation_user.php" method="post">
                                     <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
                                     <input type="hidden" name="actif" value="<?php echo $data[$col_actif]; ?>">
-                                    <button  type="submit" class="activer">Activer</button>
+                                    <button  type="submit" class="activer">Activer</button> <!--pour reactiver un utilisateur-->
                                 </form>
                             <?php } ?>
                             <?php if ($data[$col_actif] === "True") { ?>
                                 <form action="desactivation_user.php" method="post">
                                     <input type="hidden" name="id_utilisateur" value="<?php echo $data[$col_id_utilisateur]; ?>">
                                     <input type="hidden" name="actif" value="<?php echo $data[$col_actif]; ?>">
-                                    <button  type="submit" class="desactiver">Désactiver</button>
+                                    <button  type="submit" class="desactiver">Désactiver</button><!--pour desactiver un utilisateur-->
                                 </form>
                             <?php } ?>
                         </td>

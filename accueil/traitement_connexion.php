@@ -35,12 +35,12 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                         
                     $csv_file = 'utilisateurs.csv';
                     $file = fopen($file_name, 'r+');
-                    $lines = file($csv_file);// on lit le contenu du fichier CSV dans un tablea
-                    foreach ($lines as $key => &$line) {// on parcours chaque ligne du tablea 
+                    $lines = file($csv_file);// on lit le contenu du fichier CSV dans un tableau
+                    foreach ($lines as $key => &$line) {// on parcours chaque ligne du tablea u
                         $data = str_getcsv($line);// on stocke ces données dans un tableau (séparés par virgules) => convertit données string en csv
-                        if ($data[0] == $_SESSION['id_utilisateur']) {//  si l'identifiant du quiz correspond
+                        if ($data[0] == $_SESSION['id_utilisateur']) {//  si l'identifiant de l'utilisateur correspond
                             
-                            $data[8] = "True"; //nous modifions le statut du quiz
+                            $data[8] = "True"; //inscrire l'utilisateur comme connecte
 
                             $csv_line = fopen('php://temp', 'r+'); //nous réécrivons la ligne modifiée dans le tableau en utilisant fputcsv()
                             fputcsv($csv_line, $data);
@@ -48,12 +48,12 @@ if (isset($_POST['submitpost'])) { // Vérifie si l'utilisateur a cliqué sur le
                             $lines[$key] = fgets($csv_line);//on lit une ligne (à partir du pointeur) et cette ligne est stockée dans le tableau "$lines" sous la clé "$key"
                             fclose($csv_line);
 
-                            break; // Sortir de la boucle après avoir trouvé le quiz
+                            break;
                         }
                     }
 
 
-                    file_put_contents($csv_file, implode('', $lines));// Enregistrer le tableau modifié dans le fichier CSV
+                    file_put_contents($csv_file, implode('', $lines));// enregistrer le tableau modifié dans le fichier CSV
 
                         //Redirection en fonction du role de l'utilisateur
                         $message = "Vous êtes connecté"; 

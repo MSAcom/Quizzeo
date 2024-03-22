@@ -29,6 +29,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
             
     
             <a href="listeuser.php" class="desktopMenuListItem">Utilisateurs</a>
+            <a href="" class="desktopMenuListItem">Quizz</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>
