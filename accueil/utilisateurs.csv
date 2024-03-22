@@ -2,4 +2,4 @@ Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif,conn
 65fcb832ecc17,test1,test1,test1,Utilisateur,$2y$10$3Zdl3bRpqkQOFVoyZ2kY8uqOzVLku6BHAGxWKS5AWamN59nL9e2mm,,True,True
 65fcbb3523392,admin,admin,admin,Admin,$2y$10$VPvYfgsGllOsYIaC2jaiEOZj57VGIDjVl95wAglynhpm5ggT4FRSa,,True,False
 65fcbc5463848,ecole,ecole,ecole,Ecole,$2y$10$Zvg553IQ4N/NmaHwtxIDWeKeKD4gj8BCGXaKUszi/Qu53l1SWbKFu,,True,False
-65fcc88211a60,entr,entr,entr,Entreprise,$2y$10$UVrn2v6949/QOGv43sphGeww5a6eQlVkn.IsqxBwOV64XpdRcxEYy,,True,True
+65fcc88211a60,entr,entr,entr,Entreprise,$2y$10$UVrn2v6949/QOGv43sphGeww5a6eQlVkn.IsqxBwOV64XpdRcxEYy,,True,False

@@ -45,15 +45,22 @@
 }
 main {
     height: 100%;
+    justify-content : space-between;
 }
 .articles {
     display: flex;
     
+    
 }
-.article {
-    flex-direction: column;
-}
+article {
 
+    border:solid 1px black;
+    margin-left : 10px;
+    
+}
+.content{
+    color: black;
+}
 
 
 
@@ -92,21 +99,21 @@ main {
         <section class="articles container">
             <article>
                 <h2>Culture générale</h2>
-                <p>Testez votre culture generale, plusieurs type de quizz accesible pour les enfants et les adultes</p>
-                <p>C'est à vous de jouer !</p>
+                <p class="content">Testez votre culture generale, plusieurs type de quizz accesible pour les enfants et les adultes</p>
+                <p class="content">C'est à vous de jouer !</p>
                 <a href="https://www.laculturegenerale.com/60-tests-de-culture-generale1/">Lire la suite</a>
             </article>
             <article>
                 <h2>L'histoire </h2>
-                <p>À quoi servent les quizz, quel est l'origine du mot quizz ?</p>
-                <p>Découvrons ensemble !</p>
+                <p class="content">À quoi servent les quizz, quel est l'origine du mot quizz ?</p>
+                <p class="content">Découvrons ensemble !</p>
                 <a href="https://fr.wikipedia.org/wiki/Quiz">Lire la suite</a>
             </article>
             <article>
                 <h2>De la blague </h2>
                
-                <p>Vous voulez des blagues des mignons ?</p>
-                <p>Regardons ensemble ! <br> <a href="https://www.pinterest.fr/pin/541628292667356167/">Lire la suite</a></p>
+                <p class="content">Vous voulez des blagues des mignons ?</p>
+                <p class="content">Regardons ensemble ! <br> <a href="https://www.pinterest.fr/pin/541628292667356167/">Lire la suite</a></p>
             </article>
         </section>
     </main>
