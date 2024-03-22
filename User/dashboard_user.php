@@ -53,6 +53,7 @@ fclose($stockage_reponses_file);
     <link rel="stylesheet" href="../quizz/dashboard/dashboard.css">
     <link rel="stylesheet" href="user.css">
 </head>
+
 <body>
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>

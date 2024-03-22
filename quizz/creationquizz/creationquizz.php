@@ -47,7 +47,7 @@ $identifiant = $_SESSION['identifiant'];
 <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="/Projet_final/Quizzeo/accueil/home.php" class="desktopMenuListItem">Home</a>
+            
            
             <?php 
             if ($users[$identifiant]['role'] === "Ecole"){?>

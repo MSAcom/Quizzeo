@@ -45,7 +45,7 @@ $identifiant = $_SESSION['identifiant'];
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="./acceuil.php" class="desktopMenuListItem">Home</a>
+            <a href="" class="desktopMenuListItem active ">Dashboard</a>
             <a href="../quizz/creationquizz/creationquizz.php" class="desktopMenuListItem">Créer un quizz</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
@@ -92,7 +92,7 @@ $identifiant = $_SESSION['identifiant'];
                 if ($quizz_data[$col_utilisateur] == $id_utilisateur) {
                     $actif = filter_var($quizz_data[$col_actif], FILTER_VALIDATE_BOOLEAN);
                     $card_class = $actif ? '' : 'desactive';
-                    var_dump($card_class); 
+                    
                     ?>
                     <div class="tableau">
                         <div class="card">

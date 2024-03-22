@@ -117,3 +117,11 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65fc900374910,65fc900374e4e,65fc900374e76,reponse2,False,0
 65fc900374910,65fc900374e4e,65fc900374e89,reponse3,False,0
 65fc900374910,65fc900374e4e,65fc900374e9c,reponse4,True,0
+65fd45e47fa55,65fd45e47fbe6,65fd45e48108d,vrai,True,0
+65fd45e47fa55,65fd45e47fbe6,65fd45e481226,lune,False,0
+65fd45e47fa55,65fd45e47fbe6,65fd45e481251,tradition,False,0
+65fd45e47fa55,65fd45e47fbe6,65fd45e481261,vrai,False,0
+65fd4649e40a3,65fd4649e42f1,65fd4649e431b,tradition,True,0
+65fd4649e40a3,65fd4649e42f1,65fd4649e433b,lune,False,0
+65fd4649e40a3,65fd4649e42f1,65fd4649e4347,yuyu,False,0
+65fd4649e40a3,65fd4649e42f1,65fd4649e4350,"planette terre",False,0

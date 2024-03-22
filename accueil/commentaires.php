@@ -86,20 +86,11 @@ $commentaires = lireCommentaires();
     <title>Page de Commentaires</title>
     <link rel="stylesheet" href="./accueil.css">
     <style>
-        .navbar {
-        background-color: rgba(0, 30, 77, 0.5); /* Couleur avec opacité */
-        color: #fff; 
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        backdrop-filter: blur(5px); /* Ajoute un flou à l'arrière de la navbar */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute ombre */
-        }
+
 
         .desktopMenuListItem {
             margin-right: 20px;
-            color: #fff;
+            color: black;
             text-decoration: none;
         
         }
@@ -147,9 +138,9 @@ $commentaires = lireCommentaires();
 </head>
 <body>
 <nav class="navbar">
-    <img src="./quizzeo-sans-fond.png" alt='logo' class='logo'/>
+    <img src="../quizz/images/quizzeo-sans-fond.png" alt='logo' class='logo'/>
     <div class='desktopMenu'>
-        <a href="page_utilisateur.php" class="desktopMenuListItem">Dashboard</a>
+        <a href="../User/dashboard_user.php" class="desktopMenuListItem">Dashboard</a>
         <a href="profil.php" class="desktopMenuListItem">Profil</a>
         <a href="#" class="desktopMenuListItem">Commentaires</a>
         <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>

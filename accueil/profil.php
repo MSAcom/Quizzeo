@@ -69,6 +69,15 @@ if (isset($_POST['submit'])) {// Lorsque envoie le formulaire de modification, s
     <title>Profil</title>
     <link rel="stylesheet" href="./accueil.css">
 </head>
+<style>
+body{
+    background-color: #001e4d;
+}
+.container{
+    border-radius : 20px;
+    margin-top: 70px;
+}
+</style>
 <body>
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
