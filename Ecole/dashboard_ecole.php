@@ -57,6 +57,28 @@ $identifiant = $_SESSION['identifiant'];
             background-color: #ffcccc; /* Couleur rouge clair */
             border:solid;
         }
+       
+    .navbar{
+        height:8rem;
+    }
+    
+    p{
+        margin-right: 20px;
+    }
+    @media (max-width: 950px) {
+    .logo {
+        display: none;
+    }
+    .desktopMenu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    }
+
     </style>
     <div class="container">
         <h1> Les Quizz de  <?php echo $identifiant ?> : </h1>

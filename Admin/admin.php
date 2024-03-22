@@ -22,6 +22,24 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
     <link rel="stylesheet" href="../quizz/dashboard/dashboard.css">
    <link rel="stylesheet" href="admin.css">
 </head>
+<style>
+    p{
+        margin-right: 20px;
+    }
+    @media (max-width: 950px) {
+    .logo {
+        display: none;
+    }
+    .desktopMenu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    }
+</style>
 <body>
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
@@ -32,7 +50,7 @@ $identifiant = $_SESSION['identifiant'];//on récupère aussi l'identifiant
             <a href="" class="desktopMenuListItem">Quizz</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
-        <p> <span class="pastille"></span> connecté </p>
+        <p> <span class="pastille"></span> Admin </p>
     </nav>
     <div class="container">
         <h1> Les Quizz présents sur Quizzeo </h1>

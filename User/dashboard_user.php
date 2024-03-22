@@ -64,7 +64,7 @@ fclose($stockage_reponses_file);
             <a href="../accueil/profil.php" class="desktopMenuListItem">Profil</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
-        <p> <span class="pastille"></span> connecté </p>
+        <p> <span class="pastille"></span>User </p>
     </nav>
     <div class="container">
         <h1> Les Quizz présents sur Quizzeo </h1>

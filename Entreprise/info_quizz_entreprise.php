@@ -41,12 +41,35 @@ $identifiant = $_SESSION['identifiant'];
     <link rel="stylesheet" href="../Admin/admin.css">
     <link rel="stylesheet" href="ecole.css">
 </head>
- 
+<style>
+    .navbar{
+        height:8rem;
+    }
+    
+    p{
+        margin-right: 20px;
+        color:black;
+    }
+    @media (max-width: 950px) {
+    .logo {
+        display: none;
+    }
+    .desktopMenu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    }
+</style>
 <body>
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo' />
         <div class='desktopMenu'>
-            <a href="dashboard_entreprise.php" class="desktopMenuListItem">Quizz</a>
+            <a href="../quizz/creationquizz/creationquizz.php" class="desktopMenuListItem">Créer un Quizz</a>
+            <a href="dashboard_entreprise.php" class="desktopMenuListItem">Dashboard</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Déconnexion</a>
         </div>
         <p> <span class="pastille"></span> connecté </p>

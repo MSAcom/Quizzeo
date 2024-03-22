@@ -43,6 +43,29 @@ $identifiant = $_SESSION['identifiant'];
     <title>Création de Quizz</title>
     <link rel="stylesheet" href="creationquizz.css">
 </head>
+<style>
+    .navbar{
+        height:8rem;
+    }
+    
+    p{
+        margin-right: 20px;
+        color:black;
+    }
+    @media (max-width: 950px) {
+    .logo {
+        display: none;
+    }
+    .desktopMenu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    }
+</style>
 <body>
 <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>

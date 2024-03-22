@@ -34,3 +34,4 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65fd48e6398c8,boulangerie,"un beau quizz sur le chocolat",65fcc88211a60,True,EnCours,0,url
 65fd49e6d10be,"test de satisfaction","aimez vous notre entreprise",65fcc88211a60,True,EnCours,7,url
 65fd4ae8c29f8,"quizz sur la géographie","avez vous bien revisé",65fcbc5463848,True,EnCours,3,url
+65fd545c414c5,"enquete de satisfaction","que voudriez vous que nous ameliorions",65fcc88211a60,True,EnCours,8,url

@@ -87,7 +87,12 @@ $commentaires = lireCommentaires();
     <link rel="stylesheet" href="./accueil.css">
     <style>
 
-
+        .navbar {
+            height: 8rem;
+        }
+        a{
+            text-decoration
+        }
         .desktopMenuListItem {
             margin-right: 20px;
             color: black;
@@ -96,7 +101,7 @@ $commentaires = lireCommentaires();
         }
 
         .desktopMenuListItem:hover {
-            text-decoration: underline; /* GARDE OU PAS */
+            text-decoration: none; /* GARDE OU PAS */
         }
         body {
             background-color: #001e4d;
@@ -133,6 +138,7 @@ $commentaires = lireCommentaires();
             padding: 10px;
             margin-bottom: 10px;
         }
+        
     </style>
     <script src="script.js"></script>
 </head>
@@ -140,12 +146,14 @@ $commentaires = lireCommentaires();
 <nav class="navbar">
     <img src="../quizz/images/quizzeo-sans-fond.png" alt='logo' class='logo'/>
     <div class='desktopMenu'>
-        <a href="../User/dashboard_user.php" class="desktopMenuListItem">Dashboard</a>
-        <a href="profil.php" class="desktopMenuListItem">Profil</a>
+    <a href="../quizz/reponsequizz/historique.php" class="desktopMenuListItem">Historique</a>
+            <a href="../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a> <!-- a href pour redirection pages -->
         <a href="#" class="desktopMenuListItem">Commentaires</a>
+        <a href="profil.php" class="desktopMenuListItem">Profil</a>
+       
         <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
     </div>
-    <p> <span class="pastille"></span> <?php echo $identifiant; ?> connecté </p>
+    <p> <span class="pastille"></span> User </p>
 </nav>
 <div class= container>
     <h2>Ajouter un Commentaire</h2>

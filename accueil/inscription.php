@@ -43,7 +43,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
         -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); reflection /*effet miroir*/
     }
     .container {
-        margin-top:7%;
+        margin-top:2%;
        
         width: 70%;
         z-index: 1;
@@ -53,6 +53,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
        
         backdrop-filter: blur(5px); /* Ajoute un flou à l'arrière de la navbar */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute ombre */
+        padding-bottom: 100px;
     }
     .captchacha {
         width: 400px;

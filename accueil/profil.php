@@ -70,6 +70,9 @@ if (isset($_POST['submit'])) {// Lorsque envoie le formulaire de modification, s
     <link rel="stylesheet" href="./accueil.css">
 </head>
 <style>
+    .navbar {
+            height: 8rem;
+        }
 body{
     background-color: #001e4d;
 }
@@ -82,12 +85,14 @@ body{
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="../quizz/reponsequizz/historique.php" class="desktopMenuListItem">Dashboard</a> <!-- a href pour redirection pages -->
-            <a href="profil.php" class="desktopMenuListItem">Profil</a>
+        <a href="../quizz/reponsequizz/historique.php" class="desktopMenuListItem">Historique</a>
+            <a href="../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a> <!-- a href pour redirection pages -->
             <a href="commentaires.php" class="desktopMenuListItem">Commentaires</a>
+            <a href="profil.php" class="desktopMenuListItem">Profil</a>
+            
             <a href="deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
-        <p> <span class="pastille"></span> user connecté </p>
+        <p> <span class="pastille"></span> User</p>
     </nav>
     <div class="container">
     <h2>Profil de <?= $user_data[1] ?> <?= $user_data[2] ?></h2>

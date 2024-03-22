@@ -149,3 +149,11 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c80,ottawa,True,0
 65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c88,montreal,False,0
 65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c91,calgary,False,0
+65fd545c414c5,65fd545c41926,65fd545c4198d,"un babyfoot",True,0
+65fd545c414c5,65fd545c41926,65fd545c419d8,"une autre machine a café",False,0
+65fd545c414c5,65fd545c41926,65fd545c419f4,"un billard",False,0
+65fd545c414c5,65fd545c41926,65fd545c41a09,"une bouilloire",False,0
+65fd545c414c5,65fd545c41a1e,65fd545c41a33,"café au lait",False,0
+65fd545c414c5,65fd545c41a1e,65fd545c41a47,expresso,True,0
+65fd545c414c5,65fd545c41a1e,65fd545c41a5b,latte,False,0
+65fd545c414c5,65fd545c41a1e,65fd545c41a6f,"café alongé",False,0

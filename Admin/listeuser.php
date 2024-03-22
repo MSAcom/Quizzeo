@@ -45,7 +45,28 @@ $identifiant = $_SESSION['identifiant'];
     <link rel="stylesheet" href="admin.css">
 
 </head>
-
+<style>
+    .navbar{
+        height:8rem;
+    }
+    
+    p{
+        margin-right: 20px;
+    }
+    @media (max-width: 950px) {
+    .logo {
+        display: none;
+    }
+    .desktopMenu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    }
+</style>
 <body>
     <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo' />
@@ -55,7 +76,7 @@ $identifiant = $_SESSION['identifiant'];
             <a href="admin.php" class="desktopMenuListItem">Quizz</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
         </div>
-        <p> <span class="pastille"></span> connecté </p>
+        <p> <span class="pastille"></span> Admin </p>
     </nav>
     <div class="container">
         

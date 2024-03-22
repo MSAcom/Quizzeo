@@ -45,6 +45,10 @@ $identifiant = $_SESSION['identifiant'];
     <link rel="stylesheet" href="../dashboard/dashboard.css">
     <link rel="stylesheet" href="../../User/user.css">
 </head>
+<style>
+p{
+    margin-right: 20px;
+} </style>
 <body>
     <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
@@ -56,7 +60,7 @@ $identifiant = $_SESSION['identifiant'];
             <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>
 
         </div>
-        <p> <span class="pastille"></span> connecté </p>
+        <p> <span class="pastille"></span>  User </p>
     </nav>
     <div class="container">
         <h1> Les Quizz auquel vous avez déja joué </h1>
