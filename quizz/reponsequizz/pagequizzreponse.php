@@ -98,9 +98,9 @@ $points_totaux = 0; // Initialisation du score
             <div class="question"><?php
 
 
-                while (($ligne = fgetcsv($file)) !== false) { // Parcourir le fichier des questions
-                    if ($ligne[$col_id_quizz] == $id_quizz) { // Si l'id_quizz de la ligne correspond au quizz choisi par l'utilisateur
-                        // Afficher les informations de la question
+                while (($ligne = fgetcsv($file)) !== false) { // parcourir le fichier des questions
+                    if ($ligne[$col_id_quizz] == $id_quizz) { // si l'id_quizz de la ligne correspond au quizz choisi par l'utilisateur
+                        // afficher les informations de la question
                         $id_question = $ligne[$col_id_question]; // Stocker l'id de la question
                         $points_question = $ligne[$col_points_question];
                         $points_totaux +=  $points_question;

@@ -1,11 +1,11 @@
 <?php
-// Vérifier si une URL a été soumise via le formulaire
-if(isset($_GET['url'])) {
-    // Récupérer l'URL depuis le formulaire
-    $url = $_GET['url'];
+
+if(isset($_GET['url'])) {// verifier si une url a ete soumise via le formulaire
     
-    // Rediriger vers l'URL spécifiée
-    header("Location: $url");
-    exit(); // Assurez-vous de sortir du script après la redirection
+    $url = $_GET['url'];// on recupere l'url depuis le formulaire
+    
+    
+    header("Location: $url");// rediriger vers l'url entree
+    exit(); 
 }
 ?>

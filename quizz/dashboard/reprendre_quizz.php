@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['identifiant'])) {// Vérifier si l'utilisateur est connecté
-    header("Location: ../../accueil/connexion.php");    // Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+if (!isset($_SESSION['identifiant'])) {// verifier si l'utilisateur est connecté
+    header("Location: ../../accueil/connexion.php");    // rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
     exit();
 }
 
-if (!isset($_POST['id'])) {// Vérifier si l'ID du quizz est passé en tant que paramètre POST
-    header("Location: ./dashboard.php");    // Rediriger l'utilisateur vers une page d'erreur ou une autre page appropriée s'il n'a pas fourni d'ID de quizz
+if (!isset($_POST['id'])) {// verifier si l'ID du quizz est passé en tant que paramètre POST
+    header("Location: ./dashboard.php");    // rediriger l'utilisateur vers une page d'erreur ou une autre page appropriée s'il n'a pas fourni d'ID de quizz
 
     exit();
 }

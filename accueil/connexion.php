@@ -59,7 +59,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : ""; // Récupérez la variable
 <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem active">Home</a><!-- a href pour redirection pages -->
+            <a href="home.php" class="desktopMenuListItem active">Home</a><!-- a href pour redirection pages -->
             <a href="blog-page.php" class="desktopMenuListItem">Blog</a>
             <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
             <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
@@ -70,7 +70,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : ""; // Récupérez la variable
             <div class="bar"></div>
         </div>
         <div class="mobileMenu" id="mobileMenu">
-            <a href="#" class="mobileMenuItem">Home</a><!-- a href pour redirection pages -->
+            <a href="home.php" class="mobileMenuItem">Home</a><!-- a href pour redirection pages -->
             <a href="blog-page.php" class="mobileMenuItem">Blog</a>
             <a href="inscription.php" class="mobileMenuItem">Inscription</a>
             <a href="connexion.php" class="mobileMenuItem">Connexion</a>

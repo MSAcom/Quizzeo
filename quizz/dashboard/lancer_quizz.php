@@ -63,10 +63,10 @@ foreach ($lines as $key => &$line) {// on parcours chaque ligne du tableau
         if ($users[$identifiant]['role'] == "Entreprise"){ //rediriger vers entreprise
             header("Location: ../../Entreprise/dashboard_entreprise.php");}
            
-        break; // Sortir de la boucle après avoir trouvé le quiz
+        break; // sortir de la boucle après avoir trouvé le quiz
     }
 }
 
 
-file_put_contents($csv_file, implode('', $lines));// Enregistrer le tableau modifié dans le fichier CSV
+file_put_contents($csv_file, implode('', $lines));// enregistrer le tableau modifié dans le fichier CSV
 ?>

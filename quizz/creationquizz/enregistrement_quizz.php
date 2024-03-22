@@ -22,7 +22,7 @@ if (($handle = fopen($csvFile, "r")) !== FALSE) {// Ouvrir le fichier CSV en mod
 
 $identifiant = $_SESSION['identifiant'];
 if (isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Entreprise' || isset($users[$identifiant]) && $users[$identifiant]['role'] === 'Ecole') {// Vérifie si l'utilisateur a le rôle "Utilisateur"
-    // Si oui alors il accède à la page_utilisateur
+    // si oui alors il accède à la page_utilisateur
 
 } else { //sinon: 
     

@@ -75,7 +75,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
             <div class="bar"></div>
         </div>
         <div class="mobileMenu" id="mobileMenu">
-            <a href="#" class="mobileMenuItem">Home</a><!-- a href pour redirection pages -->
+            <a href="home.php" class="mobileMenuItem">Home</a><!-- a href pour redirection pages -->
             <a href="blog-page.php" class="mobileMenuItem">Blog</a>
             <a href="inscription.php" class="mobileMenuItem">Inscription</a>
             <a href="connexion.php" class="mobileMenuItem">Connexion</a>

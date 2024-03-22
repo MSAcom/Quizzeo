@@ -93,13 +93,13 @@ while (($question_row = fgetcsv($questions_file)) !== false) {
         $question_row[3] = isset($_POST['questions'][$question_row[1]]) ? $_POST['questions'][$question_row[1]] : $question_row[3]; 
         fputcsv($questions_file, $question_row);
 
-        // On reinitialise le fichier des reponses a sa position de départ
-        rewind($reponses_file);
+        
+        rewind($reponses_file);// on reinitialise le fichier des reponses a sa position de départ
 
-        // ON parcour les réponses
+        // on parcour les réponses
         while (($reponse_row = fgetcsv($reponses_file)) !== false) {
             if ($reponse_row[1] == $question_row[1]) { // Index 1 correspond à l'id de la question
-                // On met a jour la reponse si elle appartient à la reponse actuelle
+                // on met a jour la reponse si elle appartient à la question actuelle
                 $reponse_row[3] = isset($_POST['reponses'][$question_row[1]][$reponse_row[2]]) ? $_POST['reponses'][$question_row[1]][$reponse_row[2]] : $reponse_row[3]; // Index 2 correspond à l'id de la réponse
                 $reponse_row[4] = isset($_POST['bonne_reponse'][$question_row[1]]) && $_POST['bonne_reponse'][$question_row[1]] == $reponse_row[3] ? 'True' : 'False'; // Vérifie si cette réponse est la bonne réponse
                 fputcsv($reponses_file, $reponse_row);
