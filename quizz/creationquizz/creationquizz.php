@@ -48,6 +48,7 @@ $identifiant = $_SESSION['identifiant'];
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
             <a href="/Projet_final/Quizzeo/accueil/home.php" class="desktopMenuListItem">Home</a>
+           
             <?php 
             if ($users[$identifiant]['role'] === "Ecole"){?>
                 <a href="../../Ecole/dashboard_ecole.php" class="desktopMenuListItem">Dashboard</a>
@@ -57,7 +58,7 @@ $identifiant = $_SESSION['identifiant'];
             if ($users[$identifiant]['role'] === "Entreprise"){?>
                 <a href="../../Entreprise/dashboard_entreprise.php" class="desktopMenuListItem">Dashboard</a>
                 <?php } ?>
-            
+                <a href="" class="desktopMenuListItem">Créer un quizz</a>
             <a href="../../accueil/deconnexion.php" class="desktopMenuListItem">Deconnection</a>
         </div>
 

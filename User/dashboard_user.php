@@ -58,6 +58,7 @@ fclose($stockage_reponses_file);
         <img src="../quizz/images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
         <a href="../quizz/reponsequizz/historique.php" class="desktopMenuListItem">Historique</a>
+        <a href="#" class="desktopMenuListItem">Quizz</a>
         <a href="../accueil/commentaires.php" class="desktopMenuListItem">Commentaire</a>
             <a href="../accueil/profil.php" class="desktopMenuListItem">Profil</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Deconnexion</a>

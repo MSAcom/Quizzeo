@@ -110,14 +110,14 @@ $identifiant = $_SESSION['identifiant'];
                 <th>Pourcentage</th>
             </tr>
             <?php
-                // Calcul du nombre total de réponses pour chaque question
+                // calcul du nombre total de réponses pour chaque question
                 $total_responses = [];
                 rewind($file_toutes_reponses);
                 while (($data_toutes_reponses = fgetcsv($file_toutes_reponses)) !== FALSE) {
                     if ($data_toutes_reponses[$col_id_quizz_stockage_toutes_reponses] === $id_quizz) {
                         $id_question = $data_toutes_reponses[$col_id_question_toutes_reponses];
                         if (!isset($total_responses[$id_question])) {
-                            $total_responses[$id_question] = []; // Initialisation d'un tableau pour chaque question
+                            $total_responses[$id_question] = []; // initialisation d'un tableau pour chaque question
                         }
                         $reponse_id = $data_toutes_reponses[$col_id_reponse_toutes_reponses];
                         if (!isset($total_responses[$id_question][$reponse_id])) {
@@ -128,10 +128,10 @@ $identifiant = $_SESSION['identifiant'];
                     }
                 }
            
-                // Affichage des réponses pour chaque question
+                
                 foreach ($total_responses as $id_question => $reponses) {
                     echo "<tr>";
-                    $nom_question = ""; // Initialisation de la variable $nom_question
+                    $nom_question = ""; 
                
                     // Récupération du nom de la question
                     $file_questions = fopen("../quizz/creationquizz/questions_quizz.csv", "r");
@@ -147,12 +147,12 @@ $identifiant = $_SESSION['identifiant'];
                     fclose($file_questions);
     
  
-    // Calcul du nombre total de réponses pour cette question
+    // calcul du nombre total de réponses pour cette question
     $total_reponses_question = array_sum($reponses);
  
-    // Affichage des réponses et des pourcentages
+    // afficher des réponses et des pourcentages
     foreach ($reponses as $reponse_id => $nombre_reponses) {
-        // Récupération du nom de la réponse
+        // recuperer le nom de la reponse
         $file_reponses = fopen("../quizz/creationquizz/reponses_quizz.csv", "r");
         $en_tete_reponses = fgetcsv($file_reponses);
         $col_id_reponse = array_search('id_reponse', $en_tete_reponses);
@@ -167,12 +167,12 @@ $identifiant = $_SESSION['identifiant'];
  
         // Calcul du pourcentage
         $pourcentage = ($nombre_reponses / $total_reponses_question) * 100;
-        $pourcentageArrondi = round($pourcentage, 2); // Arrondir à deux décimales
-        echo "<td>$nom_question</td>"; // Affichage du nom de la question
-        // Affichage de la réponse, du nombre de réponses et du pourcentage
-        echo "<td>$reponse_quizz </td>"; // Affichage de la réponse
-        echo "<td>$nombre_reponses</td>"; // Affichage du nombre de réponses
-        echo "<td>$pourcentageArrondi%</td>"; // Affichage du pourcentage
+        $pourcentageArrondi = round($pourcentage, 2); // arrondir le pourcentage à deux chiffres apres la virgule
+        echo "<td>$nom_question</td>"; // Affichage de la question
+        
+        echo "<td>$reponse_quizz </td>"; // reponse
+        echo "<td>$nombre_reponses</td>"; // nombre de reponce pour cette reponse
+        echo "<td>$pourcentageArrondi%</td>"; // pourcentage
         echo "</tr>"; 
     }
    

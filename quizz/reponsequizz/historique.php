@@ -49,7 +49,7 @@ $identifiant = $_SESSION['identifiant'];
     <nav class="navbar">
         <img src="../images/quizzeo-sans-fond.png" height="50" alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            
+            <a href="#" class="desktopMenuListItem">Historique</a>
             <a href="../../User/dashboard_user.php" class="desktopMenuListItem">Quizz</a>
             <a href="../../accueil/commentaires.php" class="desktopMenuListItem">Commentaires</a>
             <a href="../../accueil/profil.php" class="desktopMenuListItem">Profil</a>
