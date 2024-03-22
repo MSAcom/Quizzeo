@@ -64,7 +64,7 @@ if(isset($_POST['captcha'])) {  //Si input captcha remplie par utilisateur
 <nav class="navbar">
         <img src="../quizz/images/quizzeo-sans-fond.png"  alt='logo' class='logo'/>
         <div class='desktopMenu'>
-            <a href="#" class="desktopMenuListItem active">Home</a><!-- a href pour redirection pages -->
+            <a href="home.php" class="desktopMenuListItem active">Home</a><!-- a href pour redirection pages -->
             <a href="blog-page.php" class="desktopMenuListItem">Blog</a>
             <a href="inscription.php" class="desktopMenuListItem">Inscription</a>
             <a href="connexion.php" class="desktopMenuListItem">Connexion</a>
