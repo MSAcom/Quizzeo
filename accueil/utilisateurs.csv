@@ -1,5 +1,7 @@
 Id_utilisateur,Nom,Prenom,Identifiant,role,Mot_de_passe,nouveau_email,Actif,connecte
 65fcb832ecc17,test1,test1,test1,Utilisateur,$2y$10$3Zdl3bRpqkQOFVoyZ2kY8uqOzVLku6BHAGxWKS5AWamN59nL9e2mm,,True,False
-65fcbb3523392,admin,admin,admin,Admin,$2y$10$VPvYfgsGllOsYIaC2jaiEOZj57VGIDjVl95wAglynhpm5ggT4FRSa,,True,False
+65fcbb3523392,admin,admin,admin,Admin,$2y$10$VPvYfgsGllOsYIaC2jaiEOZj57VGIDjVl95wAglynhpm5ggT4FRSa,,True,True
 65fcbc5463848,ecole,ecole,ecole,Ecole,$2y$10$Zvg553IQ4N/NmaHwtxIDWeKeKD4gj8BCGXaKUszi/Qu53l1SWbKFu,,True,False
 65fcc88211a60,entr,entr,entr,Entreprise,$2y$10$UVrn2v6949/QOGv43sphGeww5a6eQlVkn.IsqxBwOV64XpdRcxEYy,,True,False
+65fd4b2c8edbd,test2,test2,test2,Utilisateur,$2y$10$ApgE1wtVIYDqzkKD5g.U2.ulYINinFFycBEWHUTx5eo0ZjNYy1V7i,,True,False
+65fd4b70502b9,benmouffok,myriam,msa,Utilisateur,$2y$10$NyX/sRLr9GRoTuNckUSqJuur15.TY9S42kirq2xsBeZgUGDErR/Dy,,True,False

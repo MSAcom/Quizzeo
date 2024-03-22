@@ -125,3 +125,27 @@ id_quizz,id_question,id_reponse,reponse_quizz,bonne_reponse,nb_reponse
 65fd4649e40a3,65fd4649e42f1,65fd4649e433b,lune,False,0
 65fd4649e40a3,65fd4649e42f1,65fd4649e4347,yuyu,False,0
 65fd4649e40a3,65fd4649e42f1,65fd4649e4350,"planette terre",False,0
+65fd48b5a42b7,65fd48b5a4518,65fd48b5a4565,lune,False,0
+65fd48b5a42b7,65fd48b5a4518,65fd48b5a4588,soleil,True,0
+65fd48b5a42b7,65fd48b5a4518,65fd48b5a4594,"planette terre",False,0
+65fd48b5a42b7,65fd48b5a4518,65fd48b5a459e,mars,False,0
+65fd48e6398c8,65fd48e639b3b,65fd48e639b7f,noisette,True,0
+65fd48e6398c8,65fd48e639b3b,65fd48e639bac,cacao,False,0
+65fd48e6398c8,65fd48e639b3b,65fd48e639bb8,framboise,False,0
+65fd48e6398c8,65fd48e639b3b,65fd48e639bc1,coconut,False,0
+65fd49e6d10be,65fd49e6d12b7,65fd49e6d12f0,"l'open space",True,0
+65fd49e6d10be,65fd49e6d12b7,65fd49e6d1316,"la cours",False,0
+65fd49e6d10be,65fd49e6d12b7,65fd49e6d1346,"les bureaux individuels",False,0
+65fd49e6d10be,65fd49e6d12b7,65fd49e6d1352,"la machine a café",False,0
+65fd4ae8c29f8,65fd4ae8c2bd9,65fd4ae8c2c02,paris,True,0
+65fd4ae8c29f8,65fd4ae8c2bd9,65fd4ae8c2c25,nantes,False,0
+65fd4ae8c29f8,65fd4ae8c2bd9,65fd4ae8c2c31,strasbourg,False,0
+65fd4ae8c29f8,65fd4ae8c2bd9,65fd4ae8c2c3b,lilles,False,0
+65fd4ae8c29f8,65fd4ae8c2c44,65fd4ae8c2c4d,rome,True,0
+65fd4ae8c29f8,65fd4ae8c2c44,65fd4ae8c2c55,venise,False,0
+65fd4ae8c29f8,65fd4ae8c2c44,65fd4ae8c2c5e,naples,False,0
+65fd4ae8c29f8,65fd4ae8c2c44,65fd4ae8c2c66,milan,False,0
+65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c77,toronto,False,0
+65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c80,ottawa,True,0
+65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c88,montreal,False,0
+65fd4ae8c29f8,65fd4ae8c2c6e,65fd4ae8c2c91,calgary,False,0

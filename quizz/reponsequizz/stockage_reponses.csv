@@ -1,34 +1,5 @@
 id_utilisateur,id_quizz,score,nom_quizz
-65f430dcd00a6,65f9684422079,0,"quizz test"
-65f430dcd00a6,65f4b64a52f70,2,"les chocolats"
-65f30860ea5d9,65f9684422079,100,"quizz test"
-65f8465c43c65,65f9684422079,100,"quizz test"
-65f8465c43c65,65f4b64a52f70,2,"les chocolats"
-65f84309a9610,65f9684422079,100,"quizz test"
-65f84309a9610,65fa046c9e6c8,2,ecole
-65f9f1f612243,65fa046c9e6c8,2,ecole
-65f84309a9610,65fac05df0634,2,yuyu
-65f84309a9610,65f4b64a52f70,0,"les chocolats"
-65f84309a9610,65f6db9875888,0,"quizz sur la nourriture"
-65f84309a9610,65fac004274b7,1,tyty
-65f84309a9610,65f4bbb17f454,2,"les chocolats"
-65f84309a9610,65f6deda65ceb,0,"je suis un quizz"
-65f84309a9610,65f6eaf990540,5,astres
-65f84309a9610,65f6ea7fa7de5,2,boulangerie
-65f84309a9610,65fb36edca26a,2,chat
-65f84309a9610,65f5ed424ca02,2,"quizz sur la grece antique"
-65f84309a9610,65fb36fd00271,2,chat
-65f84309a9610,65fb37335bed5,0,fr
-65f84309a9610,65fb5965a37a9,4,"les chocolats"
-65f84309a9610,65fa04d790ded,0,entr
-65f84309a9610,65fb373fc5a5f,0,de
-65fc1514e5e3a,65fac05df0634,0,yuyu
-65fc1514e5e3a,65fa04d790ded,32,entr
-65fc15feadfdd,65fac05df0634,2,yuyu
-65fc15feadfdd,65fa04d790ded,0,entr
-65fc3ddda1978,65fa04d790ded,32,entr
-65fc3ddda1978,65fb36fd00271,2,chat
-65fc3ddda1978,65fc47b6c89a3,2,"je suis un quizz"
-65f84309a9610,65fc47b6c89a3,0,"je suis un quizz"
-65f84309a9610,65fc6049b6f13,0,"quizz test incrementation"
-65f84309a9610,65fc900374910,0,"les chocolats"
+65fcb832ecc17,65fd49e6d10be,2,"test de satisfaction"
+65fcb832ecc17,65fd4ae8c29f8,6,"quizz sur la géographie"
+65fd4b2c8edbd,65fd4ae8c29f8,2,"quizz sur la géographie"
+65fd4b70502b9,65fd4ae8c29f8,2,"quizz sur la géographie"
