@@ -80,7 +80,7 @@ $identifiant = $_SESSION['identifiant'];
             <a href="dashboard_ecole.php" class="desktopMenuListItem">Dashboard</a>
             <a href="../accueil/deconnexion.php" class="desktopMenuListItem">Déconnexion</a>
         </div>
-        <p> <span class="pastille"></span> connecté </p>
+        <p> <span class="pastille"></span> Ecole </p>
     </nav>
     <div class="container">
         <?php

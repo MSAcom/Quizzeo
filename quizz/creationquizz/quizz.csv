@@ -28,10 +28,10 @@ id_quizz,nomquizz,descriptionquizz,id_utilisateur,actif,status,nb_reponses,url
 65fc47b6c89a3,"je suis un quizz","je suis un quizz",65f9f43f07dad,True,Lancé,1,url
 65fc6049b6f13,"quizz test incrementation",incrementation,65f9f1f612243,True,Lancé,1,url
 65fc900374910,"les chocolats","un beau quizz sur le chocolat",65f9f43f07dad,True,EnCours,6,url
-65fd45e47fa55,"les chocolats",123,65fcbc5463848,True,EnCours,0,url
-65fd4649e40a3,"les chocolats",1,65fcc88211a60,True,EnCours,0,url
+65fd45e47fa55,"les chocolats",123,65fcbc5463848,True,Terminé,0,url
+65fd4649e40a3,"les chocolats",1,65fcc88211a60,True,Terminé,0,url
 65fd48b5a42b7,"je suis un quizz","un beau quizz sur le chocolat",65fcbc5463848,True,EnCours,0,url
-65fd48e6398c8,boulangerie,"un beau quizz sur le chocolat",65fcc88211a60,True,EnCours,0,url
-65fd49e6d10be,"test de satisfaction","aimez vous notre entreprise",65fcc88211a60,True,EnCours,7,url
+65fd48e6398c8,boulangerie,"un beau quizz sur le chocolat",65fcc88211a60,True,Terminé,0,url
+65fd49e6d10be,"test de satisfaction","aimez vous notre entreprise",65fcc88211a60,True,Lancé,7,url
 65fd4ae8c29f8,"quizz sur la géographie","avez vous bien revisé",65fcbc5463848,True,Lancé,3,url
-65fd545c414c5,"enquete de satisfaction","que voudriez vous que nous ameliorions",65fcc88211a60,True,EnCours,8,url
+65fd545c414c5,"enquete de satisfaction","que voudriez vous que nous ameliorions",65fcc88211a60,True,Lancé,8,url
