@@ -62,6 +62,15 @@ $identifiant = $_SESSION['identifiant'];
         justify-content: space-around;
     }
     }
+    form {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: row;
+}
+    input[type="text"] {
+    width: 50%;
+    margin-right:10px}
 </style>
 <body>
     <nav class="navbar">
